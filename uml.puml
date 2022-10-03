@@ -48,6 +48,27 @@ class Investigator {
 
 class AuthorId {}
 
+class Experience {
+  title
+  location
+  description
+}
+
+class Date {
+  date
+}
+
+class DateRange {
+  endDate
+}
+
+class OngoingDate {
+}
+
+class WorkExperience {
+  employer
+}
+
 ContentLayer -u-* CV
 SectionLayer -u-* CV
 
@@ -72,5 +93,10 @@ Person -r-> "*" Language
 Investigator -u-|> Person
 AuthorId -u-|> KeyValContent
 Investigator "1" -r-> "*" AuthorId
+
+Experience -r-> Date
+DateRange -d-|> Date
+OngoingDate -d-|> Date
+WorkExperience -u-|> Experience
 
 @enduml

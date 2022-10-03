@@ -1,0 +1,76 @@
+@startuml
+
+class CV {}
+
+class ContentLayer {}
+
+class Content {}
+
+class KeyValContent {
+  key
+  value
+}
+
+class SectionLayer {}
+
+class Section {
+  name // UNIQUE
+}
+
+class IdentificationSection {}
+
+class Contact {}
+
+class Language {
+  name
+  conversation
+  reading
+  writing
+  comprehension
+  peerReview
+}
+
+class Person {
+  name
+  gender
+  title
+  birthDate
+  picture
+  nationality
+  maritalStatus
+  address
+  aboutMe
+}
+
+class Investigator {
+  citationName
+}
+
+class AuthorId {}
+
+ContentLayer -u-* CV
+SectionLayer -u-* CV
+
+ContentLayer -d-> "*" Content
+KeyValContent -l-|> Content
+
+SectionLayer --> IdentificationSection : "Person Id"
+Section --> "1..*" Content
+Section "*" -u-* SectionLayer
+Section "0..1" -d-> "*" Section : "Sub-section"
+
+IdentificationSection -u-|> Section
+' CV -d-> "1" Section : "Identification"
+IdentificationSection --> Person
+
+Person -u-|> Content
+Contact -u-|> KeyValContent
+Person -l-> "*" Contact
+Language -u-|> Content
+Person -r-> "*" Language
+
+Investigator -u-|> Person
+AuthorId -u-|> KeyValContent
+Investigator "1" -r-> "*" AuthorId
+
+@enduml

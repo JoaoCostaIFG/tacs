@@ -123,7 +123,7 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNames" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" lowerBound="1"
-          eType="#//identification/Gender"/>
+          eType="#//identification/Gender" defaultValueLiteral="DONOTINDICATE"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maritalStatus" lowerBound="1"
           eType="#//identification/MaritalStatus"/>
@@ -137,16 +137,17 @@
           eType="#//identification/NamedAddress"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="Gender">
-      <eLiterals name="MALE"/>
+      <eLiterals name="DONOTINDICATE"/>
       <eLiterals name="FEMALE" value="1"/>
       <eLiterals name="OTHER" value="2"/>
-      <eLiterals name="DONOTINDICATE" value="3"/>
+      <eLiterals name="MALE" value="3"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="MaritalStatus">
-      <eLiterals name="SINGLE"/>
+      <eLiterals name="DONOTINDICATE"/>
       <eLiterals name="MARRIED" value="1"/>
       <eLiterals name="DIVORCED" value="2"/>
       <eLiterals name="SEPARATED" value="3"/>
+      <eLiterals name="SINGLE" value="4"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Contact">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"

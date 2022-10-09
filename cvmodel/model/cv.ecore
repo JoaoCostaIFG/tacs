@@ -122,6 +122,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNames" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNames" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" lowerBound="1"
           eType="#//identification/Gender" defaultValueLiteral="DONOTINDICATE"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -130,7 +131,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="aboutMe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//content/File"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="contacts" upperBound="-1"
-          eType="#//identification/Contact"/>
+          eType="#//identification/contact/Contact"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="nationalities" upperBound="-1"
           eType="#//identification/Nationality"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
@@ -149,12 +150,6 @@
       <eLiterals name="SEPARATED" value="3"/>
       <eLiterals name="SINGLE" value="4"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Contact">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="info" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Nationality">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -162,6 +157,315 @@
     <eClassifiers xsi:type="ecore:EClass" name="NamedAddress" eSuperTypes="#//content/Address">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HomeAddress" eSuperTypes="#//identification/NamedAddress"/>
+    <eClassifiers xsi:type="ecore:EClass" name="WorkAddress" eSuperTypes="#//identification/NamedAddress"/>
+    <eSubpackages name="contact" nsURI="http://cvmodel/cv/identification/contact"
+        nsPrefix="cvmodel.cv.identification.contact">
+      <eClassifiers xsi:type="ecore:EClass" name="Contact">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="info" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Email" eSuperTypes="#//identification/contact/Contact"/>
+      <eClassifiers xsi:type="ecore:EClass" name="PhoneNumber" eSuperTypes="#//identification/contact/Contact">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryCode" lowerBound="1"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="PhoneCountryCode">
+        <eLiterals name="Afghanistan" value="93"/>
+        <eLiterals name="Albania" value="355"/>
+        <eLiterals name="Algeria" value="213"/>
+        <eLiterals name="American Samoa" value="1"/>
+        <eLiterals name="Andorra" value="376"/>
+        <eLiterals name="Angola" value="244"/>
+        <eLiterals name="Anguilla" value="1"/>
+        <eLiterals name="Antarctica" value="672"/>
+        <eLiterals name="Antigua and Barbuda" value="1"/>
+        <eLiterals name="Argentina" value="54"/>
+        <eLiterals name="Armenia" value="374"/>
+        <eLiterals name="Aruba" value="297"/>
+        <eLiterals name="Australia" value="61"/>
+        <eLiterals name="Austria" value="43"/>
+        <eLiterals name="Azerbaijan" value="994"/>
+        <eLiterals name="Bahamas" value="1"/>
+        <eLiterals name="Bahrain" value="973"/>
+        <eLiterals name="Bangladesh" value="880"/>
+        <eLiterals name="Barbados" value="1"/>
+        <eLiterals name="Belarus" value="375"/>
+        <eLiterals name="Belgium" value="32"/>
+        <eLiterals name="Belize" value="501"/>
+        <eLiterals name="Benin" value="229"/>
+        <eLiterals name="Bermuda" value="1"/>
+        <eLiterals name="Bhutan" value="975"/>
+        <eLiterals name="Bolivia" value="591"/>
+        <eLiterals name="Bosnia and Herzegovina" value="387"/>
+        <eLiterals name="Botswana" value="267"/>
+        <eLiterals name="Brazil" value="55"/>
+        <eLiterals name="British Indian Ocean Territory" value="246"/>
+        <eLiterals name="British Virgin Islands" value="1"/>
+        <eLiterals name="Brunei" value="673"/>
+        <eLiterals name="Bulgaria" value="359"/>
+        <eLiterals name="Burkina Faso" value="226"/>
+        <eLiterals name="Burundi" value="257"/>
+        <eLiterals name="Cambodia" value="855"/>
+        <eLiterals name="Cameroon" value="237"/>
+        <eLiterals name="Canada" value="1"/>
+        <eLiterals name="Cape Verde" value="238"/>
+        <eLiterals name="Cayman Islands" value="1"/>
+        <eLiterals name="Central African Republic" value="236"/>
+        <eLiterals name="Chad" value="235"/>
+        <eLiterals name="Chile" value="56"/>
+        <eLiterals name="China" value="86"/>
+        <eLiterals name="Christmas Island" value="61"/>
+        <eLiterals name="Cocos Islands" value="61"/>
+        <eLiterals name="Colombia" value="57"/>
+        <eLiterals name="Comoros" value="269"/>
+        <eLiterals name="Cook Islands" value="682"/>
+        <eLiterals name="Costa Rica" value="506"/>
+        <eLiterals name="Croatia" value="385"/>
+        <eLiterals name="Cuba" value="53"/>
+        <eLiterals name="Curacao" value="599"/>
+        <eLiterals name="Cyprus" value="357"/>
+        <eLiterals name="Czech Republic" value="420"/>
+        <eLiterals name="Democratic Republic of the Congo" value="243"/>
+        <eLiterals name="Denmark" value="45"/>
+        <eLiterals name="Djibouti" value="253"/>
+        <eLiterals name="Dominica" value="1"/>
+        <eLiterals name="Dominican Republic" value="1"/>
+        <eLiterals name="East Timor" value="670"/>
+        <eLiterals name="Ecuador" value="593"/>
+        <eLiterals name="Egypt" value="20"/>
+        <eLiterals name="El Salvador" value="503"/>
+        <eLiterals name="Equatorial Guinea" value="240"/>
+        <eLiterals name="Eritrea" value="291"/>
+        <eLiterals name="Estonia" value="372"/>
+        <eLiterals name="Ethiopia" value="251"/>
+        <eLiterals name="Falkland Islands" value="500"/>
+        <eLiterals name="Faroe Islands" value="298"/>
+        <eLiterals name="Fiji" value="679"/>
+        <eLiterals name="Finland" value="358"/>
+        <eLiterals name="France" value="33"/>
+        <eLiterals name="French Polynesia" value="689"/>
+        <eLiterals name="Gabon" value="241"/>
+        <eLiterals name="Gambia" value="220"/>
+        <eLiterals name="Georgia" value="995"/>
+        <eLiterals name="Germany" value="49"/>
+        <eLiterals name="Ghana" value="233"/>
+        <eLiterals name="Gibraltar" value="350"/>
+        <eLiterals name="Greece" value="30"/>
+        <eLiterals name="Greenland" value="299"/>
+        <eLiterals name="Grenada" value="1"/>
+        <eLiterals name="Guam" value="1"/>
+        <eLiterals name="Guatemala" value="502"/>
+        <eLiterals name="Guernsey" value="44"/>
+        <eLiterals name="Guinea" value="224"/>
+        <eLiterals name="Guinea-Bissau" value="245"/>
+        <eLiterals name="Guyana" value="592"/>
+        <eLiterals name="Haiti" value="509"/>
+        <eLiterals name="Honduras" value="504"/>
+        <eLiterals name="Hong Kong" value="852"/>
+        <eLiterals name="Hungary" value="36"/>
+        <eLiterals name="Iceland" value="354"/>
+        <eLiterals name="India" value="91"/>
+        <eLiterals name="Indonesia" value="62"/>
+        <eLiterals name="Iran" value="98"/>
+        <eLiterals name="Iraq" value="964"/>
+        <eLiterals name="Ireland" value="353"/>
+        <eLiterals name="Isle of Man" value="44"/>
+        <eLiterals name="Israel" value="972"/>
+        <eLiterals name="Italy" value="39"/>
+        <eLiterals name="Ivory Coast" value="225"/>
+        <eLiterals name="Jamaica" value="1"/>
+        <eLiterals name="Japan" value="81"/>
+        <eLiterals name="Jersey" value="44"/>
+        <eLiterals name="Jordan" value="962"/>
+        <eLiterals name="Kazakhstan" value="7"/>
+        <eLiterals name="Kenya" value="254"/>
+        <eLiterals name="Kiribati" value="686"/>
+        <eLiterals name="Kosovo" value="383"/>
+        <eLiterals name="Kuwait" value="965"/>
+        <eLiterals name="Kyrgyzstan" value="996"/>
+        <eLiterals name="Laos" value="856"/>
+        <eLiterals name="Latvia" value="371"/>
+        <eLiterals name="Lebanon" value="961"/>
+        <eLiterals name="Lesotho" value="266"/>
+        <eLiterals name="Liberia" value="231"/>
+        <eLiterals name="Libya" value="218"/>
+        <eLiterals name="Liechtenstein" value="423"/>
+        <eLiterals name="Lithuania" value="370"/>
+        <eLiterals name="Luxembourg" value="352"/>
+        <eLiterals name="Macau" value="853"/>
+        <eLiterals name="Macedonia" value="389"/>
+        <eLiterals name="Madagascar" value="261"/>
+        <eLiterals name="Malawi" value="265"/>
+        <eLiterals name="Malaysia" value="60"/>
+        <eLiterals name="Maldives" value="960"/>
+        <eLiterals name="Mali" value="223"/>
+        <eLiterals name="Malta" value="356"/>
+        <eLiterals name="Marshall Islands" value="692"/>
+        <eLiterals name="Mauritania" value="222"/>
+        <eLiterals name="Mauritius" value="230"/>
+        <eLiterals name="Mayotte" value="262"/>
+        <eLiterals name="Mexico" value="52"/>
+        <eLiterals name="Micronesia" value="691"/>
+        <eLiterals name="Moldova" value="373"/>
+        <eLiterals name="Monaco" value="377"/>
+        <eLiterals name="Mongolia" value="976"/>
+        <eLiterals name="Montenegro" value="382"/>
+        <eLiterals name="Montserrat" value="1"/>
+        <eLiterals name="Morocco" value="212"/>
+        <eLiterals name="Mozambique" value="258"/>
+        <eLiterals name="Myanmar" value="95"/>
+        <eLiterals name="Namibia" value="264"/>
+        <eLiterals name="Nauru" value="674"/>
+        <eLiterals name="Nepal" value="977"/>
+        <eLiterals name="Netherlands" value="31"/>
+        <eLiterals name="Netherlands Antilles" value="599"/>
+        <eLiterals name="New Caledonia" value="687"/>
+        <eLiterals name="New Zealand" value="64"/>
+        <eLiterals name="Nicaragua" value="505"/>
+        <eLiterals name="Niger" value="227"/>
+        <eLiterals name="Nigeria" value="234"/>
+        <eLiterals name="Niue" value="683"/>
+        <eLiterals name="North Korea" value="850"/>
+        <eLiterals name="Northern Mariana Islands" value="1"/>
+        <eLiterals name="Norway" value="47"/>
+        <eLiterals name="Oman" value="968"/>
+        <eLiterals name="Pakistan" value="92"/>
+        <eLiterals name="Palau" value="680"/>
+        <eLiterals name="Palestine" value="970"/>
+        <eLiterals name="Panama" value="507"/>
+        <eLiterals name="Papua New Guinea" value="675"/>
+        <eLiterals name="Paraguay" value="595"/>
+        <eLiterals name="Peru" value="51"/>
+        <eLiterals name="Philippines" value="63"/>
+        <eLiterals name="Pitcairn" value="64"/>
+        <eLiterals name="Poland" value="48"/>
+        <eLiterals name="Portugal" value="351"/>
+        <eLiterals name="Puerto Rico" value="1"/>
+        <eLiterals name="Qatar" value="974"/>
+        <eLiterals name="Republic of the Congo" value="242"/>
+        <eLiterals name="Reunion" value="262"/>
+        <eLiterals name="Romania" value="40"/>
+        <eLiterals name="Russia" value="7"/>
+        <eLiterals name="Rwanda" value="250"/>
+        <eLiterals name="Saint Barthelemy" value="590"/>
+        <eLiterals name="Saint Helena" value="290"/>
+        <eLiterals name="Saint Kitts and Nevis" value="1"/>
+        <eLiterals name="Saint Lucia" value="1"/>
+        <eLiterals name="Saint Martin" value="590"/>
+        <eLiterals name="Saint Pierre and Miquelon" value="508"/>
+        <eLiterals name="Saint Vincent and the Grenadines" value="1"/>
+        <eLiterals name="Samoa" value="685"/>
+        <eLiterals name="San Marino" value="378"/>
+        <eLiterals name="Sao Tome and Principe" value="239"/>
+        <eLiterals name="Saudi Arabia" value="966"/>
+        <eLiterals name="Senegal" value="221"/>
+        <eLiterals name="Serbia" value="381"/>
+        <eLiterals name="Seychelles" value="248"/>
+        <eLiterals name="Sierra Leone" value="232"/>
+        <eLiterals name="Singapore" value="65"/>
+        <eLiterals name="Sint Maarten" value="1"/>
+        <eLiterals name="Slovakia" value="421"/>
+        <eLiterals name="Slovenia" value="386"/>
+        <eLiterals name="Solomon Islands" value="677"/>
+        <eLiterals name="Somalia" value="252"/>
+        <eLiterals name="South Africa" value="27"/>
+        <eLiterals name="South Korea" value="82"/>
+        <eLiterals name="South Sudan" value="211"/>
+        <eLiterals name="Spain" value="34"/>
+        <eLiterals name="Sri Lanka" value="94"/>
+        <eLiterals name="Sudan" value="249"/>
+        <eLiterals name="Suriname" value="597"/>
+        <eLiterals name="Svalbard and Jan Mayen" value="47"/>
+        <eLiterals name="Swaziland" value="268"/>
+        <eLiterals name="Sweden" value="46"/>
+        <eLiterals name="Switzerland" value="41"/>
+        <eLiterals name="Syria" value="963"/>
+        <eLiterals name="Taiwan" value="886"/>
+        <eLiterals name="Tajikistan" value="992"/>
+        <eLiterals name="Tanzania" value="255"/>
+        <eLiterals name="Thailand" value="66"/>
+        <eLiterals name="Togo" value="228"/>
+        <eLiterals name="Tokelau" value="690"/>
+        <eLiterals name="Tonga" value="676"/>
+        <eLiterals name="Trinidad and Tobago" value="1"/>
+        <eLiterals name="Tunisia" value="216"/>
+        <eLiterals name="Turkey" value="90"/>
+        <eLiterals name="Turkmenistan" value="993"/>
+        <eLiterals name="Turks and Caicos Islands" value="1"/>
+        <eLiterals name="Tuvalu" value="688"/>
+        <eLiterals name="U.S. Virgin Islands" value="1"/>
+        <eLiterals name="Uganda" value="256"/>
+        <eLiterals name="Ukraine" value="380"/>
+        <eLiterals name="United Arab Emirates" value="971"/>
+        <eLiterals name="United Kingdom" value="44"/>
+        <eLiterals name="United States" value="1"/>
+        <eLiterals name="Uruguay" value="598"/>
+        <eLiterals name="Uzbekistan" value="998"/>
+        <eLiterals name="Vanuatu" value="678"/>
+        <eLiterals name="Vatican" value="379"/>
+        <eLiterals name="Venezuela" value="58"/>
+        <eLiterals name="Vietnam" value="84"/>
+        <eLiterals name="Wallis and Futuna" value="681"/>
+        <eLiterals name="Western Sahara" value="212"/>
+        <eLiterals name="Yemen" value="967"/>
+        <eLiterals name="Zambia" value="260"/>
+        <eLiterals name="Zimbabwe" value="263"/>
+        <eLiterals name="LITERAL240" value="240"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="HomePhoneNumber" eSuperTypes="#//identification/contact/PhoneNumber"/>
+      <eClassifiers xsi:type="ecore:EClass" name="WorkPhoneNumber" eSuperTypes="#//identification/contact/PhoneNumber"/>
+      <eClassifiers xsi:type="ecore:EClass" name="MobilePhoneNumber" eSuperTypes="#//identification/contact/PhoneNumber"/>
+      <eClassifiers xsi:type="ecore:EClass" name="UrlContact" eSuperTypes="#//identification/contact/Contact"/>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="skill" nsURI="http://cvmodel/cv/skill" nsPrefix="cvmodel.cv.skill">
+    <eClassifiers xsi:type="ecore:EClass" name="SkillSection" eSuperTypes="#//section/Section">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="hardSkills" upperBound="-1"
+          eType="#//skill/HardSkill"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="softSkills" upperBound="-1"
+          eType="#//skill/SoftSkill"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="motherTongues" upperBound="-1"
+          eType="#//skill/MotherTongue"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="secondLanguages" upperBound="-1"
+          eType="#//skill/SecondLanguage"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="HardSkill">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="proficiency" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SoftSkill">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Language">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="MotherTongue" eSuperTypes="#//skill/Language"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SecondLanguage" eSuperTypes="#//skill/Language">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="conversation" lowerBound="1"
+          eType="#//skill/LanguageSkillLevel"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="reading" lowerBound="1"
+          eType="#//skill/LanguageSkillLevel"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="writing" lowerBound="1"
+          eType="#//skill/LanguageSkillLevel"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="comprehension" lowerBound="1"
+          eType="#//skill/LanguageSkillLevel"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="peerReview" lowerBound="1"
+          eType="#//skill/LanguageSkillLevel"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="LanguageSkillLevel">
+      <eLiterals name="A1"/>
+      <eLiterals name="A2" value="1"/>
+      <eLiterals name="B1" value="2"/>
+      <eLiterals name="B2" value="3"/>
+      <eLiterals name="C1" value="4"/>
+      <eLiterals name="C2" value="5"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

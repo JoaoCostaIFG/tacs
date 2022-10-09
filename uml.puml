@@ -4,11 +4,15 @@ class CV {}
 
 class ContentLayer {}
 
-class Content {}
+class Content {
+  name
+  description
+  url
+}
 
-class KeyValContent {
-  key
-  value
+class File {
+  path
+  type
 }
 
 class SectionLayer {}
@@ -17,9 +21,14 @@ class Section {
   name // UNIQUE
 }
 
+' || IdSection
+
 class IdentificationSection {}
 
-class Contact {}
+class Contact {
+  type
+  info
+}
 
 class Language {
   name
@@ -36,46 +45,99 @@ class Person {
   title
   birthDate
   picture
-  nationality
   maritalStatus
-  address
   aboutMe
+}
+
+class Address {
+  name
+  line1
+  line2
+  postalCode
+  city
+  country
+}
+
+class Nationality {
+  name
 }
 
 class Investigator {
   citationName
 }
 
-class AuthorId {}
-
-class Experience {
-  title
-  location
-  description
+class AuthorId {
+  name
+  info
 }
 
-class Date {
-  date
-}
+' || END IdSection
 
-class DateRange {
-  endDate
-}
+' || WorkExperienceSection
 
-class OngoingDate {
+class WorkExperienceSection {
 }
 
 class WorkExperience {
+  occupation
   employer
+  description
 }
+
+class TimeFrame {
+  startDate
+  endDate
+}
+
+' || END WorkExperienceSection
+
+' || EducationTrainingSection
+class EducationTrainingSection {
+}
+
+class EducationTraining {
+  title
+  organization
+  description
+  finalGrade
+}
+
+enum FieldOfStudy {
+  GENERIC_PROGRAMS_CLASSIFICATIONS /' generic programs and classifications '/
+  EDUCATION /' Education '/
+  ARTS_HUMANITIES /' Arts and humanities '/
+  SOCIAL_SCIENCES /' Social sciences, journalism and information '/
+  BUSINESS_LAW /' Business, administration and law '/
+  NATURAL_SCIENCES /' Natural sciences, mathematics and statistics '/
+  INFO_COMM_TECH /' Information and Communication Technologies '/
+  ENGINEERING /' Engineering, manufacturing and construction '/
+  AGRICULTURE /' Agriculture, forestry, fisheries and veterinary '/
+  HEALTH /' Health and welfare '/
+  SERVICES /' Services '/
+  UNKOWN /' Field unknown '/
+}
+
+enum EQF {
+  EQF1
+  EQF2
+  EQF3
+  EQF4
+  EQF5
+  EQF6
+  EQF7
+  EQF8
+}
+
+' || END EducationTrainingSection
 
 ContentLayer -u-* CV
 SectionLayer -u-* CV
 
 ContentLayer -d-> "*" Content
-KeyValContent -l-|> Content
+Content --> "0..1" TimeFrame
+Content --> "*" File
 
-SectionLayer --> IdentificationSection : "Person Id"
+SectionLayer --> IdentificationSection : "PersonId"
 Section --> "1..*" Content
 Section "*" -u-* SectionLayer
 Section "0..1" -d-> "*" Section : "Sub-section"
@@ -84,19 +146,24 @@ IdentificationSection -u-|> Section
 ' CV -d-> "1" Section : "Identification"
 IdentificationSection --> Person
 
-Person -u-|> Content
-Contact -u-|> KeyValContent
-Person -l-> "*" Contact
-Language -u-|> Content
+Person --> "*" Contact
+Person --> "*" Nationality
+Person --> "*" Address
 Person -r-> "*" Language
 
 Investigator -u-|> Person
-AuthorId -u-|> KeyValContent
-Investigator "1" -r-> "*" AuthorId
+Investigator -r-> "*" AuthorId
 
-Experience -r-> Date
-DateRange -d-|> Date
-OngoingDate -d-|> Date
-WorkExperience -u-|> Experience
+WorkExperienceSection -u-|> Section
+WorkExperienceSection -d-> "1..*" WorkExperience
+WorkExperience --> "0..1" Address
+WorkExperience --> TimeFrame
+
+EducationTraining --|> Section
+EducationTrainingSection --> EducationTraining
+EducationTraining --> Address
+EducationTraining --> TimeFrame
+EducationTraining --> "0..1" FieldOfStudy
+EducationTraining --> "0..1" EQF
 
 @enduml

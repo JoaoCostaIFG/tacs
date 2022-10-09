@@ -30,4 +30,28 @@
             genModel="model/cv.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cv -->
+      <package
+            uri="http://cvmodel/cv/workexp"
+            class="cv.workexp.WorkexpPackage"
+            genModel="model/cv.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cv -->
+      <package
+            uri="http://cvmodel/cv/edutrain"
+            class="cv.edutrain.EdutrainPackage"
+            genModel="model/cv.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated cv -->
+      <package
+            uri="http://cvmodel/cv/identification"
+            class="cv.identification.IdentificationPackage"
+            genModel="model/cv.genmodel"/>
+   </extension>
+
 </plugin>

@@ -12,11 +12,20 @@ Export-Package: cv,
  cv.content,
  cv.content.impl,
  cv.content.util,
+ cv.edutrain,
+ cv.edutrain.impl,
+ cv.edutrain.util,
+ cv.identification,
+ cv.identification.impl,
+ cv.identification.util,
  cv.impl,
  cv.section,
  cv.section.impl,
  cv.section.util,
- cv.util
+ cv.util,
+ cv.workexp,
+ cv.workexp.impl,
+ cv.workexp.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport
 Bundle-ActivationPolicy: lazy

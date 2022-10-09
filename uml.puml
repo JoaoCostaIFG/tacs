@@ -103,7 +103,7 @@ class EducationTraining {
 }
 
 enum FieldOfStudy {
-  GENERIC_PROGRAMS_CLASSIFICATIONS /' generic programs and classifications '/
+  GENERIC /' generic programs and classifications '/
   EDUCATION /' Education '/
   ARTS_HUMANITIES /' Arts and humanities '/
   SOCIAL_SCIENCES /' Social sciences, journalism and information '/
@@ -114,7 +114,7 @@ enum FieldOfStudy {
   AGRICULTURE /' Agriculture, forestry, fisheries and veterinary '/
   HEALTH /' Health and welfare '/
   SERVICES /' Services '/
-  UNKOWN /' Field unknown '/
+  UNKNOWN /' Field unknown '/
 }
 
 enum EQF {

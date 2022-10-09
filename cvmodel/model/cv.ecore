@@ -3,17 +3,9 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cv" nsURI="http://cvmodel/cv" nsPrefix="cvmodel.cv">
   <eClassifiers xsi:type="ecore:EClass" name="CV">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sectionLayer" lowerBound="1"
-        eType="#//SectionLayer" changeable="false" containment="true"/>
+        eType="#//section/SectionLayer" changeable="false" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contentLayer" lowerBound="1"
-        eType="#//ContentLayer" changeable="false" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SectionLayer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
-        eType="#//section/Section" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ContentLayer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
-        eType="#//content/Content" containment="true"/>
+        eType="#//content/ContentLayer" changeable="false" containment="true"/>
   </eClassifiers>
   <eSubpackages name="content" nsURI="http://cvmodel/cv/content" nsPrefix="cvmodel.cv.content">
     <eClassifiers xsi:type="ecore:EClass" name="Content">
@@ -47,6 +39,10 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ContentLayer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
+          eType="#//content/Content" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="section" nsURI="http://cvmodel/cv/section" nsPrefix="cvmodel.cv.section">
     <eClassifiers xsi:type="ecore:EClass" name="Section">
@@ -56,6 +52,115 @@
           eType="#//section/Section" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
           upperBound="-1" eType="#//content/Content"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="SectionLayer">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
+          eType="#//section/Section" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="workexp" nsURI="http://cvmodel/cv/workexp" nsPrefix="cvmodel.cv.workexp">
+    <eClassifiers xsi:type="ecore:EClass" name="WorkExperienceSection" eSuperTypes="#//section/Section">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="workExperiences" lowerBound="1"
+          upperBound="-1" eType="#//workexp/WorkExperience"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="WorkExperience">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="occupation" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="employer" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//content/Address"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" eType="#//content/TimeFrame"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="edutrain" nsURI="http://cvmodel/cv/edutrain" nsPrefix="cvmodel.cv.edutrain">
+    <eClassifiers xsi:type="ecore:EClass" name="EducationTrainingSection" eSuperTypes="#//section/Section">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="educationTraining" upperBound="-1"
+          eType="#//edutrain/EducationTraining"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="EducationTraining">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="organization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="finalGrade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldsOfStudy" upperBound="-1"
+          eType="#//edutrain/FieldOfStudy"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="eqf" eType="#//edutrain/EQF"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="FieldOfStudy">
+      <eLiterals name="GENERIC"/>
+      <eLiterals name="EDUCATION" value="1"/>
+      <eLiterals name="ARTS_HUMANITIES" value="2"/>
+      <eLiterals name="SOCIAL_SCIENCES" value="3"/>
+      <eLiterals name="BUSINESS_LAW" value="4"/>
+      <eLiterals name="NATURAL_SCIENCES" value="5"/>
+      <eLiterals name="INFO_COMM_TECH" value="6"/>
+      <eLiterals name="ENGINEERING" value="7"/>
+      <eLiterals name="AGRICULTURE" value="8"/>
+      <eLiterals name="HEALTH" value="9"/>
+      <eLiterals name="SERVICES" value="10"/>
+      <eLiterals name="UNKNOWN" value="11"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="EQF">
+      <eLiterals name="EQF1"/>
+      <eLiterals name="EQF2" value="1"/>
+      <eLiterals name="EQF3" value="2"/>
+      <eLiterals name="EQF4" value="3"/>
+      <eLiterals name="EQF5" value="4"/>
+      <eLiterals name="EQF6" value="5"/>
+      <eLiterals name="EQF7" value="6"/>
+      <eLiterals name="EQF8" value="7"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="identification" nsURI="http://cvmodel/cv/identification" nsPrefix="cvmodel.cv.identification">
+    <eClassifiers xsi:type="ecore:EClass" name="IdentificationSection" eSuperTypes="#//section/Section">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="person" lowerBound="1"
+          eType="#//identification/Person"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Person">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNames" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNames" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" lowerBound="1"
+          eType="#//identification/Gender"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maritalStatus" lowerBound="1"
+          eType="#//identification/MaritalStatus"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="aboutMe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//content/File"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="contacts" upperBound="-1"
+          eType="#//identification/Contact"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="nationalities" upperBound="-1"
+          eType="#//identification/Nationality"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
+          eType="#//identification/NamedAddress"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="Gender">
+      <eLiterals name="MALE"/>
+      <eLiterals name="FEMALE" value="1"/>
+      <eLiterals name="OTHER" value="2"/>
+      <eLiterals name="DONOTINDICATE" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="MaritalStatus">
+      <eLiterals name="SINGLE"/>
+      <eLiterals name="MARRIED" value="1"/>
+      <eLiterals name="DIVORCED" value="2"/>
+      <eLiterals name="SEPARATED" value="3"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Contact">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="info" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Nationality">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="NamedAddress" eSuperTypes="#//content/Address">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

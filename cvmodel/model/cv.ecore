@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="cv" nsURI="http://cvmodel/cv" nsPrefix="cvmodel.cv">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="CV">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sectionLayer" lowerBound="1"
         eType="#//section/SectionLayer" changeable="false" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="contentLayer" lowerBound="1"
-        eType="#//content/ContentLayer" changeable="false" containment="true"/>
   </eClassifiers>
   <eSubpackages name="content" nsURI="http://cvmodel/cv/content" nsPrefix="cvmodel.cv.content">
     <eClassifiers xsi:type="ecore:EClass" name="Content">
@@ -39,23 +40,45 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ContentLayer">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
-          eType="#//content/Content" containment="true"/>
-    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="section" nsURI="http://cvmodel/cv/section" nsPrefix="cvmodel.cv.section">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="Section">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="SectionOrderGreater0 SubSectionOrderUnique SubSectionOrderSequence SubSectionNameUnique"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="SectionOrderGreater0" value="self.order > 0"/>
+        <details key="SubSectionOrderUnique" value="self.subSections->isUnique(order)"/>
+        <details key="SubSectionOrderSequence" value="self.subSections->forAll(s | s.order &lt;= self.subSections->size())"/>
+        <details key="SubSectionNameUnique" value="self.subSections->isUnique(name)"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="order" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="subSections" upperBound="-1"
           eType="#//section/Section" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
           upperBound="-1" eType="#//content/Content"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SectionLayer">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="SectionOrderUnique SectionOrderSequence SectionTitleUnique"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="SectionOrderUnique" value="self.sections->isUnique(order)"/>
+        <details key="SectionOrderSequence" value="self.sections->forAll(s | s.order &lt;= self.sections->size())"/>
+        <details key="SectionTitleUnique" value="self.sections->isUnique(name)"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
           eType="#//section/Section" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="identificationSection"
+          lowerBound="1" eType="#//identification/IdentificationSection"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="workexp" nsURI="http://cvmodel/cv/workexp" nsPrefix="cvmodel.cv.workexp">
@@ -170,7 +193,8 @@
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Email" eSuperTypes="#//identification/contact/Contact"/>
       <eClassifiers xsi:type="ecore:EClass" name="PhoneNumber" eSuperTypes="#//identification/contact/Contact">
-        <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryCode" lowerBound="1"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryCode" lowerBound="1"
+            eType="#//identification/contact/PhoneCountryCode"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="PhoneCountryCode">
         <eLiterals name="AFGHANISTAN" value="93" literal="Afghanistan"/>

@@ -173,247 +173,246 @@
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryCode" lowerBound="1"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="PhoneCountryCode">
-        <eLiterals name="Afghanistan" value="93"/>
-        <eLiterals name="Albania" value="355"/>
-        <eLiterals name="Algeria" value="213"/>
-        <eLiterals name="American Samoa" value="1"/>
-        <eLiterals name="Andorra" value="376"/>
-        <eLiterals name="Angola" value="244"/>
-        <eLiterals name="Anguilla" value="1"/>
-        <eLiterals name="Antarctica" value="672"/>
-        <eLiterals name="Antigua and Barbuda" value="1"/>
-        <eLiterals name="Argentina" value="54"/>
-        <eLiterals name="Armenia" value="374"/>
-        <eLiterals name="Aruba" value="297"/>
-        <eLiterals name="Australia" value="61"/>
-        <eLiterals name="Austria" value="43"/>
-        <eLiterals name="Azerbaijan" value="994"/>
-        <eLiterals name="Bahamas" value="1"/>
-        <eLiterals name="Bahrain" value="973"/>
-        <eLiterals name="Bangladesh" value="880"/>
-        <eLiterals name="Barbados" value="1"/>
-        <eLiterals name="Belarus" value="375"/>
-        <eLiterals name="Belgium" value="32"/>
-        <eLiterals name="Belize" value="501"/>
-        <eLiterals name="Benin" value="229"/>
-        <eLiterals name="Bermuda" value="1"/>
-        <eLiterals name="Bhutan" value="975"/>
-        <eLiterals name="Bolivia" value="591"/>
-        <eLiterals name="Bosnia and Herzegovina" value="387"/>
-        <eLiterals name="Botswana" value="267"/>
-        <eLiterals name="Brazil" value="55"/>
-        <eLiterals name="British Indian Ocean Territory" value="246"/>
-        <eLiterals name="British Virgin Islands" value="1"/>
-        <eLiterals name="Brunei" value="673"/>
-        <eLiterals name="Bulgaria" value="359"/>
-        <eLiterals name="Burkina Faso" value="226"/>
-        <eLiterals name="Burundi" value="257"/>
-        <eLiterals name="Cambodia" value="855"/>
-        <eLiterals name="Cameroon" value="237"/>
-        <eLiterals name="Canada" value="1"/>
-        <eLiterals name="Cape Verde" value="238"/>
-        <eLiterals name="Cayman Islands" value="1"/>
-        <eLiterals name="Central African Republic" value="236"/>
-        <eLiterals name="Chad" value="235"/>
-        <eLiterals name="Chile" value="56"/>
-        <eLiterals name="China" value="86"/>
-        <eLiterals name="Christmas Island" value="61"/>
-        <eLiterals name="Cocos Islands" value="61"/>
-        <eLiterals name="Colombia" value="57"/>
-        <eLiterals name="Comoros" value="269"/>
-        <eLiterals name="Cook Islands" value="682"/>
-        <eLiterals name="Costa Rica" value="506"/>
-        <eLiterals name="Croatia" value="385"/>
-        <eLiterals name="Cuba" value="53"/>
-        <eLiterals name="Curacao" value="599"/>
-        <eLiterals name="Cyprus" value="357"/>
-        <eLiterals name="Czech Republic" value="420"/>
-        <eLiterals name="Democratic Republic of the Congo" value="243"/>
-        <eLiterals name="Denmark" value="45"/>
-        <eLiterals name="Djibouti" value="253"/>
-        <eLiterals name="Dominica" value="1"/>
-        <eLiterals name="Dominican Republic" value="1"/>
-        <eLiterals name="East Timor" value="670"/>
-        <eLiterals name="Ecuador" value="593"/>
-        <eLiterals name="Egypt" value="20"/>
-        <eLiterals name="El Salvador" value="503"/>
-        <eLiterals name="Equatorial Guinea" value="240"/>
-        <eLiterals name="Eritrea" value="291"/>
-        <eLiterals name="Estonia" value="372"/>
-        <eLiterals name="Ethiopia" value="251"/>
-        <eLiterals name="Falkland Islands" value="500"/>
-        <eLiterals name="Faroe Islands" value="298"/>
-        <eLiterals name="Fiji" value="679"/>
-        <eLiterals name="Finland" value="358"/>
-        <eLiterals name="France" value="33"/>
-        <eLiterals name="French Polynesia" value="689"/>
-        <eLiterals name="Gabon" value="241"/>
-        <eLiterals name="Gambia" value="220"/>
-        <eLiterals name="Georgia" value="995"/>
-        <eLiterals name="Germany" value="49"/>
-        <eLiterals name="Ghana" value="233"/>
-        <eLiterals name="Gibraltar" value="350"/>
-        <eLiterals name="Greece" value="30"/>
-        <eLiterals name="Greenland" value="299"/>
-        <eLiterals name="Grenada" value="1"/>
-        <eLiterals name="Guam" value="1"/>
-        <eLiterals name="Guatemala" value="502"/>
-        <eLiterals name="Guernsey" value="44"/>
-        <eLiterals name="Guinea" value="224"/>
-        <eLiterals name="Guinea-Bissau" value="245"/>
-        <eLiterals name="Guyana" value="592"/>
-        <eLiterals name="Haiti" value="509"/>
-        <eLiterals name="Honduras" value="504"/>
-        <eLiterals name="Hong Kong" value="852"/>
-        <eLiterals name="Hungary" value="36"/>
-        <eLiterals name="Iceland" value="354"/>
-        <eLiterals name="India" value="91"/>
-        <eLiterals name="Indonesia" value="62"/>
-        <eLiterals name="Iran" value="98"/>
-        <eLiterals name="Iraq" value="964"/>
-        <eLiterals name="Ireland" value="353"/>
-        <eLiterals name="Isle of Man" value="44"/>
-        <eLiterals name="Israel" value="972"/>
-        <eLiterals name="Italy" value="39"/>
-        <eLiterals name="Ivory Coast" value="225"/>
-        <eLiterals name="Jamaica" value="1"/>
-        <eLiterals name="Japan" value="81"/>
-        <eLiterals name="Jersey" value="44"/>
-        <eLiterals name="Jordan" value="962"/>
-        <eLiterals name="Kazakhstan" value="7"/>
-        <eLiterals name="Kenya" value="254"/>
-        <eLiterals name="Kiribati" value="686"/>
-        <eLiterals name="Kosovo" value="383"/>
-        <eLiterals name="Kuwait" value="965"/>
-        <eLiterals name="Kyrgyzstan" value="996"/>
-        <eLiterals name="Laos" value="856"/>
-        <eLiterals name="Latvia" value="371"/>
-        <eLiterals name="Lebanon" value="961"/>
-        <eLiterals name="Lesotho" value="266"/>
-        <eLiterals name="Liberia" value="231"/>
-        <eLiterals name="Libya" value="218"/>
-        <eLiterals name="Liechtenstein" value="423"/>
-        <eLiterals name="Lithuania" value="370"/>
-        <eLiterals name="Luxembourg" value="352"/>
-        <eLiterals name="Macau" value="853"/>
-        <eLiterals name="Macedonia" value="389"/>
-        <eLiterals name="Madagascar" value="261"/>
-        <eLiterals name="Malawi" value="265"/>
-        <eLiterals name="Malaysia" value="60"/>
-        <eLiterals name="Maldives" value="960"/>
-        <eLiterals name="Mali" value="223"/>
-        <eLiterals name="Malta" value="356"/>
-        <eLiterals name="Marshall Islands" value="692"/>
-        <eLiterals name="Mauritania" value="222"/>
-        <eLiterals name="Mauritius" value="230"/>
-        <eLiterals name="Mayotte" value="262"/>
-        <eLiterals name="Mexico" value="52"/>
-        <eLiterals name="Micronesia" value="691"/>
-        <eLiterals name="Moldova" value="373"/>
-        <eLiterals name="Monaco" value="377"/>
-        <eLiterals name="Mongolia" value="976"/>
-        <eLiterals name="Montenegro" value="382"/>
-        <eLiterals name="Montserrat" value="1"/>
-        <eLiterals name="Morocco" value="212"/>
-        <eLiterals name="Mozambique" value="258"/>
-        <eLiterals name="Myanmar" value="95"/>
-        <eLiterals name="Namibia" value="264"/>
-        <eLiterals name="Nauru" value="674"/>
-        <eLiterals name="Nepal" value="977"/>
-        <eLiterals name="Netherlands" value="31"/>
-        <eLiterals name="Netherlands Antilles" value="599"/>
-        <eLiterals name="New Caledonia" value="687"/>
-        <eLiterals name="New Zealand" value="64"/>
-        <eLiterals name="Nicaragua" value="505"/>
-        <eLiterals name="Niger" value="227"/>
-        <eLiterals name="Nigeria" value="234"/>
-        <eLiterals name="Niue" value="683"/>
-        <eLiterals name="North Korea" value="850"/>
-        <eLiterals name="Northern Mariana Islands" value="1"/>
-        <eLiterals name="Norway" value="47"/>
-        <eLiterals name="Oman" value="968"/>
-        <eLiterals name="Pakistan" value="92"/>
-        <eLiterals name="Palau" value="680"/>
-        <eLiterals name="Palestine" value="970"/>
-        <eLiterals name="Panama" value="507"/>
-        <eLiterals name="Papua New Guinea" value="675"/>
-        <eLiterals name="Paraguay" value="595"/>
-        <eLiterals name="Peru" value="51"/>
-        <eLiterals name="Philippines" value="63"/>
-        <eLiterals name="Pitcairn" value="64"/>
-        <eLiterals name="Poland" value="48"/>
-        <eLiterals name="Portugal" value="351"/>
-        <eLiterals name="Puerto Rico" value="1"/>
-        <eLiterals name="Qatar" value="974"/>
-        <eLiterals name="Republic of the Congo" value="242"/>
-        <eLiterals name="Reunion" value="262"/>
-        <eLiterals name="Romania" value="40"/>
-        <eLiterals name="Russia" value="7"/>
-        <eLiterals name="Rwanda" value="250"/>
-        <eLiterals name="Saint Barthelemy" value="590"/>
-        <eLiterals name="Saint Helena" value="290"/>
-        <eLiterals name="Saint Kitts and Nevis" value="1"/>
-        <eLiterals name="Saint Lucia" value="1"/>
-        <eLiterals name="Saint Martin" value="590"/>
-        <eLiterals name="Saint Pierre and Miquelon" value="508"/>
-        <eLiterals name="Saint Vincent and the Grenadines" value="1"/>
-        <eLiterals name="Samoa" value="685"/>
-        <eLiterals name="San Marino" value="378"/>
-        <eLiterals name="Sao Tome and Principe" value="239"/>
-        <eLiterals name="Saudi Arabia" value="966"/>
-        <eLiterals name="Senegal" value="221"/>
-        <eLiterals name="Serbia" value="381"/>
-        <eLiterals name="Seychelles" value="248"/>
-        <eLiterals name="Sierra Leone" value="232"/>
-        <eLiterals name="Singapore" value="65"/>
-        <eLiterals name="Sint Maarten" value="1"/>
-        <eLiterals name="Slovakia" value="421"/>
-        <eLiterals name="Slovenia" value="386"/>
-        <eLiterals name="Solomon Islands" value="677"/>
-        <eLiterals name="Somalia" value="252"/>
-        <eLiterals name="South Africa" value="27"/>
-        <eLiterals name="South Korea" value="82"/>
-        <eLiterals name="South Sudan" value="211"/>
-        <eLiterals name="Spain" value="34"/>
-        <eLiterals name="Sri Lanka" value="94"/>
-        <eLiterals name="Sudan" value="249"/>
-        <eLiterals name="Suriname" value="597"/>
-        <eLiterals name="Svalbard and Jan Mayen" value="47"/>
-        <eLiterals name="Swaziland" value="268"/>
-        <eLiterals name="Sweden" value="46"/>
-        <eLiterals name="Switzerland" value="41"/>
-        <eLiterals name="Syria" value="963"/>
-        <eLiterals name="Taiwan" value="886"/>
-        <eLiterals name="Tajikistan" value="992"/>
-        <eLiterals name="Tanzania" value="255"/>
-        <eLiterals name="Thailand" value="66"/>
-        <eLiterals name="Togo" value="228"/>
-        <eLiterals name="Tokelau" value="690"/>
-        <eLiterals name="Tonga" value="676"/>
-        <eLiterals name="Trinidad and Tobago" value="1"/>
-        <eLiterals name="Tunisia" value="216"/>
-        <eLiterals name="Turkey" value="90"/>
-        <eLiterals name="Turkmenistan" value="993"/>
-        <eLiterals name="Turks and Caicos Islands" value="1"/>
-        <eLiterals name="Tuvalu" value="688"/>
-        <eLiterals name="U.S. Virgin Islands" value="1"/>
-        <eLiterals name="Uganda" value="256"/>
-        <eLiterals name="Ukraine" value="380"/>
-        <eLiterals name="United Arab Emirates" value="971"/>
-        <eLiterals name="United Kingdom" value="44"/>
-        <eLiterals name="United States" value="1"/>
-        <eLiterals name="Uruguay" value="598"/>
-        <eLiterals name="Uzbekistan" value="998"/>
-        <eLiterals name="Vanuatu" value="678"/>
-        <eLiterals name="Vatican" value="379"/>
-        <eLiterals name="Venezuela" value="58"/>
-        <eLiterals name="Vietnam" value="84"/>
-        <eLiterals name="Wallis and Futuna" value="681"/>
-        <eLiterals name="Western Sahara" value="212"/>
-        <eLiterals name="Yemen" value="967"/>
-        <eLiterals name="Zambia" value="260"/>
-        <eLiterals name="Zimbabwe" value="263"/>
-        <eLiterals name="LITERAL240" value="240"/>
+        <eLiterals name="AFGHANISTAN" value="93" literal="Afghanistan"/>
+        <eLiterals name="ALBANIA" value="355" literal="Albania"/>
+        <eLiterals name="ALGERIA" value="213" literal="Algeria"/>
+        <eLiterals name="AMERICAN_SAMOA" value="1" literal="American Samoa"/>
+        <eLiterals name="ANDORRA" value="376" literal="Andorra"/>
+        <eLiterals name="ANGOLA" value="244" literal="Angola"/>
+        <eLiterals name="ANGUILLA" value="1" literal="Anguilla"/>
+        <eLiterals name="ANTARCTICA" value="672" literal="Antarctica"/>
+        <eLiterals name="ANTIGUA_AND_BARBUDA" value="1" literal="Antigua and Barbuda"/>
+        <eLiterals name="ARGENTINA" value="54" literal="Argentina"/>
+        <eLiterals name="ARMENIA" value="374" literal="Armenia"/>
+        <eLiterals name="ARUBA" value="297" literal="Aruba"/>
+        <eLiterals name="AUSTRALIA" value="61" literal="Australia"/>
+        <eLiterals name="AUSTRIA" value="43" literal="Austria"/>
+        <eLiterals name="AZERBAIJAN" value="994" literal="Azerbaijan"/>
+        <eLiterals name="BAHAMAS" value="1" literal="Bahamas"/>
+        <eLiterals name="BAHRAIN" value="973" literal="Bahrain"/>
+        <eLiterals name="BANGLADESH" value="880" literal="Bangladesh"/>
+        <eLiterals name="BARBADOS" value="1" literal="Barbados"/>
+        <eLiterals name="BELARUS" value="375" literal="Belarus"/>
+        <eLiterals name="BELGIUM" value="32" literal="Belgium"/>
+        <eLiterals name="BELIZE" value="501" literal="Belize"/>
+        <eLiterals name="BENIN" value="229" literal="Benin"/>
+        <eLiterals name="BERMUDA" value="1" literal="Bermuda"/>
+        <eLiterals name="BHUTAN" value="975" literal="Bhutan"/>
+        <eLiterals name="BOLIVIA" value="591" literal="Bolivia"/>
+        <eLiterals name="BOSNIA_AND_HERZEGOVINA" value="387" literal="Bosnia and Herzegovina"/>
+        <eLiterals name="BOTSWANA" value="267" literal="Botswana"/>
+        <eLiterals name="BRAZIL" value="55" literal="Brazil"/>
+        <eLiterals name="BRITISH_INDIAN_OCEAN" value="246" literal="British Indian Ocean Territory"/>
+        <eLiterals name="BRITISH_VIRGIN_ISLANDS" value="1" literal="British Virgin Islands"/>
+        <eLiterals name="BRUNEI" value="673" literal="Brunei"/>
+        <eLiterals name="BULGARIA" value="359" literal="Bulgaria"/>
+        <eLiterals name="BURKINA_FASO" value="226" literal="Burkina Faso"/>
+        <eLiterals name="BURUNDI" value="257" literal="Burundi"/>
+        <eLiterals name="CAMBODIA" value="855" literal="Cambodia"/>
+        <eLiterals name="CAMEROON" value="237" literal="Cameroon"/>
+        <eLiterals name="CANADA" value="1" literal="Canada"/>
+        <eLiterals name="CAPE_VERDE" value="238" literal="Cape Verde"/>
+        <eLiterals name="CAYMAN_ISLANDS" value="1" literal="Cayman Islands"/>
+        <eLiterals name="CENTRAL_AFRICAN" value="236" literal="Central African Republic"/>
+        <eLiterals name="CHAD" value="235" literal="Chad"/>
+        <eLiterals name="CHILE" value="56" literal="Chile"/>
+        <eLiterals name="CHINA" value="86" literal="China"/>
+        <eLiterals name="CHRISTMAS_ISLAND" value="61" literal="Christmas Island"/>
+        <eLiterals name="COCOS_ISLANDS" value="61" literal="Cocos Islands"/>
+        <eLiterals name="COLOMBIA" value="57" literal="Colombia"/>
+        <eLiterals name="COMOROS" value="269" literal="Comoros"/>
+        <eLiterals name="COOK_ISLANDS" value="682" literal="Cook Islands"/>
+        <eLiterals name="COSTA_RICA" value="506" literal="Costa Rica"/>
+        <eLiterals name="CROATIA" value="385" literal="Croatia"/>
+        <eLiterals name="CUBA" value="53" literal="Cuba"/>
+        <eLiterals name="CURACAO" value="599" literal="Curacao"/>
+        <eLiterals name="CYPRUS" value="357" literal="Cyprus"/>
+        <eLiterals name="CZECH_REPUBLIC" value="420" literal="Czech Republic"/>
+        <eLiterals name="DEMO_CONGO" value="243" literal="Democratic Republic of the Congo"/>
+        <eLiterals name="DENMARK" value="45" literal="Denmark"/>
+        <eLiterals name="DJIBOUTI" value="253" literal="Djibouti"/>
+        <eLiterals name="DOMINICA" value="1" literal="Dominica"/>
+        <eLiterals name="DOMINICAN_REPUBLIC" value="1" literal="Dominican Republic"/>
+        <eLiterals name="EAST_TIMOR" value="670" literal="East Timor"/>
+        <eLiterals name="ECUADOR" value="593" literal="Ecuador"/>
+        <eLiterals name="EGYPT" value="20" literal="Egypt"/>
+        <eLiterals name="EL_SALVADOR" value="503" literal="El Salvador"/>
+        <eLiterals name="EQUATORIAL_GUINEA" value="240" literal="Equatorial Guinea"/>
+        <eLiterals name="ERITREA" value="291" literal="Eritrea"/>
+        <eLiterals name="ESTONIA" value="372" literal="Estonia"/>
+        <eLiterals name="ETHIOPIA" value="251" literal="Ethiopia"/>
+        <eLiterals name="FALKLAND_ISLANDS" value="500" literal="Falkland Islands"/>
+        <eLiterals name="FAROE_ISLANDS" value="298" literal="Faroe Islands"/>
+        <eLiterals name="FIJI" value="679" literal="Fiji"/>
+        <eLiterals name="FINLAND" value="358" literal="Finland"/>
+        <eLiterals name="FRANCE" value="33" literal="France"/>
+        <eLiterals name="FRENCH_POLYNESIA" value="689" literal="French Polynesia"/>
+        <eLiterals name="GABON" value="241" literal="Gabon"/>
+        <eLiterals name="GAMBIA" value="220" literal="Gambia"/>
+        <eLiterals name="GEORGIA" value="995" literal="Georgia"/>
+        <eLiterals name="GERMANY" value="49" literal="Germany"/>
+        <eLiterals name="GHANA" value="233" literal="Ghana"/>
+        <eLiterals name="GIBRALTAR" value="350" literal="Gibraltar"/>
+        <eLiterals name="GREECE" value="30" literal="Greece"/>
+        <eLiterals name="GREENLAND" value="299" literal="Greenland"/>
+        <eLiterals name="GRENADA" value="1" literal="Grenada"/>
+        <eLiterals name="GUAM" value="1" literal="Guam"/>
+        <eLiterals name="GUATEMALA" value="502" literal="Guatemala"/>
+        <eLiterals name="GUERNSEY" value="44" literal="Guernsey"/>
+        <eLiterals name="GUINEA" value="224" literal="Guinea"/>
+        <eLiterals name="GUINEA_BISSAU" value="245" literal="Guinea-Bissau"/>
+        <eLiterals name="GUYANA" value="592" literal="Guyana"/>
+        <eLiterals name="HAITI" value="509" literal="Haiti"/>
+        <eLiterals name="HONDURAS" value="504" literal="Honduras"/>
+        <eLiterals name="HONG_KONG" value="852" literal="Hong Kong"/>
+        <eLiterals name="HUNGARY" value="36" literal="Hungary"/>
+        <eLiterals name="ICELAND" value="354" literal="Iceland"/>
+        <eLiterals name="INDIA" value="91" literal="India"/>
+        <eLiterals name="INDONESIA" value="62" literal="Indonesia"/>
+        <eLiterals name="IRAN" value="98" literal="Iran"/>
+        <eLiterals name="IRAQ" value="964" literal="Iraq"/>
+        <eLiterals name="IRELAND" value="353" literal="Ireland"/>
+        <eLiterals name="ISLE_OF_MAN" value="44" literal="Isle of Man"/>
+        <eLiterals name="ISRAEL" value="972" literal="Israel"/>
+        <eLiterals name="ITALY" value="39" literal="Italy"/>
+        <eLiterals name="IVORY_COAST" value="225" literal="Ivory Coast"/>
+        <eLiterals name="JAMAICA" value="1" literal="Jamaica"/>
+        <eLiterals name="JAPAN" value="81" literal="Japan"/>
+        <eLiterals name="JERSEY" value="44" literal="Jersey"/>
+        <eLiterals name="JORDAN" value="962" literal="Jordan"/>
+        <eLiterals name="KAZAKHSTAN" value="7" literal="Kazakhstan"/>
+        <eLiterals name="KENYA" value="254" literal="Kenya"/>
+        <eLiterals name="KIRIBATI" value="686" literal="Kiribati"/>
+        <eLiterals name="KOSOVO" value="383" literal="Kosovo"/>
+        <eLiterals name="KUWAIT" value="965" literal="Kuwait"/>
+        <eLiterals name="KYRGYZSTAN" value="996" literal="Kyrgyzstan"/>
+        <eLiterals name="LAOS" value="856" literal="Laos"/>
+        <eLiterals name="LATVIA" value="371" literal="Latvia"/>
+        <eLiterals name="LEBANON" value="961" literal="Lebanon"/>
+        <eLiterals name="LESOTHO" value="266" literal="Lesotho"/>
+        <eLiterals name="LIBERIA" value="231" literal="Liberia"/>
+        <eLiterals name="LIBYA" value="218" literal="Libya"/>
+        <eLiterals name="LIECHTENSTEIN" value="423" literal="Liechtenstein"/>
+        <eLiterals name="LITHUANIA" value="370" literal="Lithuania"/>
+        <eLiterals name="LUXEMBOURG" value="352" literal="Luxembourg"/>
+        <eLiterals name="MACAU" value="853" literal="Macau"/>
+        <eLiterals name="MACEDONIA" value="389" literal="Macedonia"/>
+        <eLiterals name="MADAGASCAR" value="261" literal="Madagascar"/>
+        <eLiterals name="MALAWI" value="265" literal="Malawi"/>
+        <eLiterals name="MALAYSIA" value="60" literal="Malaysia"/>
+        <eLiterals name="MALDIVES" value="960" literal="Maldives"/>
+        <eLiterals name="MALI" value="223" literal="Mali"/>
+        <eLiterals name="MALTA" value="356" literal="Malta"/>
+        <eLiterals name="MARSHALL_ISLANDS" value="692" literal="Marshall Islands"/>
+        <eLiterals name="MAURITANIA" value="222" literal="Mauritania"/>
+        <eLiterals name="MAURITIUS" value="230" literal="Mauritius"/>
+        <eLiterals name="MAYOTTE" value="262" literal="Mayotte"/>
+        <eLiterals name="MEXICO" value="52" literal="Mexico"/>
+        <eLiterals name="MICRONESIA" value="691" literal="Micronesia"/>
+        <eLiterals name="MOLDOVA" value="373" literal="Moldova"/>
+        <eLiterals name="MONACO" value="377" literal="Monaco"/>
+        <eLiterals name="MONGOLIA" value="976" literal="Mongolia"/>
+        <eLiterals name="MONTENEGRO" value="382" literal="Montenegro"/>
+        <eLiterals name="MONTSERRAT" value="1" literal="Montserrat"/>
+        <eLiterals name="MOROCCO" value="212" literal="Morocco"/>
+        <eLiterals name="MOZAMBIQUE" value="258" literal="Mozambique"/>
+        <eLiterals name="MYANMAR" value="95" literal="Myanmar"/>
+        <eLiterals name="NAMIBIA" value="264" literal="Namibia"/>
+        <eLiterals name="NAURU" value="674" literal="Nauru"/>
+        <eLiterals name="NEPAL" value="977" literal="Nepal"/>
+        <eLiterals name="NETHERLANDS" value="31" literal="Netherlands"/>
+        <eLiterals name="NETHERLANDS_ANTILLES" value="599" literal="Netherlands Antilles"/>
+        <eLiterals name="NEW_CALEDONIA" value="687" literal="New Caledonia"/>
+        <eLiterals name="NEW_ZEALAND" value="64" literal="New Zealand"/>
+        <eLiterals name="NICARAGUA" value="505" literal="Nicaragua"/>
+        <eLiterals name="NIGER" value="227" literal="Niger"/>
+        <eLiterals name="NIGERIA" value="234" literal="Nigeria"/>
+        <eLiterals name="NIUE" value="683" literal="Niue"/>
+        <eLiterals name="NORTH_KOREA" value="850" literal="North Korea"/>
+        <eLiterals name="NORTHERN_MARIANA_ISLANDS" value="1" literal="Northern Mariana Islands"/>
+        <eLiterals name="NORWAY" value="47" literal="Norway"/>
+        <eLiterals name="OMAN" value="968" literal="Oman"/>
+        <eLiterals name="PAKISTAN" value="92" literal="Pakistan"/>
+        <eLiterals name="PALAU" value="680" literal="Palau"/>
+        <eLiterals name="PALESTINE" value="970" literal="Palestine"/>
+        <eLiterals name="PANAMA" value="507" literal="Panama"/>
+        <eLiterals name="PAPUA_NEW_GUINEA" value="675" literal="Papua New Guinea"/>
+        <eLiterals name="PARAGUAY" value="595" literal="Paraguay"/>
+        <eLiterals name="PERU" value="51" literal="Peru"/>
+        <eLiterals name="PHILIPPINES" value="63" literal="Philippines"/>
+        <eLiterals name="PITCAIRN" value="64" literal="Pitcairn"/>
+        <eLiterals name="POLAND" value="48" literal="Poland"/>
+        <eLiterals name="PORTUGAL" value="351" literal="Portugal"/>
+        <eLiterals name="PUERTO_RICO" value="1" literal="Puerto Rico"/>
+        <eLiterals name="QATAR" value="974" literal="Qatar"/>
+        <eLiterals name="CONGO" value="242" literal="Republic of the Congo"/>
+        <eLiterals name="REUNION" value="262" literal="Reunion"/>
+        <eLiterals name="ROMANIA" value="40" literal="Romania"/>
+        <eLiterals name="RUSSIA" value="7" literal="Russia"/>
+        <eLiterals name="RWANDA" value="250" literal="Rwanda"/>
+        <eLiterals name="SAINT_BARTHELEMY" value="590" literal="Saint Barthelemy"/>
+        <eLiterals name="SAINT_HELENA" value="290" literal="Saint Helena"/>
+        <eLiterals name="SAINT_KITTS_NEVIS" value="1" literal="Saint Kitts and Nevis"/>
+        <eLiterals name="SAINT_LUCIA" value="1" literal="Saint Lucia"/>
+        <eLiterals name="SAINT_MARTIN" value="590" literal="Saint Martin"/>
+        <eLiterals name="SAINT_PIERRE" value="508" literal="Saint Pierre and Miquelon"/>
+        <eLiterals name="SAINT_VINCENT" value="1" literal="Saint Vincent and the Grenadines"/>
+        <eLiterals name="SAMOA" value="685" literal="Samoa"/>
+        <eLiterals name="SAN_MARINO" value="378" literal="San Marino"/>
+        <eLiterals name="SAO_TOME_PRINCIPE" value="239" literal="Sao Tome and Principe"/>
+        <eLiterals name="SAUDI_ARABIA" value="966" literal="Saudi Arabia"/>
+        <eLiterals name="SENEGAL" value="221" literal="Senegal"/>
+        <eLiterals name="SERBIA" value="381" literal="Serbia"/>
+        <eLiterals name="SEYCHELLES" value="248" literal="Seychelles"/>
+        <eLiterals name="SIERRA_LEONE" value="232" literal="Sierra Leone"/>
+        <eLiterals name="SINGAPORE" value="65" literal="Singapore"/>
+        <eLiterals name="SINT_MAARTEN" value="1" literal="Sint Maarten"/>
+        <eLiterals name="SLOVAKIA" value="421" literal="Slovakia"/>
+        <eLiterals name="SLOVENIA" value="386" literal="Slovenia"/>
+        <eLiterals name="SOLOMON_ISLANDS" value="677" literal="Solomon Islands"/>
+        <eLiterals name="SOMALIA" value="252" literal="Somalia"/>
+        <eLiterals name="SOUTH_AFRICA" value="27" literal="South Africa"/>
+        <eLiterals name="SOUTH_KOREA" value="82" literal="South Korea"/>
+        <eLiterals name="SOUTH_SUDAN" value="211" literal="South Sudan"/>
+        <eLiterals name="SPAIN" value="34" literal="Spain"/>
+        <eLiterals name="SRI_LANKA" value="94" literal="Sri Lanka"/>
+        <eLiterals name="SUDAN" value="249" literal="Sudan"/>
+        <eLiterals name="SURINAME" value="597" literal="Suriname"/>
+        <eLiterals name="SVALBARD_JAN_MAYEN" value="47" literal="Svalbard and Jan Mayen"/>
+        <eLiterals name="SWAZILAND" value="268" literal="Swaziland"/>
+        <eLiterals name="SWEDEN" value="46" literal="Sweden"/>
+        <eLiterals name="SWITZERLAND" value="41" literal="Switzerland"/>
+        <eLiterals name="SYRIA" value="963" literal="Syria"/>
+        <eLiterals name="TAIWAN" value="886" literal="Taiwan"/>
+        <eLiterals name="TAJIKISTAN" value="992" literal="Tajikistan"/>
+        <eLiterals name="TANZANIA" value="255" literal="Tanzania"/>
+        <eLiterals name="THAILAND" value="66" literal="Thailand"/>
+        <eLiterals name="TOGO" value="228" literal="Togo"/>
+        <eLiterals name="TOKELAU" value="690" literal="Tokelau"/>
+        <eLiterals name="TONGA" value="676" literal="Tonga"/>
+        <eLiterals name="TRINIDAD_TOBAGO" value="1" literal="Trinidad and Tobago"/>
+        <eLiterals name="TUNISIA" value="216" literal="Tunisia"/>
+        <eLiterals name="TURKEY" value="90" literal="Turkey"/>
+        <eLiterals name="TURKMENISTAN" value="993" literal="Turkmenistan"/>
+        <eLiterals name="TURKS_CAICOS_ISLANDS" value="1" literal="Turks and Caicos Islands"/>
+        <eLiterals name="TUVALU" value="688" literal="Tuvalu"/>
+        <eLiterals name="US_VIRGIN_ISLANDS" value="1" literal="U.S. Virgin Islands"/>
+        <eLiterals name="UGANDA" value="256" literal="Uganda"/>
+        <eLiterals name="UKRAINE" value="380" literal="Ukraine"/>
+        <eLiterals name="UNITED_ARAB_EMIRATES" value="971" literal="United Arab Emirates"/>
+        <eLiterals name="UNITED_KINGDOM" value="44" literal="United Kingdom"/>
+        <eLiterals name="UNITED_STATES" value="1" literal="United States"/>
+        <eLiterals name="URUGUAY" value="598" literal="Uruguay"/>
+        <eLiterals name="UZBEKISTAN" value="998" literal="Uzbekistan"/>
+        <eLiterals name="VANUATU" value="678" literal="Vanuatu"/>
+        <eLiterals name="VATICAN" value="379" literal="Vatican"/>
+        <eLiterals name="VENEZUELA" value="58" literal="Venezuela"/>
+        <eLiterals name="VIETNAM" value="84" literal="Vietnam"/>
+        <eLiterals name="WALLIS_FUTUNA" value="681" literal="Wallis and Futuna"/>
+        <eLiterals name="WESTERN_SAHARA" value="212" literal="Western Sahara"/>
+        <eLiterals name="YEMEN" value="967" literal="Yemen"/>
+        <eLiterals name="ZAMBIA" value="260" literal="Zambia"/>
+        <eLiterals name="ZIMBABWE" value="263" literal="Zimbabwe"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="HomePhoneNumber" eSuperTypes="#//identification/contact/PhoneNumber"/>
       <eClassifiers xsi:type="ecore:EClass" name="WorkPhoneNumber" eSuperTypes="#//identification/contact/PhoneNumber"/>

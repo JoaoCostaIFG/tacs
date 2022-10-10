@@ -146,11 +146,22 @@
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="edutrain" nsURI="http://cvmodel/cv/edutrain" nsPrefix="cvmodel.cv.edutrain">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="EducationTrainingSection" eSuperTypes="#//section/Section">
       <eStructuralFeatures xsi:type="ecore:EReference" name="educationTraining" upperBound="-1"
           eType="#//edutrain/EducationTraining"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EducationTraining">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="EduTrainTitleNotEmpty"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="EduTrainTitleNotEmpty" value="self.title.size() > 0"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="organization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -175,6 +186,7 @@
       <eLiterals name="UNKNOWN" value="11" literal="Field unknown"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="EQF">
+      <eLiterals name="NO_EQF" literal="No EQF set"/>
       <eLiterals name="EQF1" value="1" literal="EQF 1"/>
       <eLiterals name="EQF2" value="2" literal="EQF 2"/>
       <eLiterals name="EQF3" value="3" literal="EQF 3"/>
@@ -195,9 +207,9 @@
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNames" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" lowerBound="1"
-          eType="#//identification/Gender" defaultValueLiteral="DONOTINDICATE"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="gender" lowerBound="1"
+          eType="#//identification/Gender"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="maritalStatus" lowerBound="1"
           eType="#//identification/MaritalStatus"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="aboutMe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -242,6 +254,7 @@
             eType="#//identification/contact/PhoneCountryCode"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EEnum" name="PhoneCountryCode">
+        <eLiterals name="UNITED_STATES" value="1" literal="United States"/>
         <eLiterals name="AFGHANISTAN" value="93" literal="Afghanistan"/>
         <eLiterals name="ALBANIA" value="355" literal="Albania"/>
         <eLiterals name="ALGERIA" value="213" literal="Algeria"/>
@@ -470,7 +483,6 @@
         <eLiterals name="UKRAINE" value="380" literal="Ukraine"/>
         <eLiterals name="UNITED_ARAB_EMIRATES" value="971" literal="United Arab Emirates"/>
         <eLiterals name="UNITED_KINGDOM" value="44" literal="United Kingdom"/>
-        <eLiterals name="UNITED_STATES" value="1" literal="United States"/>
         <eLiterals name="URUGUAY" value="598" literal="Uruguay"/>
         <eLiterals name="UZBEKISTAN" value="998" literal="Uzbekistan"/>
         <eLiterals name="VANUATU" value="678" literal="Vanuatu"/>

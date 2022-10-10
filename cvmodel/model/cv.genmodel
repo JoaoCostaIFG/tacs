@@ -82,6 +82,7 @@
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/UNKNOWN"/>
       </genEnums>
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//edutrain/EQF">
+        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/NO_EQF"/>
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF1"/>
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF2"/>
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF3"/>
@@ -126,8 +127,8 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/firstNames"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/lastNames"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/title"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/gender"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/dateOfBirth"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/gender"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/maritalStatus"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/aboutMe"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -145,6 +146,7 @@
       <genClasses ecoreClass="cv.ecore#//identification/WorkAddress"/>
       <nestedGenPackages prefix="Contact" disposableProviderFactory="true" ecorePackage="cv.ecore#//identification/contact">
         <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//identification/contact/PhoneCountryCode">
+          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_STATES"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/AFGHANISTAN"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ALBANIA"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ALGERIA"/>
@@ -373,7 +375,6 @@
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UKRAINE"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_ARAB_EMIRATES"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_KINGDOM"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_STATES"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/URUGUAY"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UZBEKISTAN"/>
           <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/VANUATU"/>

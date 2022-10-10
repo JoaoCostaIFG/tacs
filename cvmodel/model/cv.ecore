@@ -29,11 +29,10 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="File">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="FilePathNotEmpty FileTypeNotNull"/>
+        <details key="constraints" value="FilePathNotEmpty"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="FilePathNotEmpty" value="self.path.size() > 0"/>
-        <details key="FileTypeNotNull" value="self.type &lt;> null"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
@@ -47,18 +46,21 @@
       <eLiterals name="JPG" value="2"/>
       <eLiterals name="SVG" value="3"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TimeFrame">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="TimeFrameStartDateNotNull TimeFrameDateValid"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="TimeFrameStartDateNotNull" value="self.startDate &lt;> null"/>
-        <details key="TimeFrameDateValid" value="self.endDate = null or self.startDate &lt;= self.endDate"/>
-      </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="TimeFrame" abstract="true">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="StartEndTimeFrame" eSuperTypes="#//content/TimeFrame">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="TimeFrameDateValid"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="TimeFrameDateValid" value="self.startDate &lt;= self.endDate"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OnGoingTimeFrame" eSuperTypes="#//content/TimeFrame"/>
     <eClassifiers xsi:type="ecore:EClass" name="Address">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="AddressCountryNotEmpty"/>
@@ -83,9 +85,10 @@
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="Section">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="SectionOrderGreater0 SubSectionOrderUnique SubSectionOrderSequence SubSectionNameUnique"/>
+        <details key="constraints" value="SectionNameNotEmpty SectionOrderGreater0 SubSectionOrderUnique SubSectionOrderSequence SubSectionNameUnique"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="SectionNameNotEmpty" value="self.name.size() > 0"/>
         <details key="SectionOrderGreater0" value="self.order > 0"/>
         <details key="SubSectionOrderUnique" value="self.subSections->isUnique(order)"/>
         <details key="SubSectionOrderSequence" value="self.subSections->forAll(s | s.order &lt;= self.subSections->size())"/>

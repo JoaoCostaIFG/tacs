@@ -10,9 +10,9 @@
     </genClasses>
     <nestedGenPackages prefix="Content" disposableProviderFactory="true" ecorePackage="cv.ecore#//content">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//content/FileType">
+        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/PDF"/>
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/PNG"/>
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/JPG"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/PDF"/>
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/SVG"/>
       </genEnums>
       <genClasses ecoreClass="cv.ecore#//content/Content">
@@ -26,8 +26,11 @@
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//content/TimeFrame">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/TimeFrame/startDate"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/TimeFrame/endDate"/>
       </genClasses>
+      <genClasses ecoreClass="cv.ecore#//content/StartEndTimeFrame">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/StartEndTimeFrame/endDate"/>
+      </genClasses>
+      <genClasses ecoreClass="cv.ecore#//content/OnGoingTimeFrame"/>
       <genClasses ecoreClass="cv.ecore#//content/Address">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/line1"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/line2"/>
@@ -41,13 +44,11 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/order"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/subSections"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//section/Section/content"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/content"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//section/SectionLayer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/sections"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/identificationSection"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/identificationSection"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Workexp" disposableProviderFactory="true" ecorePackage="cv.ecore#//workexp">
@@ -131,15 +132,11 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/aboutMe"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference cv.ecore#//identification/Person/picture"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/nationalities"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference cv.ecore#//identification/Person/contacts"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//identification/Person/nationalities"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference cv.ecore#//identification/Person/addresses"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//identification/Nationality">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Nationality/name"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//identification/NamedAddress">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/NamedAddress/name"/>

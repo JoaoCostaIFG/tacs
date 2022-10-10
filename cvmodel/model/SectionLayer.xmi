@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <cvmodel.cv.section:SectionLayer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv.section="http://cvmodel/cv/section" xsi:schemaLocation="http://cvmodel/cv/section cv.ecore#//section">
-  <sections/>
+  <sections name="name1" order="2"/>
 </cvmodel.cv.section:SectionLayer>

@@ -124,28 +124,28 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="eqf" eType="#//edutrain/EQF"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="FieldOfStudy">
-      <eLiterals name="GENERIC"/>
-      <eLiterals name="EDUCATION" value="1"/>
-      <eLiterals name="ARTS_HUMANITIES" value="2"/>
-      <eLiterals name="SOCIAL_SCIENCES" value="3"/>
-      <eLiterals name="BUSINESS_LAW" value="4"/>
-      <eLiterals name="NATURAL_SCIENCES" value="5"/>
-      <eLiterals name="INFO_COMM_TECH" value="6"/>
-      <eLiterals name="ENGINEERING" value="7"/>
-      <eLiterals name="AGRICULTURE" value="8"/>
-      <eLiterals name="HEALTH" value="9"/>
-      <eLiterals name="SERVICES" value="10"/>
-      <eLiterals name="UNKNOWN" value="11"/>
+      <eLiterals name="GENERIC" literal="Generic programs and classifications"/>
+      <eLiterals name="EDUCATION" value="1" literal="Education"/>
+      <eLiterals name="ARTS_HUMANITIES" value="2" literal="Arts and humanities"/>
+      <eLiterals name="SOCIAL_SCIENCES" value="3" literal="Social sciences, journalism and information"/>
+      <eLiterals name="BUSINESS_LAW" value="4" literal="Business, administration and law"/>
+      <eLiterals name="NATURAL_SCIENCES" value="5" literal="Natural sciences, mathematics and statistics"/>
+      <eLiterals name="INFO_COMM_TECH" value="6" literal="Information and Communication Technologies"/>
+      <eLiterals name="ENGINEERING" value="7" literal="Engineering, manufacturing and construction"/>
+      <eLiterals name="AGRICULTURE" value="8" literal="Agriculture, forestry, fisheries and veterinary"/>
+      <eLiterals name="HEALTH" value="9" literal="Health and welfare"/>
+      <eLiterals name="SERVICES" value="10" literal="Services"/>
+      <eLiterals name="UNKNOWN" value="11" literal="Field unknown"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="EQF">
-      <eLiterals name="EQF1" value="1"/>
-      <eLiterals name="EQF2" value="2"/>
-      <eLiterals name="EQF3" value="3"/>
-      <eLiterals name="EQF4" value="4"/>
-      <eLiterals name="EQF5" value="5"/>
-      <eLiterals name="EQF6" value="6"/>
-      <eLiterals name="EQF7" value="7"/>
-      <eLiterals name="EQF8" value="8"/>
+      <eLiterals name="EQF1" value="1" literal="EQF 1"/>
+      <eLiterals name="EQF2" value="2" literal="EQF 2"/>
+      <eLiterals name="EQF3" value="3" literal="EQF 3"/>
+      <eLiterals name="EQF4" value="4" literal="EQF 4"/>
+      <eLiterals name="EQF5" value="5" literal="EQF 5"/>
+      <eLiterals name="EQF6" value="6" literal="EQF 6"/>
+      <eLiterals name="EQF7" value="7" literal="EQF 7"/>
+      <eLiterals name="EQF8" value="8" literal="EQF 8"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="identification" nsURI="http://cvmodel/cv/identification" nsPrefix="cvmodel.cv.identification">

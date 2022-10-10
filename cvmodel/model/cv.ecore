@@ -16,41 +16,63 @@
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="Content">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="ContentNameNotNull"/>
+        <details key="constraints" value="ContentNameNotEmpty"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="ContentNameNotNull" value="self.name &lt;> null"/>
+        <details key="ContentNameNotEmpty" value="self.name.size() > 0"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="File">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="FilePathNotEmpty FileTypeNotNull"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="FilePathNotEmpty" value="self.path.size() > 0"/>
+        <details key="FileTypeNotNull" value="self.type &lt;> null"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
           eType="#//content/FileType"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EEnum" name="FileType">
-      <eLiterals name="PNG"/>
-      <eLiterals name="JPG" value="1"/>
-      <eLiterals name="PDF" value="2"/>
+      <eLiterals name="PDF"/>
+      <eLiterals name="PNG" value="1"/>
+      <eLiterals name="JPG" value="2"/>
       <eLiterals name="SVG" value="3"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TimeFrame">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="TimeFrameStartDateNotNull TimeFrameDateValid"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="TimeFrameStartDateNotNull" value="self.startDate &lt;> null"/>
+        <details key="TimeFrameDateValid" value="self.endDate = null or self.startDate &lt;= self.endDate"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="startDate" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate" unsettable="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="endDate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Address">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="AddressCountryNotEmpty"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="AddressCountryNotEmpty" value="self.country.size() > 0"/>
+      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="line1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="line2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="section" nsURI="http://cvmodel/cv/section" nsPrefix="cvmodel.cv.section">
@@ -76,7 +98,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="subSections" upperBound="-1"
           eType="#//section/Section" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
-          upperBound="-1" eType="#//content/Content"/>
+          upperBound="-1" eType="#//content/Content" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SectionLayer">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -90,7 +112,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
           eType="#//section/Section" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="identificationSection"
-          lowerBound="1" eType="#//identification/IdentificationSection"/>
+          lowerBound="1" eType="#//identification/IdentificationSection" containment="true"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="workexp" nsURI="http://cvmodel/cv/workexp" nsPrefix="cvmodel.cv.workexp">
@@ -165,10 +187,10 @@
           eType="#//identification/MaritalStatus"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="aboutMe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//content/File"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationalities" upperBound="-1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="contacts" upperBound="-1"
           eType="#//identification/contact/Contact"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="nationalities" upperBound="-1"
-          eType="#//identification/Nationality"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="addresses" upperBound="-1"
           eType="#//identification/NamedAddress"/>
     </eClassifiers>
@@ -184,10 +206,6 @@
       <eLiterals name="DIVORCED" value="2"/>
       <eLiterals name="SEPARATED" value="3"/>
       <eLiterals name="SINGLE" value="4"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Nationality">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NamedAddress" eSuperTypes="#//content/Address">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"

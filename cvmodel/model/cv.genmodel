@@ -24,6 +24,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Content/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Content/description"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Content/url"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//content/Content/files"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//content/File">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/path"/>

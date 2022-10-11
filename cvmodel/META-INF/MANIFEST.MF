@@ -40,5 +40,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.ocl.pivot;visibility:=reexport,
  org.eclipse.ocl.examples.codegen;visibility:=reexport,
  org.junit,
- junit-jupiter-api
+ junit-jupiter-api,
+ org.apache.log4j;bundle-version="1.2.19",
+ com.google.guava;bundle-version="30.1.0"
 Bundle-ActivationPolicy: lazy

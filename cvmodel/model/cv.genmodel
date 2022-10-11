@@ -48,11 +48,9 @@
       <genClasses image="false" ecoreClass="cv.ecore#//section/SectionContainer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionContainer/sections"/>
       </genClasses>
-      <genClasses image="false" ecoreClass="cv.ecore#//section/ContentContainer">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/ContentContainer/content"/>
-      </genClasses>
       <genClasses ecoreClass="cv.ecore#//section/Section">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/name"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/content"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//section/SectionLayer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/identificationSection"/>

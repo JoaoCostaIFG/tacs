@@ -112,27 +112,20 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
           eType="#//section/Section" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="ContentContainer" abstract="true">
+    <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//section/SectionContainer #//order/Orderable">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="ContentOrderUnique ContentOrderSequence"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="ContentOrderUnique" value="self.content->isUnique(order)"/>
-        <details key="ContentOrderSequence" value="self.content->forAll(s | s.order &lt;= self.content->size())"/>
-      </eAnnotations>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
-          upperBound="-1" eType="#//content/Content" containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//section/SectionContainer #//section/ContentContainer #//order/Orderable">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="SectionNameNotEmpty"/>
+        <details key="constraints" value="SectionNameNotEmpty SectionContentOrderUnique SectionContentOrderSequence"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="SectionNameNotEmpty" value="self.name.size() > 0"/>
+        <details key="SectionContentOrderUnique" value="self.content->isUnique(order)"/>
+        <details key="SectionContentOrderSequence" value="self.content->forAll(c | c.order &lt;= self.content->size())"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
           defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
+          upperBound="-1" eType="#//content/Content" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SectionLayer" eSuperTypes="#//section/SectionContainer">
       <eStructuralFeatures xsi:type="ecore:EReference" name="identificationSection"

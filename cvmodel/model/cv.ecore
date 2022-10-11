@@ -32,30 +32,16 @@
       <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="Content" eSuperTypes="#//order/Orderable">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="ContentNameNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="ContentNameNotEmpty" value="self.name.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
           eType="#//content/File" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="File">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="FilePathNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="FilePathNotEmpty" value="self.path.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1"
           eType="#//content/FileType"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="createdDate" lowerBound="1"
@@ -83,19 +69,12 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="OnGoingTimeFrame" eSuperTypes="#//content/TimeFrame"/>
     <eClassifiers xsi:type="ecore:EClass" name="Address">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="AddressCountryNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="AddressCountryNotEmpty" value="self.country.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="line1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="line2" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalCode" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="country" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="section" nsURI="http://cvmodel/cv/section" nsPrefix="cvmodel.cv.section">
@@ -115,52 +94,37 @@
         <details key="SectionNoLoops" value="self.sections->closure(sections)->excludes(self)"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
-          eType="#//section/Section" containment="true"/>
+          eType="#//section/OrderedSection" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Section" eSuperTypes="#//section/SectionContainer #//order/Orderable">
+    <eClassifiers xsi:type="ecore:EClass" name="Section" abstract="true" eSuperTypes="#//section/SectionContainer">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="SectionNameNotEmpty SectionContentOrderUnique SectionContentOrderSequence"/>
+        <details key="constraints" value="SectionContentOrderUnique SectionContentOrderSequence"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="SectionNameNotEmpty" value="self.name.size() > 0"/>
         <details key="SectionContentOrderUnique" value="self.content->isUnique(order)"/>
         <details key="SectionContentOrderSequence" value="self.content->forAll(c | c.order &lt;= self.content->size())"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
           eType="#//content/Content" containment="true"/>
     </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OrderedSection" eSuperTypes="#//section/Section #//order/Orderable"/>
     <eClassifiers xsi:type="ecore:EClass" name="SectionLayer" eSuperTypes="#//section/SectionContainer">
       <eStructuralFeatures xsi:type="ecore:EReference" name="identificationSection"
           lowerBound="1" eType="#//identification/IdentificationSection" containment="true"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="workexp" nsURI="http://cvmodel/cv/workexp" nsPrefix="cvmodel.cv.workexp">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="WorkExperienceSection" eSuperTypes="#//section/Section">
+    <eClassifiers xsi:type="ecore:EClass" name="WorkExperienceSection" eSuperTypes="#//section/OrderedSection">
       <eStructuralFeatures xsi:type="ecore:EReference" name="workExperiences" lowerBound="1"
           upperBound="-1" eType="#//workexp/WorkExperience" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="WorkExperience">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="WorkExpOccupationNotEmpty WorkExpEmployerNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="WorkExpOccupationNotEmpty" value="self.occupation.size() > 0"/>
-        <details key="WorkExpEmployerNotEmpty" value="self.employer.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="occupation" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="employer" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" lowerBound="1"
           eType="#//content/TimeFrame"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -168,25 +132,13 @@
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="edutrain" nsURI="http://cvmodel/cv/edutrain" nsPrefix="cvmodel.cv.edutrain">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="EducationTrainingSection" eSuperTypes="#//section/Section">
+    <eClassifiers xsi:type="ecore:EClass" name="EducationTrainingSection" eSuperTypes="#//section/OrderedSection">
       <eStructuralFeatures xsi:type="ecore:EReference" name="educationTraining" upperBound="-1"
           eType="#//edutrain/EducationTraining" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EducationTraining">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="EduTrainTitleNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="EduTrainTitleNotEmpty" value="self.title.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="organization" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="finalGrade" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -221,25 +173,13 @@
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="identification" nsURI="http://cvmodel/cv/identification" nsPrefix="cvmodel.cv.identification">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-      <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-      <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-      <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
-    </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="IdentificationSection" eSuperTypes="#//section/Section">
       <eStructuralFeatures xsi:type="ecore:EReference" name="person" lowerBound="1"
           eType="#//identification/Person"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Person">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="PersonFirstNameNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="PersonFirstNameNotEmpty" value="self.firstNames.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNames" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNames" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateOfBirth" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
@@ -270,15 +210,8 @@
       <eLiterals name="SINGLE" value="4"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="NamedAddress" eSuperTypes="#//content/Address">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="NamedAddressNameNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="NamedAddressNameNotEmpty" value="self.name.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HomeAddress" eSuperTypes="#//identification/NamedAddress"/>
     <eClassifiers xsi:type="ecore:EClass" name="WorkAddress" eSuperTypes="#//identification/NamedAddress"/>
@@ -290,19 +223,10 @@
         <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
       </eAnnotations>
       <eClassifiers xsi:type="ecore:EClass" name="Contact">
-        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-          <details key="constraints" value="ContactNameNotEmpty ContactInfoNotEmpty"/>
-        </eAnnotations>
-        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-          <details key="ContactNameNotEmpty" value="self.name.size() > 0"/>
-          <details key="ContactInfoNotEmpty" value="self.info.size() > 0"/>
-        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-            defaultValueLiteral=""/>
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="info" lowerBound="1"
-            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-            defaultValueLiteral=""/>
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="Email" eSuperTypes="#//identification/contact/Contact">
         <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -313,6 +237,12 @@
         </eAnnotations>
       </eClassifiers>
       <eClassifiers xsi:type="ecore:EClass" name="PhoneNumber" eSuperTypes="#//identification/contact/Contact">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="PhoneNumberIsValid"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+          <details key="PhoneNumberIsValid" value="self.info.matches('[0-9- ]+')"/>
+        </eAnnotations>
         <eStructuralFeatures xsi:type="ecore:EAttribute" name="countryCode" lowerBound="1"
             eType="#//identification/contact/PhoneCountryCode"/>
       </eClassifiers>
@@ -570,7 +500,7 @@
       <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
       <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="SkillSection" eSuperTypes="#//section/Section">
+    <eClassifiers xsi:type="ecore:EClass" name="SkillSection" eSuperTypes="#//section/OrderedSection">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
         <details key="constraints" value="SkillSectionNoLanguageDups"/>
       </eAnnotations>
@@ -588,28 +518,19 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="HardSkill">
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="HardSkillNameNotEmpty HardSkillProficiencyRange"/>
+        <details key="constraints" value="HardSkillProficiencyRange"/>
       </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="HardSkillNameNotEmpty" value="self.name.size() > 0"/>
         <details key="HardSkillProficiencyRange" value="0 &lt;= self.proficiency and self.proficiency &lt;= 5"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="proficiency" lowerBound="1"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Language" abstract="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
-        <details key="constraints" value="LanguageNameNotEmpty"/>
-      </eAnnotations>
-      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-        <details key="LanguageNameNotEmpty" value="self.name.size() > 0"/>
-      </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-          defaultValueLiteral=""/>
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="MotherTongue" eSuperTypes="#//skill/Language"/>
     <eClassifiers xsi:type="ecore:EClass" name="SecondLanguage" eSuperTypes="#//skill/Language">

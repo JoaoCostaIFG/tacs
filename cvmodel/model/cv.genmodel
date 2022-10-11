@@ -29,6 +29,7 @@
       <genClasses ecoreClass="cv.ecore#//content/File">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/path"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/createdDate"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//content/TimeFrame">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/TimeFrame/startDate"/>
@@ -53,6 +54,7 @@
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/name"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/content"/>
       </genClasses>
+      <genClasses ecoreClass="cv.ecore#//section/OrderedSection"/>
       <genClasses ecoreClass="cv.ecore#//section/SectionLayer">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/identificationSection"/>
       </genClasses>
@@ -65,11 +67,11 @@
       <genClasses ecoreClass="cv.ecore#//workexp/WorkExperience">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//workexp/WorkExperience/occupation"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//workexp/WorkExperience/employer"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference cv.ecore#//workexp/WorkExperience/timeFrame"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//workexp/WorkExperience/description"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference cv.ecore#//workexp/WorkExperience/address"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//workexp/WorkExperience/timeFrame"/>
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Edutrain" disposableProviderFactory="true" ecorePackage="cv.ecore#//edutrain">

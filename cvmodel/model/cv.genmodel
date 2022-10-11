@@ -8,6 +8,11 @@
     <genClasses ecoreClass="cv.ecore#//CV">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//CV/sectionLayer"/>
     </genClasses>
+    <nestedGenPackages prefix="Order" disposableProviderFactory="true" ecorePackage="cv.ecore#//order">
+      <genClasses image="false" ecoreClass="cv.ecore#//order/Orderable">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//order/Orderable/order"/>
+      </genClasses>
+    </nestedGenPackages>
     <nestedGenPackages prefix="Content" disposableProviderFactory="true" ecorePackage="cv.ecore#//content">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//content/FileType">
         <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/PDF"/>
@@ -40,14 +45,16 @@
       </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Section" disposableProviderFactory="true" ecorePackage="cv.ecore#//section">
+      <genClasses image="false" ecoreClass="cv.ecore#//section/SectionContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionContainer/sections"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="cv.ecore#//section/ContentContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/ContentContainer/content"/>
+      </genClasses>
       <genClasses ecoreClass="cv.ecore#//section/Section">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/order"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/subSections"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/content"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//section/SectionLayer">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/sections"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/identificationSection"/>
       </genClasses>
     </nestedGenPackages>
@@ -414,7 +421,7 @@
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference cv.ecore#//skill/SkillSection/hardSkills"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//skill/SkillSection/softSkills"/>
+            ecoreFeature="ecore:EAttribute cv.ecore#//skill/SkillSection/softSkills"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference cv.ecore#//skill/SkillSection/motherTongues"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -423,9 +430,6 @@
       <genClasses ecoreClass="cv.ecore#//skill/HardSkill">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/HardSkill/name"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/HardSkill/proficiency"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//skill/SoftSkill">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/SoftSkill/name"/>
       </genClasses>
       <genClasses ecoreClass="cv.ecore#//skill/Language">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/Language/name"/>

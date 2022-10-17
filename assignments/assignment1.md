@@ -47,7 +47,7 @@ in sequence (e.g., 1, 2, 3, etc...).
 is the only mandatory section, and it always appears in the first position
 (before the rest) of the document.
 
-### Contant info
+### Contacts
 
 @startuml
 class Contact {
@@ -67,6 +67,16 @@ MobilePhoneNumber -u-|> PhoneNumber
 UrlContact -u-|> Contact
 @enduml
 
+A `Contact` is composed by a name and the contact itself (*info*). We defined some
+commonly used types of contacts: phone number (which takes a country code), 
+email and url. This way, it is possible to take advantage of the pre-created types
+or to the create another type of contact that might be missing.
+
+### Time frames
+Usually, work experience is accompanied by a time frame (start date - end date).
+For this reason, we created the abstract class `TimeFrame` that contains a *startDate*.
+Then, there is `StartEndTimeFrame` extending `TimeFrame` for cases where the final date of the experience is known,
+and `TimeFrameDateValid` to be used when the experience is still ongoing. 
 ## Concept tables
 
 | Concept | Intrinsit Properties | Extrinsic Properties             |

@@ -133,8 +133,8 @@
   </eSubpackages>
   <eSubpackages name="edutrain" nsURI="http://cvmodel/cv/edutrain" nsPrefix="cvmodel.cv.edutrain">
     <eClassifiers xsi:type="ecore:EClass" name="EducationTrainingSection" eSuperTypes="#//section/OrderedSection">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="educationTraining" upperBound="-1"
-          eType="#//edutrain/EducationTraining" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="educationTraining" lowerBound="1"
+          upperBound="-1" eType="#//edutrain/EducationTraining" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="EducationTraining">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" lowerBound="1"

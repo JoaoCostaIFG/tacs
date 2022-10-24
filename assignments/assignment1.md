@@ -49,6 +49,14 @@ is the only mandatory section, and it always appears in the first position
 
 ### Contacts
 
+A `Contact` is composed by a name and the contact itself (_info_). We defined
+some commonly used types of contacts: phone number (which takes a country code),
+email and url. This way, it is possible to take advantage of the pre-created
+types or to the create another type of contact that might be missing.
+
+![contact](img/contact.png)
+
+```puml
 @startuml
 class Contact {
   name: String
@@ -66,17 +74,16 @@ WorkPhoneNumber -u-|> PhoneNumber
 MobilePhoneNumber -u-|> PhoneNumber
 UrlContact -u-|> Contact
 @enduml
-
-A `Contact` is composed by a name and the contact itself (*info*). We defined some
-commonly used types of contacts: phone number (which takes a country code), 
-email and url. This way, it is possible to take advantage of the pre-created types
-or to the create another type of contact that might be missing.
+```
 
 ### Time frames
+
 Usually, work experience is accompanied by a time frame (start date - end date).
-For this reason, we created the abstract class `TimeFrame` that contains a *startDate*.
-Then, there is `StartEndTimeFrame` extending `TimeFrame` for cases where the final date of the experience is known,
-and `TimeFrameDateValid` to be used when the experience is still ongoing. 
+For this reason, we created the abstract class `TimeFrame` that contains a
+_startDate_. Then, there is `StartEndTimeFrame` extending `TimeFrame` for cases
+where the final date of the experience is known, and `TimeFrameDateValid` to be
+used when the experience is still ongoing.
+
 ## Concept tables
 
 | Concept | Intrinsit Properties | Extrinsic Properties             |
@@ -95,7 +102,7 @@ and `TimeFrameDateValid` to be used when the experience is still ongoing.
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | `Content` _(extends: Orderable)_           | name: String<br />description: String _(optional)_ <br />url: String _(optional)_                                                                 | files: Arbitrary number of `File` |
 | `File`                                     | path: String<br />createdDate: Date                                                                                                               | type: `FileType` _(Enum)_         |
-| `FileType ` _(enum)_                       | `PDF` \| `PNG`  \| `JPG` \| `SVG`                                                                                                                 |                                   |
+| `FileType ` _(enum)_                       | `PDF` \| `PNG` \| `JPG` \| `SVG`                                                                                                                  |                                   |
 | `TimeFrame` _(abstract)_                   | startDate: Date                                                                                                                                   |                                   |
 | `StartEndTimeFrame` _(extends: TimeFrame)_ | endDate: Date                                                                                                                                     |                                   |
 | `OnGoingTimeFrame` _(extends: TimeFrame)_  |                                                                                                                                                   |                                   |
@@ -123,7 +130,7 @@ and `TimeFrameDateValid` to be used when the experience is still ongoing.
 | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `EducationTrainingSection` _(extends: OrderedSection)_ |                                                                                                                                 | educationTraining: One or more `EducationTraining`                                          |
 | `EducationTraining`                                    | title: String<br />organization: String _(optional)_<br />description: String _(optional)_<br />finalGrade: String _(optional)_ | fieldsOfStudy: Arbitrary number of`FieldOfStudy` _(enum)_<br />eqf: Optional `EQF` _(enum)_ |
-| `FieldOfStudy` _(enum)_                                | `GENERIC` \| `EDUCATION`   \| `ARTS_HUMANITIES` \| ...                                                                          |                                                                                             |
+| `FieldOfStudy` _(enum)_                                | `GENERIC` \| `EDUCATION` \| `ARTS_HUMANITIES` \| ...                                                                            |                                                                                             |
 | `EQF` _(enum)_                                         | `EQF1` \| `EQF2` \| `EQF3` \| ...                                                                                               |                                                                                             |
 
 ### `identification` package

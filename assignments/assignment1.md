@@ -8,6 +8,13 @@
 
 ## Design decisions
 
+### Enums' _unset_ element
+
+Many times enums are optional. When this happens it's important to include a
+default _unset_ value for the enums. This is a value meaning that the enum
+instance doesn't have any value set. This is because enums in the generated code
+can't be set to `null`.
+
 ### (Sub)section's names
 
 Section can contain subsections (recursively). We enforced that each section's
@@ -83,6 +90,12 @@ For this reason, we created the abstract class `TimeFrame` that contains a
 _startDate_. Then, there is `StartEndTimeFrame` extending `TimeFrame` for cases
 where the final date of the experience is known, and `TimeFrameDateValid` to be
 used when the experience is still ongoing.
+
+At first, we wanted to use `null` for the **end date** to signal that it was an
+_ongoing_ time frame, but this caused problems with OCL restrictions: OCL
+comparisons against `null` were generating semantically incorrect code. We
+aren't sure why this was happening, but it happened with code snippets from the
+documentation about `null` comparisons as well.
 
 ## Concept tables
 

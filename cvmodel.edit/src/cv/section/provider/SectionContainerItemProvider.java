@@ -8,13 +8,9 @@ import cv.edutrain.EdutrainFactory;
 import cv.provider.CvEditPlugin;
 
 import cv.section.SectionContainer;
-import cv.section.SectionFactory;
 import cv.section.SectionPackage;
 
 import cv.skill.SkillFactory;
-
-import cv.workexp.WorkexpFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -144,16 +140,6 @@ public class SectionContainerItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SectionPackage.Literals.SECTION_CONTAINER__SECTIONS,
-				 SectionFactory.eINSTANCE.createOrderedSection()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(SectionPackage.Literals.SECTION_CONTAINER__SECTIONS,
-				 WorkexpFactory.eINSTANCE.createWorkExperienceSection()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.presentation.CvModelWizardID"
+            name="%_UI_CvModelWizard_label"
+            class="cv.presentation.CvModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CvModelFile.gif">
+         <description>%_UI_CvModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.presentation.CvEditorID"
+            name="%_UI_CvEditor_label"
+            icon="icons/full/obj16/CvModelFile.gif"
+            extensions="cv"
+            class="cv.presentation.CvEditor"
+            contributorClass="cv.presentation.CvActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.content.presentation.ContentModelWizardID"
+            name="%_UI_ContentModelWizard_label"
+            class="cv.content.presentation.ContentModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContentModelFile.gif">
+         <description>%_UI_ContentModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.content.presentation.ContentEditorID"
+            name="%_UI_ContentEditor_label"
+            icon="icons/full/obj16/ContentModelFile.gif"
+            extensions="content"
+            class="cv.content.presentation.ContentEditor"
+            contributorClass="cv.content.presentation.ContentActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.section.presentation.SectionModelWizardID"
+            name="%_UI_SectionModelWizard_label"
+            class="cv.section.presentation.SectionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SectionModelFile.gif">
+         <description>%_UI_SectionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.section.presentation.SectionEditorID"
+            name="%_UI_SectionEditor_label"
+            icon="icons/full/obj16/SectionModelFile.gif"
+            extensions="section"
+            class="cv.section.presentation.SectionEditor"
+            contributorClass="cv.section.presentation.SectionActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.workexp.presentation.WorkexpModelWizardID"
+            name="%_UI_WorkexpModelWizard_label"
+            class="cv.workexp.presentation.WorkexpModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WorkexpModelFile.gif">
+         <description>%_UI_WorkexpModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.workexp.presentation.WorkexpEditorID"
+            name="%_UI_WorkexpEditor_label"
+            icon="icons/full/obj16/WorkexpModelFile.gif"
+            extensions="workexp"
+            class="cv.workexp.presentation.WorkexpEditor"
+            contributorClass="cv.workexp.presentation.WorkexpActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.edutrain.presentation.EdutrainModelWizardID"
+            name="%_UI_EdutrainModelWizard_label"
+            class="cv.edutrain.presentation.EdutrainModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EdutrainModelFile.gif">
+         <description>%_UI_EdutrainModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.edutrain.presentation.EdutrainEditorID"
+            name="%_UI_EdutrainEditor_label"
+            icon="icons/full/obj16/EdutrainModelFile.gif"
+            extensions="edutrain"
+            class="cv.edutrain.presentation.EdutrainEditor"
+            contributorClass="cv.edutrain.presentation.EdutrainActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.identification.presentation.IdentificationModelWizardID"
+            name="%_UI_IdentificationModelWizard_label"
+            class="cv.identification.presentation.IdentificationModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/IdentificationModelFile.gif">
+         <description>%_UI_IdentificationModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.identification.presentation.IdentificationEditorID"
+            name="%_UI_IdentificationEditor_label"
+            icon="icons/full/obj16/IdentificationModelFile.gif"
+            extensions="identification"
+            class="cv.identification.presentation.IdentificationEditor"
+            contributorClass="cv.identification.presentation.IdentificationActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.identification.contact.presentation.ContactModelWizardID"
+            name="%_UI_ContactModelWizard_label"
+            class="cv.identification.contact.presentation.ContactModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ContactModelFile.gif">
+         <description>%_UI_ContactModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.identification.contact.presentation.ContactEditorID"
+            name="%_UI_ContactEditor_label"
+            icon="icons/full/obj16/ContactModelFile.gif"
+            extensions="contact"
+            class="cv.identification.contact.presentation.ContactEditor"
+            contributorClass="cv.identification.contact.presentation.ContactActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="cv.skill.presentation.SkillModelWizardID"
+            name="%_UI_SkillModelWizard_label"
+            class="cv.skill.presentation.SkillModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SkillModelFile.gif">
+         <description>%_UI_SkillModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv -->
+      <editor
+            id="cv.skill.presentation.SkillEditorID"
+            name="%_UI_SkillEditor_label"
+            icon="icons/full/obj16/SkillModelFile.gif"
+            extensions="skill"
+            class="cv.skill.presentation.SkillEditor"
+            contributorClass="cv.skill.presentation.SkillActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

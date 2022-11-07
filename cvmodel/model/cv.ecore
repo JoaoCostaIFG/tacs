@@ -38,6 +38,8 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
           eType="#//content/File" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//content/Address"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" eType="#//content/TimeFrame"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="File">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1"

@@ -2,9 +2,9 @@
 
 ## Group members
 
-- [Ana Ines Oliveira de Barros <up201806593@fe.up.pt>](up201806593@fe.up.pt)
-- [Joao Alexandre Lobo Cardoso <up201806531@fe.up.pt>](up201806531@fe.up.pt)
-- [Joao de Jesus Costa <up201806560@fe.up.pt>](up201806560@fe.up.pt)
+- [Ana Inês Oliveira de Barros <up201806593@fe.up.pt>](up201806593@fe.up.pt)
+- [João Alexandre Lobo Cardoso <up201806531@fe.up.pt>](up201806531@fe.up.pt)
+- [João de Jesus Costa <up201806560@fe.up.pt>](up201806560@fe.up.pt)
 
 ## Design decisions
 
@@ -99,31 +99,31 @@ documentation about `null` comparisons as well.
 
 ## Concept tables
 
-| Concept | Intrinsit Properties | Extrinsic Properties             |
+| Concept | Intrinsic Properties | Extrinsic Properties             |
 | ------- | -------------------- | -------------------------------- |
 | CV      |                      | sectionLayer: One `SectionLayer` |
 
 ### `order` package
 
-| Concept                   | Intrinsit Properties | Extrinsic Properties |
+| Concept                   | Intrinsic Properties | Extrinsic Properties |
 | ------------------------- | -------------------- | -------------------- |
 | `Orderable` _(interface)_ | order: int           |                      |
 
 ### `content` package
 
-| Concept                                    | Intrinsit Properties                                                                                                                              | Extrinsic Properties              |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `Content` _(extends: Orderable)_           | name: String<br />description: String _(optional)_ <br />url: String _(optional)_                                                                 | files: Arbitrary number of `File` |
-| `File`                                     | path: String<br />createdDate: Date                                                                                                               | type: `FileType` _(Enum)_         |
-| `FileType ` _(enum)_                       | `PDF` \| `PNG` \| `JPG` \| `SVG`                                                                                                                  |                                   |
-| `TimeFrame` _(abstract)_                   | startDate: Date                                                                                                                                   |                                   |
-| `StartEndTimeFrame` _(extends: TimeFrame)_ | endDate: Date                                                                                                                                     |                                   |
-| `OnGoingTimeFrame` _(extends: TimeFrame)_  |                                                                                                                                                   |                                   |
-| `Address`                                  | line1: String _(optional)_<br />line2: String _(optional)_<br />postalCode: String (optional)<br />city: String _(optional)_<br />country: String |                                   |
+| Concept                                    | Intrinsic Properties                                         | Extrinsic Properties                                         |
+| ------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `Content` _(extends: Orderable)_           | name: String<br />description: String _(optional)_ <br />url: String _(optional)_ | files: Arbitrary number of `File`<br />timeFrame: Optional `TimeFrame`<br />address: Optional `Address` |
+| `File`                                     | path: String<br />createdDate: Date                          | type: `FileType` _(Enum)_                                    |
+| `FileType ` _(enum)_                       | `PDF` \| `PNG` \| `JPG` \| `SVG`                             |                                                              |
+| `TimeFrame` _(abstract)_                   | startDate: Date                                              |                                                              |
+| `StartEndTimeFrame` _(extends: TimeFrame)_ | endDate: Date                                                |                                                              |
+| `OnGoingTimeFrame` _(extends: TimeFrame)_  |                                                              |                                                              |
+| `Address`                                  | line1: String _(optional)_<br />line2: String _(optional)_<br />postalCode: String (optional)<br />city: String _(optional)_<br />country: String |                                                              |
 
 ### `section` package
 
-| Concept                                              | Intrinsit Properties | Extrinsic Properties                               |
+| Concept                                              | Intrinsic Properties | Extrinsic Properties                               |
 | ---------------------------------------------------- | -------------------- | -------------------------------------------------- |
 | `SectionContainer` _(abstract)_                      |                      | sections: Arbitrary number of `Section`            |
 | `Section` _(abstract)_ _(extends: SectionContainer)_ | name: String         | content: Arbitrary number of `Content`             |
@@ -132,35 +132,35 @@ documentation about `null` comparisons as well.
 
 ### `workexp` package
 
-| Concept                                             | Intrinsit Properties                                                           | Extrinsic Properties                                        |
-| --------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------- |
-| `WorkExperienceSection` _(extends: OrderedSection)_ |                                                                                | workExperiences: One or more `WorkExperience`               |
+| Concept                                             | Intrinsic Properties                                         | Extrinsic Properties                                        |
+| --------------------------------------------------- | ------------------------------------------------------------ | ----------------------------------------------------------- |
+| `WorkExperienceSection` _(extends: OrderedSection)_ |                                                              | workExperiences: One or more `WorkExperience`               |
 | `WorkExperience`                                    | occupation: String<br />employer: String<br />description: String _(optional)_ | timeFrame: One `TimeFrame`<br />address: Optional `Address` |
 
 ### `edutrain` package
 
-| Concept                                                | Intrinsit Properties                                                                                                            | Extrinsic Properties                                                                        |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `EducationTrainingSection` _(extends: OrderedSection)_ |                                                                                                                                 | educationTraining: One or more `EducationTraining`                                          |
+| Concept                                                | Intrinsic Properties                                         | Extrinsic Properties                                         |
+| ------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `EducationTrainingSection` _(extends: OrderedSection)_ |                                                              | educationTraining: One or more `EducationTraining`           |
 | `EducationTraining`                                    | title: String<br />organization: String _(optional)_<br />description: String _(optional)_<br />finalGrade: String _(optional)_ | fieldsOfStudy: Arbitrary number of`FieldOfStudy` _(enum)_<br />eqf: Optional `EQF` _(enum)_ |
-| `FieldOfStudy` _(enum)_                                | `GENERIC` \| `EDUCATION` \| `ARTS_HUMANITIES` \| ...                                                                            |                                                                                             |
-| `EQF` _(enum)_                                         | `EQF1` \| `EQF2` \| `EQF3` \| ...                                                                                               |                                                                                             |
+| `FieldOfStudy` _(enum)_                                | `GENERIC` \| `EDUCATION` \| `ARTS_HUMANITIES` \| ...         |                                                              |
+| `EQF` _(enum)_                                         | `EQF1` \| `EQF2` \| `EQF3` \| ...                            |                                                              |
 
 ### `identification` package
 
-| Concept                                      | Intrinsit Properties                                                                                                                                                                            | Extrinsic Properties                                                                                                                                                                                         |
-| -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `IdentificationSection` _(extends: Section)_ |                                                                                                                                                                                                 | One Person                                                                                                                                                                                                   |
+| Concept                                      | Intrinsic Properties                                         | Extrinsic Properties                                         |
+| -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `IdentificationSection` _(extends: Section)_ |                                                              | One Person                                                   |
 | `Person`                                     | firstNames: String<br />lastNames: String _(optional)_<br />title: String _(optional)_<br />dateOfBirth: Date _(optional)_<br />aboutMe: String _(optional)_<br />nationalities: List of String | gender: One `Gender` _(enum)_<br />maritalStatus: One `MaritalStatus` _(enum)_<br />picture: Optional `File`<br />contacts: Arbitrary number of `Contact`<br />addresses: Arbitrary number of `NamedAddress` |
-| `Gender` _(enum)_                            | `MALE` \| `FEMALE` \| ...                                                                                                                                                                       |                                                                                                                                                                                                              |
-| `MartialStatus` _(enum)_                     | `MARRIED` \| `DIVORCED` \| `SEPARATED` \| ...                                                                                                                                                   |                                                                                                                                                                                                              |
-| `NamedAddress` _(extends: Address)_          | name: String                                                                                                                                                                                    |                                                                                                                                                                                                              |
-| `HomeAddress` _(extends: NamedAddress)_      |                                                                                                                                                                                                 |                                                                                                                                                                                                              |
-| `WorkAddress` _(extends: NamedAddress)_      |                                                                                                                                                                                                 |                                                                                                                                                                                                              |
+| `Gender` _(enum)_                            | `MALE` \| `FEMALE` \| ...                                    |                                                              |
+| `MartialStatus` _(enum)_                     | `MARRIED` \| `DIVORCED` \| `SEPARATED` \| ...                |                                                              |
+| `NamedAddress` _(extends: Address)_          | name: String                                                 |                                                              |
+| `HomeAddress` _(extends: NamedAddress)_      |                                                              |                                                              |
+| `WorkAddress` _(extends: NamedAddress)_      |                                                              |                                                              |
 
 #### `identification.contact` package
 
-| Concept                                      | Intrinsit Properties                                 | Extrinsic Properties                         |
+| Concept                                      | Intrinsic Properties                                 | Extrinsic Properties                         |
 | -------------------------------------------- | ---------------------------------------------------- | -------------------------------------------- |
 | `Contact`                                    | name: String<br />info: String                       |                                              |
 | `Email` _(extends: Contact)_                 |                                                      |                                              |
@@ -173,11 +173,11 @@ documentation about `null` comparisons as well.
 
 ### `skill` package
 
-| Concept                                    | Intrinsit Properties                         | Extrinsic Properties                                                                                                                                                                                                                                  |
-| ------------------------------------------ | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `SkillSection` _(extends: OrderedSection)_ | softSkills: Arbitratry number of String      | hardSkills: Arbitrary number of `HardSkill`<br />motherTongues: Arbitrary number of `MotherTongue`<br />secondLanguages: Arbitrary number of `SecondLanguage`                                                                                         |
-| `HardSkill`                                | name: String<br />proficiency: Float         |                                                                                                                                                                                                                                                       |
-| `Language` _(abstract)_                    | name: String                                 |                                                                                                                                                                                                                                                       |
-| `MotherTongue` _(extends: Language)_       |                                              |                                                                                                                                                                                                                                                       |
+| Concept                                    | Intrinsic Properties                         | Extrinsic Properties                                         |
+| ------------------------------------------ | -------------------------------------------- | ------------------------------------------------------------ |
+| `SkillSection` _(extends: OrderedSection)_ | softSkills: Arbitrary number of String       | hardSkills: Arbitrary number of `HardSkill`<br />motherTongues: Arbitrary number of `MotherTongue`<br />secondLanguages: Arbitrary number of `SecondLanguage` |
+| `HardSkill`                                | name: String<br />proficiency: Float         |                                                              |
+| `Language` _(abstract)_                    | name: String                                 |                                                              |
+| `MotherTongue` _(extends: Language)_       |                                              |                                                              |
 | `SecondLanguage` _(extends: Language)_     |                                              | conversation: One `LanguageSkillLevel` _(enum)_<br/>reading: One `LanguageSkillLevel` _(enum)_<br/>writting: One `LanguageSkillLevel` _(enum)_<br/>comprehension: One `LanguageSkillLevel` _(enum)_<br/>peerReview: One `LanguageSkillLevel` _(enum)_ |
-| `LanguageSkillLevel` _(enum)_              | `A1` \| `A2` \| `B1` \| `B2` \| `C1` \| `C2` |                                                                                                                                                                                                                                                       |
+| `LanguageSkillLevel` _(enum)_              | `A1` \| `A2` \| `B1` \| `B2` \| `C1` \| `C2` |                                                              |

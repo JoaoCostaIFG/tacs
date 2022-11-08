@@ -14,7 +14,7 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_Ki_bQF-CEe2HFZFtUf3jxw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Q_i9EF-EEe2JFbKtDoMO1Q" name="CVDiagram" repPath="#_Q_YlAF-EEe2JFbKtDoMO1Q" changeId="11b56370-cde7-4d01-a0a3-eafb9366f046">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Q_i9EF-EEe2JFbKtDoMO1Q" name="CVDiagram" repPath="#_Q_YlAF-EEe2JFbKtDoMO1Q" changeId="fc42af1c-0350-4969-bff6-1f6ce63a544d">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
@@ -41,16 +41,232 @@
   <diagram:DSemanticDiagram uid="_Q_YlAF-EEe2JFbKtDoMO1Q">
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Q_nOgF-EEe2JFbKtDoMO1Q" source="GMF_DIAGRAMS">
       <data xmi:type="notation:Diagram" xmi:id="_Q_nOgV-EEe2JFbKtDoMO1Q" type="Sirius" element="_Q_YlAF-EEe2JFbKtDoMO1Q" measurementUnit="Pixel">
-        <children xmi:type="notation:Node" xmi:id="_Q__B8F-EEe2JFbKtDoMO1Q" type="2001" element="_Q_ujQF-EEe2JFbKtDoMO1Q">
-          <children xmi:type="notation:Node" xmi:id="_RAAQEF-EEe2JFbKtDoMO1Q" type="5002">
-            <layoutConstraint xmi:type="notation:Location" xmi:id="_RAAQEV-EEe2JFbKtDoMO1Q" y="5"/>
+        <children xmi:type="notation:Node" xmi:id="_HdPp8F-QEe2V1YSitGIQpg" type="2002" element="_sNUisF-UEe2V1YSitGIQpg">
+          <children xmi:type="notation:Node" xmi:id="_HdaCAF-QEe2V1YSitGIQpg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_HdbQIF-QEe2V1YSitGIQpg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_sNYNEF-UEe2V1YSitGIQpg" type="3009" element="_sNVJwF-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNYNE1-UEe2V1YSitGIQpg" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_sNY0IF-UEe2V1YSitGIQpg" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_sNbQZF-UEe2V1YSitGIQpg" type="3010" element="_sNVJw1-UEe2V1YSitGIQpg">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_sNbQZV-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_sNbQZl-UEe2V1YSitGIQpg"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNY0IV-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNY0Il-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNYNEV-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNYNEl-UEe2V1YSitGIQpg" y="354"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNY0I1-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNVJxV-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNY0Jl-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNZbMF-UEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNZbMV-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNZbMl-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNY0JF-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12" underline="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNY0JV-UEe2V1YSitGIQpg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNZbM1-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNVJyF-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNZbNl-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNZbN1-UEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNZbOF-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNZbOV-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNZbNF-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNZbNV-UEe2V1YSitGIQpg" y="40"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNZbOl-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNVw0l-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNZbPV-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNZbPl-UEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNZbP1-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNZbQF-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNZbO1-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12" underline="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNZbPF-UEe2V1YSitGIQpg" y="80"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNaCQF-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNVw1V-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNaCQ1-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNaCRF-UEe2V1YSitGIQpg" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_sNb3cF-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX4F-UEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_sNb3c1-UEe2V1YSitGIQpg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_sNcegF-UEe2V1YSitGIQpg" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_sNcegV-UEe2V1YSitGIQpg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_sNcegl-UEe2V1YSitGIQpg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sNb3cV-UEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNb3cl-UEe2V1YSitGIQpg" x="31" y="30"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNaCRV-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNaCRl-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNaCQV-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNaCQl-UEe2V1YSitGIQpg" y="120"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNaCR1-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNVw2F-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNaCSl-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNaCS1-UEe2V1YSitGIQpg" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_sNceg1-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX4V-UEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_sNdFkV-UEe2V1YSitGIQpg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_sNdFkl-UEe2V1YSitGIQpg" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_sNdFk1-UEe2V1YSitGIQpg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_sNdFlF-UEe2V1YSitGIQpg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sNcehF-UEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNdFkF-UEe2V1YSitGIQpg" x="31" y="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_sNdFlV-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX4l-UEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_sNdFmF-UEe2V1YSitGIQpg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_sNdFmV-UEe2V1YSitGIQpg" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_sNdFml-UEe2V1YSitGIQpg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_sNdFm1-UEe2V1YSitGIQpg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sNdFll-UEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNdFl1-UEe2V1YSitGIQpg" x="103" y="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_sNdFnF-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX41-UEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_sNdFn1-UEe2V1YSitGIQpg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_sNdFoF-UEe2V1YSitGIQpg" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_sNdFoV-UEe2V1YSitGIQpg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_sNdFol-UEe2V1YSitGIQpg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sNdFnV-UEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNdFnl-UEe2V1YSitGIQpg" x="199" y="30"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_sNdFo1-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX5F-UEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_sNdFpl-UEe2V1YSitGIQpg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_sNdFp1-UEe2V1YSitGIQpg" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_sNdFqF-UEe2V1YSitGIQpg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_sNdFqV-UEe2V1YSitGIQpg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sNdFpF-UEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNdFpV-UEe2V1YSitGIQpg" x="295" y="30"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNaCTF-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNaCTV-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNaCSF-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12" underline="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNaCSV-UEe2V1YSitGIQpg" y="201"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNaCTl-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNVw21-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNapUF-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNapUV-UEe2V1YSitGIQpg" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_sNdFql-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX5V-UEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_sNdsoF-UEe2V1YSitGIQpg" type="5005"/>
+                  <children xmi:type="notation:Node" xmi:id="_sNdsoV-UEe2V1YSitGIQpg" type="7002">
+                    <styles xmi:type="notation:SortingStyle" xmi:id="_sNdsol-UEe2V1YSitGIQpg"/>
+                    <styles xmi:type="notation:FilteringStyle" xmi:id="_sNdso1-UEe2V1YSitGIQpg"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sNdFq1-UEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNdFrF-UEe2V1YSitGIQpg" x="31" y="30"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNapUl-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNapU1-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNaCT1-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNaCUF-UEe2V1YSitGIQpg" y="282"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_sNapVF-UEe2V1YSitGIQpg" visible="false" type="3008" element="_sNWX5l-UEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_sNbQYF-UEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_sNbQYV-UEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_sNbQYl-UEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_sNbQY1-UEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sNapVV-UEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sNapVl-UEe2V1YSitGIQpg" y="363"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_taQacF-VEe2V1YSitGIQpg" type="3008" element="_tZj24V-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_taQac1-VEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_taQadF-VEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_taQadV-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_taQadl-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_taQad1-VEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_taQacV-VEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12" underline="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taQacl-VEe2V1YSitGIQpg" x="223" y="241"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_taQaeF-VEe2V1YSitGIQpg" type="3008" element="_tZkd8F-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_taQae1-VEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_taRBgF-VEe2V1YSitGIQpg" type="7002">
+                <children xmi:type="notation:Node" xmi:id="_1tmJoF-VEe2V1YSitGIQpg" type="3007" element="_1s93gF-VEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_1tmJo1-VEe2V1YSitGIQpg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_1tmJpF-VEe2V1YSitGIQpg" y="5"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_1tmJoV-VEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1tmJol-VEe2V1YSitGIQpg" x="30" y="30" width="20" height="20"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_1tmwsF-VEe2V1YSitGIQpg" type="3007" element="_1s93gV-VEe2V1YSitGIQpg">
+                  <children xmi:type="notation:Node" xmi:id="_1tmws1-VEe2V1YSitGIQpg" type="5003">
+                    <layoutConstraint xmi:type="notation:Location" xmi:id="_1tmwtF-VEe2V1YSitGIQpg" y="5"/>
+                  </children>
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_1tmwsV-VEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1tmwsl-VEe2V1YSitGIQpg" x="78" y="30" width="20" height="20"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_taRBgV-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_taRBgl-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_taRBg1-VEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_taQaeV-VEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taQael-VEe2V1YSitGIQpg" x="559" y="308"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_taRBhF-VEe2V1YSitGIQpg" type="3008" element="_tZkd81-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_taRBh1-VEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_taRBiF-VEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_taRBiV-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_taRBil-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_taRBi1-VEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_taRBhV-VEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12" underline="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taRBhl-VEe2V1YSitGIQpg" y="493"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_taRBjF-VEe2V1YSitGIQpg" type="3008" element="_tZkd9l-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_taRokF-VEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_taRokV-VEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_taRokl-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_taRok1-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_taRolF-VEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_taRBjV-VEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taRBjl-VEe2V1YSitGIQpg" y="533"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_taRolV-VEe2V1YSitGIQpg" type="3008" element="_tZkd-V-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_taVS8F-VEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_taVS8V-VEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_taVS8l-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_taVS81-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_taVS9F-VEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_taRoll-VEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12" underline="true"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taRol1-VEe2V1YSitGIQpg" y="573"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_taVS9V-VEe2V1YSitGIQpg" type="3008" element="_tZlFAl-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_taVS-F-VEe2V1YSitGIQpg" type="5005"/>
+              <children xmi:type="notation:Node" xmi:id="_taVS-V-VEe2V1YSitGIQpg" type="7002">
+                <styles xmi:type="notation:SortingStyle" xmi:id="_taVS-l-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_taVS-1-VEe2V1YSitGIQpg"/>
+                <styles xmi:type="notation:DrawerStyle" xmi:id="_taVS_F-VEe2V1YSitGIQpg"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_taVS9l-VEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_taVS91-VEe2V1YSitGIQpg" y="613"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-SrJEF-VEe2V1YSitGIQpg" visible="false" type="3007" element="_-SPEO1-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_-SrwIF-VEe2V1YSitGIQpg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_-SrwIV-VEe2V1YSitGIQpg" y="5"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-SrJEV-VEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SrJEl-VEe2V1YSitGIQpg" x="31" y="30" width="20" height="20"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-SrwIl-VEe2V1YSitGIQpg" visible="false" type="3007" element="_-SPEPF-VEe2V1YSitGIQpg">
+              <children xmi:type="notation:Node" xmi:id="_-SrwJV-VEe2V1YSitGIQpg" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_-SrwJl-VEe2V1YSitGIQpg" y="5"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_-SrwI1-VEe2V1YSitGIQpg" fontName="Source Han Sans"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-SrwJF-VEe2V1YSitGIQpg" x="103" y="30" width="20" height="20"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_HdbQIV-QEe2V1YSitGIQpg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_HdbQIl-QEe2V1YSitGIQpg"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_RABeMF-EEe2JFbKtDoMO1Q" type="3003" element="_Q_47UF-EEe2JFbKtDoMO1Q">
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_RABeMV-EEe2JFbKtDoMO1Q" fontName="Segoe UI"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RABeMl-EEe2JFbKtDoMO1Q"/>
-          </children>
-          <styles xmi:type="notation:ShapeStyle" xmi:id="_Q__B8V-EEe2JFbKtDoMO1Q" fontName="Segoe UI" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q__B8l-EEe2JFbKtDoMO1Q" x="85" y="80" width="166" height="76"/>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_HdPp8V-QEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HdPp8l-QEe2V1YSitGIQpg"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_Q_nOgl-EEe2JFbKtDoMO1Q"/>
       </data>
@@ -58,16 +274,197 @@
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Q_7-oF-EEe2JFbKtDoMO1Q" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Q_7-oV-EEe2JFbKtDoMO1Q"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Q_ujQF-EEe2JFbKtDoMO1Q" name="Ana" tooltipText="Ana" width="3" height="3" resizeKind="NSEW">
-      <target xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
-      <semanticElements xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
-      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-      <ownedStyle xmi:type="diagram:Square" uid="_Q_47UF-EEe2JFbKtDoMO1Q" labelSize="12" labelPosition="node" color="217,196,215">
-        <description xmi:type="style:SquareDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNUisF-UEe2V1YSitGIQpg" name="CV">
+      <target xmi:type="cvmodel.cv:SectionLayer" href="ExampleCv.cv#//@sectionLayer"/>
+      <semanticElements xmi:type="cvmodel.cv:SectionLayer" href="ExampleCv.cv#//@sectionLayer"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNUisV-UEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom">
+        <labelFormat>bold</labelFormat>
+        <labelFormat>underline</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@style"/>
       </ownedStyle>
-      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_sNVJwF-UEe2V1YSitGIQpg" name="Identification">
+        <target xmi:type="cvmodel.cv:IdentificationSection" href="ExampleCv.cv#//@sectionLayer/@identificationSection"/>
+        <semanticElements xmi:type="cvmodel.cv:IdentificationSection" href="ExampleCv.cv#//@sectionLayer/@identificationSection"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVJwV-UEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="114,159,207" foregroundColor="194,239,255">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='IdentificationSection']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='IdentificationSection']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_sNVJw1-UEe2V1YSitGIQpg" name="Ana Barros" tooltipText="Ana">
+          <target xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
+          <semanticElements xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_sNVJxF-UEe2V1YSitGIQpg" labelSize="12" iconPath="/org.eclipse.emf.validation.ui.source/icons/full/lock.gif" labelPosition="node" color="217,196,215">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='IdentificationSection']/@subNodeMappings[name='PersonNode']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='IdentificationSection']/@subNodeMappings[name='PersonNode']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNVJxV-UEe2V1YSitGIQpg" name="Skills" visible="false">
+        <target xmi:type="cvmodel.cv:SkillSection" href="ExampleCv.cv#//@sectionLayer/@sections.2"/>
+        <semanticElements xmi:type="cvmodel.cv:SkillSection" href="ExampleCv.cv#//@sectionLayer/@sections.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVJxl-UEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundStyle="GradientTopToBottom" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <labelFormat>underline</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNVJyF-UEe2V1YSitGIQpg" name="Education" visible="false">
+        <target xmi:type="cvmodel.cv:EducationTrainingSection" href="ExampleCv.cv#//@sectionLayer/@sections.0"/>
+        <semanticElements xmi:type="cvmodel.cv:EducationTrainingSection" href="ExampleCv.cv#//@sectionLayer/@sections.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVw0F-UEe2V1YSitGIQpg" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNVw0l-UEe2V1YSitGIQpg" name="Work Experience" visible="false">
+        <target xmi:type="cvmodel.cv:WorkExperienceSection" href="ExampleCv.cv#//@sectionLayer/@sections.1"/>
+        <semanticElements xmi:type="cvmodel.cv:WorkExperienceSection" href="ExampleCv.cv#//@sectionLayer/@sections.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVw01-UEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundStyle="GradientTopToBottom" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <labelFormat>underline</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNVw1V-UEe2V1YSitGIQpg" name="Networks and Memberships" visible="false">
+        <target xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.3"/>
+        <semanticElements xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVw1l-UEe2V1YSitGIQpg" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX4F-UEe2V1YSitGIQpg" visible="false">
+          <target xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.3/@content.0"/>
+          <semanticElements xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.3/@content.0"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@subContainerMappings[name='Content']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNVw2F-UEe2V1YSitGIQpg" name="Projects" visible="false">
+        <target xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.4"/>
+        <semanticElements xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVw2V-UEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundStyle="GradientTopToBottom" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <labelFormat>underline</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX4V-UEe2V1YSitGIQpg" visible="false">
+          <target xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.0"/>
+          <semanticElements xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.0"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@subContainerMappings[name='Content']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX4l-UEe2V1YSitGIQpg" visible="false">
+          <target xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.1"/>
+          <semanticElements xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.1"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@subContainerMappings[name='Content']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX41-UEe2V1YSitGIQpg" visible="false">
+          <target xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.2"/>
+          <semanticElements xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.2"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@subContainerMappings[name='Content']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX5F-UEe2V1YSitGIQpg" visible="false">
+          <target xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.3"/>
+          <semanticElements xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.4/@content.3"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@subContainerMappings[name='Content']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNVw21-UEe2V1YSitGIQpg" name="Recommendations" visible="false">
+        <target xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.5"/>
+        <semanticElements xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.5"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNVw3F-UEe2V1YSitGIQpg" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']"/>
+        <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX5V-UEe2V1YSitGIQpg" visible="false">
+          <target xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.5/@content.0"/>
+          <semanticElements xmi:type="cvmodel.cv:Content" href="ExampleCv.cv#//@sectionLayer/@sections.5/@content.0"/>
+          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='OrderedSection']/@subContainerMappings[name='Content']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_sNWX5l-UEe2V1YSitGIQpg" name="Skills" visible="false">
+        <target xmi:type="cvmodel.cv:SkillSection" href="ExampleCv.cv#//@sectionLayer/@sections.2"/>
+        <semanticElements xmi:type="cvmodel.cv:SkillSection" href="ExampleCv.cv#//@sectionLayer/@sections.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_sNWX51-UEe2V1YSitGIQpg" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="252,175,62">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='asd']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='asd']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tZj24V-VEe2V1YSitGIQpg" name="Skills">
+        <target xmi:type="cvmodel.cv:SkillSection" href="ExampleCv.cv#//@sectionLayer/@sections.2"/>
+        <semanticElements xmi:type="cvmodel.cv:SkillSection" href="ExampleCv.cv#//@sectionLayer/@sections.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tZj24l-VEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundStyle="GradientTopToBottom" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <labelFormat>underline</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tZkd8F-VEe2V1YSitGIQpg" name="Education">
+        <target xmi:type="cvmodel.cv:EducationTrainingSection" href="ExampleCv.cv#//@sectionLayer/@sections.0"/>
+        <semanticElements xmi:type="cvmodel.cv:EducationTrainingSection" href="ExampleCv.cv#//@sectionLayer/@sections.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tZkd8V-VEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']"/>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_1s93gF-VEe2V1YSitGIQpg">
+          <target xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.0"/>
+          <semanticElements xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.0"/>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subNodeMappings[name='Content']"/>
+        </ownedDiagramElements>
+        <ownedDiagramElements xmi:type="diagram:DNode" uid="_1s93gV-VEe2V1YSitGIQpg">
+          <target xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.1"/>
+          <semanticElements xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.1"/>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subNodeMappings[name='Content']"/>
+        </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tZkd81-VEe2V1YSitGIQpg" name="Work Experience">
+        <target xmi:type="cvmodel.cv:WorkExperienceSection" href="ExampleCv.cv#//@sectionLayer/@sections.1"/>
+        <semanticElements xmi:type="cvmodel.cv:WorkExperienceSection" href="ExampleCv.cv#//@sectionLayer/@sections.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tZkd9F-VEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundStyle="GradientTopToBottom" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <labelFormat>underline</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tZkd9l-VEe2V1YSitGIQpg" name="Networks and Memberships">
+        <target xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.3"/>
+        <semanticElements xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tZkd91-VEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tZkd-V-VEe2V1YSitGIQpg" name="Projects">
+        <target xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.4"/>
+        <semanticElements xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tZlFAF-VEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundStyle="GradientTopToBottom" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <labelFormat>underline</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_tZlFAl-VEe2V1YSitGIQpg" name="Recommendations">
+        <target xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.5"/>
+        <semanticElements xmi:type="cvmodel.cv:OrderedSection" href="ExampleCv.cv#//@sectionLayer/@sections.5"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_tZlFA1-VEe2V1YSitGIQpg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" borderColor="136,136,136" backgroundColor="209,209,209" foregroundColor="136,136,136">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@conditionnalStyles.0/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_-SPEO1-VEe2V1YSitGIQpg" visible="false">
+        <target xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.0"/>
+        <semanticElements xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.0"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subNodeMappings[name='Content']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_-SPEPF-VEe2V1YSitGIQpg" visible="false">
+        <target xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.1"/>
+        <semanticElements xmi:type="cvmodel.cv:EducationTraining" href="ExampleCv.cv#//@sectionLayer/@sections.0/@educationTraining.1"/>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subNodeMappings[name='Content']"/>
+      </ownedDiagramElements>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Q_eEkF-EEe2JFbKtDoMO1Q"/>

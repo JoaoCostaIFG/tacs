@@ -5,448 +5,418 @@
     complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>cv.ecore</foreignModel>
   <genPackages prefix="Cv" disposableProviderFactory="true" ecorePackage="cv.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//FileType">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FileType/PDF"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FileType/PNG"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FileType/JPG"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FileType/SVG"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//FieldOfStudy">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/GENERIC"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/EDUCATION"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/ARTS_HUMANITIES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/SOCIAL_SCIENCES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/BUSINESS_LAW"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/NATURAL_SCIENCES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/INFO_COMM_TECH"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/ENGINEERING"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/AGRICULTURE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/HEALTH"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/SERVICES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//FieldOfStudy/UNKNOWN"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//EQF">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/NO_EQF"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF1"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF2"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF3"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF4"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF5"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF6"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF7"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//EQF/EQF8"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//PhoneCountryCode">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/UNITED_STATES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/AFGHANISTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ALBANIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ALGERIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/AMERICAN_SAMOA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ANDORRA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ANGOLA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ANGUILLA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ANTARCTICA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ANTIGUA_AND_BARBUDA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ARGENTINA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ARMENIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ARUBA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/AUSTRALIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/AUSTRIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/AZERBAIJAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BAHAMAS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BAHRAIN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BANGLADESH"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BARBADOS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BELARUS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BELGIUM"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BELIZE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BENIN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BERMUDA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BHUTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BOLIVIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BOSNIA_AND_HERZEGOVINA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BOTSWANA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BRAZIL"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BRITISH_INDIAN_OCEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BRITISH_VIRGIN_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BRUNEI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BULGARIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BURKINA_FASO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/BURUNDI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CAMBODIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CAMEROON"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CANADA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CAPE_VERDE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CAYMAN_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CENTRAL_AFRICAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CHAD"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CHILE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CHINA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CHRISTMAS_ISLAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/COCOS_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/COLOMBIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/COMOROS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/COOK_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/COSTA_RICA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CROATIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CUBA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CURACAO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CYPRUS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CZECH_REPUBLIC"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/DEMO_CONGO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/DENMARK"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/DJIBOUTI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/DOMINICA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/DOMINICAN_REPUBLIC"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/EAST_TIMOR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ECUADOR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/EGYPT"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/EL_SALVADOR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/EQUATORIAL_GUINEA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ERITREA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ESTONIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ETHIOPIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/FALKLAND_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/FAROE_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/FIJI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/FINLAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/FRANCE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/FRENCH_POLYNESIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GABON"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GAMBIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GEORGIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GERMANY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GHANA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GIBRALTAR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GREECE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GREENLAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GRENADA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GUAM"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GUATEMALA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GUERNSEY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GUINEA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GUINEA_BISSAU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/GUYANA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/HAITI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/HONDURAS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/HONG_KONG"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/HUNGARY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ICELAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/INDIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/INDONESIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/IRAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/IRAQ"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/IRELAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ISLE_OF_MAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ISRAEL"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ITALY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/IVORY_COAST"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/JAMAICA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/JAPAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/JERSEY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/JORDAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/KAZAKHSTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/KENYA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/KIRIBATI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/KOSOVO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/KUWAIT"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/KYRGYZSTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LAOS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LATVIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LEBANON"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LESOTHO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LIBERIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LIBYA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LIECHTENSTEIN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LITHUANIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/LUXEMBOURG"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MACAU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MACEDONIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MADAGASCAR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MALAWI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MALAYSIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MALDIVES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MALI"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MALTA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MARSHALL_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MAURITANIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MAURITIUS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MAYOTTE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MEXICO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MICRONESIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MOLDOVA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MONACO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MONGOLIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MONTENEGRO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MONTSERRAT"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MOROCCO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MOZAMBIQUE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/MYANMAR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NAMIBIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NAURU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NEPAL"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NETHERLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NETHERLANDS_ANTILLES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NEW_CALEDONIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NEW_ZEALAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NICARAGUA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NIGER"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NIGERIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NIUE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NORTH_KOREA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NORTHERN_MARIANA_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/NORWAY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/OMAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PAKISTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PALAU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PALESTINE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PANAMA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PAPUA_NEW_GUINEA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PARAGUAY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PERU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PHILIPPINES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PITCAIRN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/POLAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PORTUGAL"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/PUERTO_RICO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/QATAR"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/CONGO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/REUNION"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ROMANIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/RUSSIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/RWANDA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_BARTHELEMY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_HELENA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_KITTS_NEVIS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_LUCIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_MARTIN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_PIERRE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAINT_VINCENT"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAMOA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAN_MARINO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAO_TOME_PRINCIPE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SAUDI_ARABIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SENEGAL"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SERBIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SEYCHELLES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SIERRA_LEONE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SINGAPORE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SINT_MAARTEN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SLOVAKIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SLOVENIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SOLOMON_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SOMALIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SOUTH_AFRICA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SOUTH_KOREA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SOUTH_SUDAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SPAIN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SRI_LANKA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SUDAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SURINAME"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SVALBARD_JAN_MAYEN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SWAZILAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SWEDEN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SWITZERLAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/SYRIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TAIWAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TAJIKISTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TANZANIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/THAILAND"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TOGO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TOKELAU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TONGA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TRINIDAD_TOBAGO"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TUNISIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TURKEY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TURKMENISTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TURKS_CAICOS_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/TUVALU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/US_VIRGIN_ISLANDS"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/UGANDA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/UKRAINE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/UNITED_ARAB_EMIRATES"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/UNITED_KINGDOM"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/URUGUAY"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/UZBEKISTAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/VANUATU"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/VATICAN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/VENEZUELA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/VIETNAM"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/WALLIS_FUTUNA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/WESTERN_SAHARA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/YEMEN"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ZAMBIA"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//PhoneCountryCode/ZIMBABWE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//Gender">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//Gender/DONOTINDICATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//Gender/FEMALE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//Gender/OTHER"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//Gender/MALE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//MaritalStatus">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//MaritalStatus/DONOTINDICATE"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//MaritalStatus/MARRIED"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//MaritalStatus/DIVORCED"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//MaritalStatus/SEPARATED"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//MaritalStatus/SINGLE"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//LanguageSkillLevel">
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//LanguageSkillLevel/A1"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//LanguageSkillLevel/A2"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//LanguageSkillLevel/B1"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//LanguageSkillLevel/B2"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//LanguageSkillLevel/C1"/>
+      <genEnumLiterals ecoreEnumLiteral="cv.ecore#//LanguageSkillLevel/C2"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="cv.ecore#//Orderable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Orderable/order"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Content/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Content/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Content/url"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Content/files"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//Content/address"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//Content/timeFrame"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//File/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//File/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//File/createdDate"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="cv.ecore#//TimeFrame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//TimeFrame/startDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//StartEndTimeFrame">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//StartEndTimeFrame/endDate"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//OnGoingTimeFrame"/>
+    <genClasses ecoreClass="cv.ecore#//Address">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Address/line1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Address/line2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Address/postalCode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Address/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Address/country"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="cv.ecore#//SectionContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//SectionContainer/sections"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="cv.ecore#//Section">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Section/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Section/content"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//OrderedSection"/>
+    <genClasses ecoreClass="cv.ecore#//SectionLayer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//SectionLayer/identificationSection"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//WorkExperienceSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperienceSection/workExperiences"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//WorkExperience">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//WorkExperience/occupation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//WorkExperience/employer"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperience/timeFrame"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//WorkExperience/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperience/address"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//EducationTrainingSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//EducationTrainingSection/educationTraining"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//EducationTraining">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//EducationTraining/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//EducationTraining/organization"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//EducationTraining/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//EducationTraining/finalGrade"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//EducationTraining/fieldsOfStudy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//EducationTraining/eqf"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//Contact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Contact/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Contact/info"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//Email"/>
+    <genClasses ecoreClass="cv.ecore#//PhoneNumber">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//PhoneNumber/countryCode"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//HomePhoneNumber"/>
+    <genClasses ecoreClass="cv.ecore#//WorkPhoneNumber"/>
+    <genClasses ecoreClass="cv.ecore#//MobilePhoneNumber"/>
+    <genClasses ecoreClass="cv.ecore#//UrlContact"/>
+    <genClasses ecoreClass="cv.ecore#//IdentificationSection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//IdentificationSection/person"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/firstNames"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/lastNames"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/dateOfBirth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/gender"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/maritalStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/aboutMe"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//Person/picture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/nationalities"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Person/contacts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Person/addresses"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//NamedAddress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//NamedAddress/name"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//HomeAddress"/>
+    <genClasses ecoreClass="cv.ecore#//WorkAddress"/>
+    <genClasses ecoreClass="cv.ecore#//SkillSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//SkillSection/hardSkills"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//SkillSection/softSkills"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//SkillSection/motherTongues"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//SkillSection/secondLanguages"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//HardSkill">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//HardSkill/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//HardSkill/proficiency"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="cv.ecore#//Language">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Language/name"/>
+    </genClasses>
+    <genClasses ecoreClass="cv.ecore#//MotherTongue"/>
+    <genClasses ecoreClass="cv.ecore#//SecondLanguage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//SecondLanguage/conversation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//SecondLanguage/reading"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//SecondLanguage/writing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//SecondLanguage/comprehension"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//SecondLanguage/peerReview"/>
+    </genClasses>
     <genClasses ecoreClass="cv.ecore#//CV">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//CV/sectionLayer"/>
     </genClasses>
-    <nestedGenPackages prefix="Order" disposableProviderFactory="true" ecorePackage="cv.ecore#//order">
-      <genClasses image="false" ecoreClass="cv.ecore#//order/Orderable">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//order/Orderable/order"/>
-      </genClasses>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Content" disposableProviderFactory="true" ecorePackage="cv.ecore#//content">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//content/FileType">
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/PDF"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/PNG"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/JPG"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//content/FileType/SVG"/>
-      </genEnums>
-      <genClasses ecoreClass="cv.ecore#//content/Content">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Content/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Content/description"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Content/url"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//content/Content/files"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//content/Content/address"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//content/Content/timeFrame"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//content/File">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/path"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/type"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/File/createdDate"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//content/TimeFrame">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/TimeFrame/startDate"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//content/StartEndTimeFrame">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/StartEndTimeFrame/endDate"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//content/OnGoingTimeFrame"/>
-      <genClasses ecoreClass="cv.ecore#//content/Address">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/line1"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/line2"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/postalCode"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/city"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//content/Address/country"/>
-      </genClasses>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Section" disposableProviderFactory="true" ecorePackage="cv.ecore#//section">
-      <genClasses image="false" ecoreClass="cv.ecore#//section/SectionContainer">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionContainer/sections"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//section/Section">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//section/Section/name"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/Section/content"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//section/OrderedSection"/>
-      <genClasses ecoreClass="cv.ecore#//section/SectionLayer">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//section/SectionLayer/identificationSection"/>
-      </genClasses>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Workexp" disposableProviderFactory="true" ecorePackage="cv.ecore#//workexp">
-      <genClasses ecoreClass="cv.ecore#//workexp/WorkExperienceSection">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//workexp/WorkExperienceSection/workExperiences"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//workexp/WorkExperience">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//workexp/WorkExperience/occupation"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//workexp/WorkExperience/employer"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//workexp/WorkExperience/timeFrame"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//workexp/WorkExperience/description"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//workexp/WorkExperience/address"/>
-      </genClasses>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Edutrain" disposableProviderFactory="true" ecorePackage="cv.ecore#//edutrain">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//edutrain/FieldOfStudy">
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/GENERIC"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/EDUCATION"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/ARTS_HUMANITIES"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/SOCIAL_SCIENCES"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/BUSINESS_LAW"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/NATURAL_SCIENCES"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/INFO_COMM_TECH"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/ENGINEERING"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/AGRICULTURE"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/HEALTH"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/SERVICES"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/FieldOfStudy/UNKNOWN"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//edutrain/EQF">
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/NO_EQF"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF1"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF2"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF3"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF4"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF5"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF6"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF7"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//edutrain/EQF/EQF8"/>
-      </genEnums>
-      <genClasses ecoreClass="cv.ecore#//edutrain/EducationTrainingSection">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//edutrain/EducationTrainingSection/educationTraining"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//edutrain/EducationTraining">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//edutrain/EducationTraining/title"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//edutrain/EducationTraining/organization"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//edutrain/EducationTraining/description"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//edutrain/EducationTraining/finalGrade"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//edutrain/EducationTraining/fieldsOfStudy"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//edutrain/EducationTraining/eqf"/>
-      </genClasses>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Identification" disposableProviderFactory="true" ecorePackage="cv.ecore#//identification">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//identification/Gender">
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/Gender/DONOTINDICATE"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/Gender/FEMALE"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/Gender/OTHER"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/Gender/MALE"/>
-      </genEnums>
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//identification/MaritalStatus">
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/MaritalStatus/DONOTINDICATE"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/MaritalStatus/MARRIED"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/MaritalStatus/DIVORCED"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/MaritalStatus/SEPARATED"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/MaritalStatus/SINGLE"/>
-      </genEnums>
-      <genClasses ecoreClass="cv.ecore#//identification/IdentificationSection">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//identification/IdentificationSection/person"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//identification/Person">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/firstNames"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/lastNames"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/title"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/dateOfBirth"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/gender"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/maritalStatus"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/aboutMe"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//identification/Person/picture"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/Person/nationalities"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//identification/Person/contacts"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//identification/Person/addresses"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//identification/NamedAddress">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/NamedAddress/name"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//identification/HomeAddress"/>
-      <genClasses ecoreClass="cv.ecore#//identification/WorkAddress"/>
-      <nestedGenPackages prefix="Contact" disposableProviderFactory="true" ecorePackage="cv.ecore#//identification/contact">
-        <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//identification/contact/PhoneCountryCode">
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_STATES"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/AFGHANISTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ALBANIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ALGERIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/AMERICAN_SAMOA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ANDORRA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ANGOLA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ANGUILLA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ANTARCTICA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ANTIGUA_AND_BARBUDA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ARGENTINA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ARMENIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ARUBA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/AUSTRALIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/AUSTRIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/AZERBAIJAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BAHAMAS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BAHRAIN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BANGLADESH"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BARBADOS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BELARUS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BELGIUM"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BELIZE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BENIN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BERMUDA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BHUTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BOLIVIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BOSNIA_AND_HERZEGOVINA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BOTSWANA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BRAZIL"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BRITISH_INDIAN_OCEAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BRITISH_VIRGIN_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BRUNEI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BULGARIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BURKINA_FASO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/BURUNDI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CAMBODIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CAMEROON"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CANADA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CAPE_VERDE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CAYMAN_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CENTRAL_AFRICAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CHAD"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CHILE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CHINA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CHRISTMAS_ISLAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/COCOS_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/COLOMBIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/COMOROS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/COOK_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/COSTA_RICA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CROATIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CUBA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CURACAO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CYPRUS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CZECH_REPUBLIC"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/DEMO_CONGO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/DENMARK"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/DJIBOUTI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/DOMINICA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/DOMINICAN_REPUBLIC"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/EAST_TIMOR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ECUADOR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/EGYPT"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/EL_SALVADOR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/EQUATORIAL_GUINEA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ERITREA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ESTONIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ETHIOPIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/FALKLAND_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/FAROE_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/FIJI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/FINLAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/FRANCE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/FRENCH_POLYNESIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GABON"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GAMBIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GEORGIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GERMANY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GHANA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GIBRALTAR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GREECE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GREENLAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GRENADA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GUAM"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GUATEMALA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GUERNSEY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GUINEA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GUINEA_BISSAU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/GUYANA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/HAITI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/HONDURAS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/HONG_KONG"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/HUNGARY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ICELAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/INDIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/INDONESIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/IRAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/IRAQ"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/IRELAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ISLE_OF_MAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ISRAEL"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ITALY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/IVORY_COAST"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/JAMAICA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/JAPAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/JERSEY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/JORDAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/KAZAKHSTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/KENYA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/KIRIBATI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/KOSOVO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/KUWAIT"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/KYRGYZSTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LAOS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LATVIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LEBANON"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LESOTHO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LIBERIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LIBYA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LIECHTENSTEIN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LITHUANIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/LUXEMBOURG"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MACAU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MACEDONIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MADAGASCAR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MALAWI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MALAYSIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MALDIVES"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MALI"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MALTA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MARSHALL_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MAURITANIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MAURITIUS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MAYOTTE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MEXICO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MICRONESIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MOLDOVA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MONACO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MONGOLIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MONTENEGRO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MONTSERRAT"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MOROCCO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MOZAMBIQUE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/MYANMAR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NAMIBIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NAURU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NEPAL"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NETHERLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NETHERLANDS_ANTILLES"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NEW_CALEDONIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NEW_ZEALAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NICARAGUA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NIGER"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NIGERIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NIUE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NORTH_KOREA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NORTHERN_MARIANA_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/NORWAY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/OMAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PAKISTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PALAU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PALESTINE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PANAMA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PAPUA_NEW_GUINEA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PARAGUAY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PERU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PHILIPPINES"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PITCAIRN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/POLAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PORTUGAL"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/PUERTO_RICO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/QATAR"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/CONGO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/REUNION"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ROMANIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/RUSSIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/RWANDA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_BARTHELEMY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_HELENA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_KITTS_NEVIS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_LUCIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_MARTIN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_PIERRE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAINT_VINCENT"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAMOA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAN_MARINO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAO_TOME_PRINCIPE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SAUDI_ARABIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SENEGAL"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SERBIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SEYCHELLES"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SIERRA_LEONE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SINGAPORE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SINT_MAARTEN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SLOVAKIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SLOVENIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SOLOMON_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SOMALIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SOUTH_AFRICA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SOUTH_KOREA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SOUTH_SUDAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SPAIN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SRI_LANKA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SUDAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SURINAME"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SVALBARD_JAN_MAYEN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SWAZILAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SWEDEN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SWITZERLAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/SYRIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TAIWAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TAJIKISTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TANZANIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/THAILAND"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TOGO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TOKELAU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TONGA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TRINIDAD_TOBAGO"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TUNISIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TURKEY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TURKMENISTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TURKS_CAICOS_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/TUVALU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/US_VIRGIN_ISLANDS"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UGANDA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UKRAINE"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_ARAB_EMIRATES"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UNITED_KINGDOM"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/URUGUAY"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/UZBEKISTAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/VANUATU"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/VATICAN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/VENEZUELA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/VIETNAM"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/WALLIS_FUTUNA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/WESTERN_SAHARA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/YEMEN"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ZAMBIA"/>
-          <genEnumLiterals ecoreEnumLiteral="cv.ecore#//identification/contact/PhoneCountryCode/ZIMBABWE"/>
-        </genEnums>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/Contact">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/contact/Contact/name"/>
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/contact/Contact/info"/>
-        </genClasses>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/Email"/>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/PhoneNumber">
-          <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//identification/contact/PhoneNumber/countryCode"/>
-        </genClasses>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/HomePhoneNumber"/>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/WorkPhoneNumber"/>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/MobilePhoneNumber"/>
-        <genClasses ecoreClass="cv.ecore#//identification/contact/UrlContact"/>
-      </nestedGenPackages>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Skill" disposableProviderFactory="true" ecorePackage="cv.ecore#//skill">
-      <genEnums typeSafeEnumCompatible="false" ecoreEnum="cv.ecore#//skill/LanguageSkillLevel">
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//skill/LanguageSkillLevel/A1"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//skill/LanguageSkillLevel/A2"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//skill/LanguageSkillLevel/B1"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//skill/LanguageSkillLevel/B2"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//skill/LanguageSkillLevel/C1"/>
-        <genEnumLiterals ecoreEnumLiteral="cv.ecore#//skill/LanguageSkillLevel/C2"/>
-      </genEnums>
-      <genClasses ecoreClass="cv.ecore#//skill/SkillSection">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//skill/SkillSection/hardSkills"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EAttribute cv.ecore#//skill/SkillSection/softSkills"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//skill/SkillSection/motherTongues"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference cv.ecore#//skill/SkillSection/secondLanguages"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//skill/HardSkill">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/HardSkill/name"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/HardSkill/proficiency"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//skill/Language">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/Language/name"/>
-      </genClasses>
-      <genClasses ecoreClass="cv.ecore#//skill/MotherTongue"/>
-      <genClasses ecoreClass="cv.ecore#//skill/SecondLanguage">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/SecondLanguage/conversation"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/SecondLanguage/reading"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/SecondLanguage/writing"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/SecondLanguage/comprehension"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//skill/SecondLanguage/peerReview"/>
-      </genClasses>
-    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

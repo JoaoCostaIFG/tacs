@@ -24,8 +24,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="url" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="files" upperBound="-1"
         eType="#//File" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//Address"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" eType="#//TimeFrame"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//Address"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" eType="#//TimeFrame"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="File">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -102,9 +104,10 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="employer" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" lowerBound="1"
-        eType="#//TimeFrame"/>
+        eType="#//TimeFrame" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//Address"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="address" eType="#//Address"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="EducationTrainingSection" eSuperTypes="#//OrderedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="educationTraining" lowerBound="1"
@@ -414,7 +417,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="UrlContact" eSuperTypes="#//Contact"/>
   <eClassifiers xsi:type="ecore:EClass" name="IdentificationSection" eSuperTypes="#//Section">
     <eStructuralFeatures xsi:type="ecore:EReference" name="person" lowerBound="1"
-        eType="#//Person"/>
+        eType="#//Person" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Person">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNames" lowerBound="1"
@@ -427,7 +430,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maritalStatus" lowerBound="1"
         eType="#//MaritalStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="aboutMe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//File"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="picture" eType="#//File"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nationalities" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contacts" upperBound="-1"

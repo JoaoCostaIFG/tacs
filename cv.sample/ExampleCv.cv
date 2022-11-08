@@ -2,7 +2,7 @@
 <cvmodel.cv:CV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:cvmodel.cv="http://cvmodel/cv">
   <sectionLayer>
     <identificationSection name="Identification">
-      <person href="ExamplePerson.cv#/"/>
+      <person firstNames="João"/>
     </identificationSection>
   </sectionLayer>
 </cvmodel.cv:CV>

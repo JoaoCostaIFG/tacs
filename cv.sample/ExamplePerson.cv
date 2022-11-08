@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<cvmodel.cv:Person xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv" firstNames="João" lastNames="Chlache" title="The chalch" dateOfBirth="2000-06-28T00:00:00.000+0100" gender="MALE" maritalStatus="DIVORCED" aboutMe="I'm a Texas Instruments version 84 (TI-84) calculator.">
-  <nationalities>portuguese</nationalities>
-  <nationalities>ti-84ense</nationalities>
-  <contacts xsi:type="cvmodel.cv:Email" name="work" info="chalch@ti84.com"/>
-  <addresses xsi:type="cvmodel.cv:HomeAddress" country="Portugal" name="home"/>
-</cvmodel.cv:Person>

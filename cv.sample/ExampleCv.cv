@@ -47,7 +47,7 @@
       <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com"/>
     </sections>
     <identificationSection name="Identification">
-      <person firstNames="Ana" lastNames="Barros" title="Software engineer" dateOfBirth="2000-06-28T00:00:00.000+0100" gender="FEMALE" aboutMe="I am a student at FEUP taking the master's in Informatics and Computing Engineering. I&#xA;am currently looking for internships to get work experience.">
+      <person firstNames="Ana" lastNames="Barros" title="Software engineer" dateOfBirth="2000-06-28T00:00:00.000+0100" gender="FEMALE" aboutMe="I am a student at FEUP taking the master's in Informatics and Computing Engineering.&#xA;am currently looking for internships to get work experience.">
         <nationalities>Portuguese</nationalities>
         <contacts xsi:type="cvmodel.cv:Email" name="Email" info="anaiobarros@outlook.pt"/>
         <addresses xsi:type="cvmodel.cv:HomeAddress" city="Trofa" country="Portugal" name="Home Address"/>

@@ -22,7 +22,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MVrlQl-gEe2V1YSitGIQpg" name="new CVDiagram" repPath="#_MVrlQF-gEe2V1YSitGIQpg" changeId="18d468c1-3a3c-4eab-a7bc-5efb050aa37d">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MVrlQl-gEe2V1YSitGIQpg" name="new CVDiagram" repPath="#_MVrlQF-gEe2V1YSitGIQpg" changeId="ff2f699e-3e1d-4579-859d-fa279ac5cd88">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
@@ -588,7 +588,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_MVuBhl-gEe2V1YSitGIQpg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_MVuBgV-gEe2V1YSitGIQpg" fontName="Source Han Sans" fontHeight="16" bold="true" underline="true"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MVuBgl-gEe2V1YSitGIQpg" x="-11" y="36"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MVuBgl-gEe2V1YSitGIQpg" x="-12" y="36"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_MVsMUl-gEe2V1YSitGIQpg"/>
       </data>

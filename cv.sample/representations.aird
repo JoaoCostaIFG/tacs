@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description">
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tree="http://www.eclipse.org/sirius/tree/1.0.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/tree/description/1.0.0 http://www.eclipse.org/sirius/tree/1.0.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
   <viewpoint:DAnalysis uid="_aTuVoF9tEe2hqpjNqW2zWA" selectedViews="_Ki_bQF-CEe2HFZFtUf3jxw" version="15.0.0.202209061200">
     <semanticResources>Example.person.identification</semanticResources>
     <semanticResources>Example.cv</semanticResources>
@@ -14,6 +14,14 @@
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_Ki_bQF-CEe2HFZFtUf3jxw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Q_i9EF-EEe2JFbKtDoMO1Q" name="CVDiagram" repPath="#_Q_YlAF-EEe2JFbKtDoMO1Q" changeId="4736f15d-2538-442e-bb71-fcc13f5aa140">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
+        <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ft9nYl-GEe2JFbKtDoMO1Q" name="new CVTree" repPath="#_ftyoQF-GEe2JFbKtDoMO1Q" changeId="107d3f8c-5167-4134-b8e2-e56abe5d2851">
+        <description xmi:type="description_2:TreeDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVTree']"/>
+        <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram uid="_c7FVQF90Ee2bHpcN-yWzYw">
@@ -30,4 +38,62 @@
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='cv']/@ownedRepresentations[name='CV%20diagram']/@defaultLayer"/>
     <target xmi:type="cvmodel.cv:CV" href="Example.cv#/"/>
   </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_Q_YlAF-EEe2JFbKtDoMO1Q">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Q_nOgF-EEe2JFbKtDoMO1Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_Q_nOgV-EEe2JFbKtDoMO1Q" type="Sirius" element="_Q_YlAF-EEe2JFbKtDoMO1Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_Q__B8F-EEe2JFbKtDoMO1Q" type="2001" element="_Q_ujQF-EEe2JFbKtDoMO1Q">
+          <children xmi:type="notation:Node" xmi:id="_RAAQEF-EEe2JFbKtDoMO1Q" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_RAAQEV-EEe2JFbKtDoMO1Q" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_RABeMF-EEe2JFbKtDoMO1Q" type="3003" element="_Q_47UF-EEe2JFbKtDoMO1Q">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_RABeMV-EEe2JFbKtDoMO1Q" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RABeMl-EEe2JFbKtDoMO1Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Q__B8V-EEe2JFbKtDoMO1Q" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q__B8l-EEe2JFbKtDoMO1Q" x="85" y="80" width="166" height="76"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_Q_nOgl-EEe2JFbKtDoMO1Q"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_Q_7-oF-EEe2JFbKtDoMO1Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_Q_7-oV-EEe2JFbKtDoMO1Q"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_Q_ujQF-EEe2JFbKtDoMO1Q" name="João" tooltipText="João" width="3" height="3" resizeKind="NSEW">
+      <target xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
+      <semanticElements xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" uid="_Q_47UF-EEe2JFbKtDoMO1Q" labelSize="12" labelPosition="node" color="217,196,215">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@nodeMappings[name='PersonNode']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@nodeMappings[name='PersonNode']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Q_eEkF-EEe2JFbKtDoMO1Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer"/>
+    <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
+  </diagram:DSemanticDiagram>
+  <tree:DTree uid="_ftyoQF-GEe2JFbKtDoMO1Q">
+    <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
+    <ownedTreeItems xmi:type="tree:DTreeItem" uid="_ft59AF-GEe2JFbKtDoMO1Q" name="SectionLayer" expanded="true">
+      <target xmi:type="cvmodel.cv:SectionLayer" href="ExampleCv.cv#//@sectionLayer"/>
+      <ownedTreeItems xmi:type="tree:DTreeItem" uid="_ft9nYF-GEe2JFbKtDoMO1Q" name="Identification" expanded="true">
+        <target xmi:type="cvmodel.cv:IdentificationSection" href="ExampleCv.cv#//@sectionLayer/@identificationSection"/>
+        <ownedTreeItems xmi:type="tree:DTreeItem" uid="_f-G8MF-GEe2JFbKtDoMO1Q" name="João Costa">
+          <target xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
+          <semanticElements xmi:type="cvmodel.cv:Person" href="ExampleCv.cv#//@sectionLayer/@identificationSection/@person"/>
+          <ownedStyle xmi:type="tree:TreeItemStyle" uid="_f-G8MV-GEe2JFbKtDoMO1Q"/>
+          <actualMapping xmi:type="description_2:TreeItemMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVTree']/@subItemMappings[name='SectionLayer']/@subItemMappings[name='IdentificationSection']/@subItemMappings[name='Person']"/>
+        </ownedTreeItems>
+        <semanticElements xmi:type="cvmodel.cv:IdentificationSection" href="ExampleCv.cv#//@sectionLayer/@identificationSection"/>
+        <ownedStyle xmi:type="tree:TreeItemStyle" uid="_ft9nYV-GEe2JFbKtDoMO1Q" backgroundColor="194,239,255"/>
+        <actualMapping xmi:type="description_2:TreeItemMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVTree']/@subItemMappings[name='SectionLayer']/@subItemMappings[name='IdentificationSection']"/>
+      </ownedTreeItems>
+      <semanticElements xmi:type="cvmodel.cv:SectionLayer" href="ExampleCv.cv#//@sectionLayer"/>
+      <ownedStyle xmi:type="tree:TreeItemStyle" uid="_ft7yMF-GEe2JFbKtDoMO1Q" backgroundColor="224,133,3"/>
+      <actualMapping xmi:type="description_2:TreeItemMapping" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVTree']/@subItemMappings[name='SectionLayer']"/>
+    </ownedTreeItems>
+    <description xmi:type="description_2:TreeDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVTree']"/>
+  </tree:DTree>
 </xmi:XMI>

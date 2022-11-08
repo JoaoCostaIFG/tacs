@@ -4,35 +4,59 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CVDiagram" domainClass="cv::CV" enablePopupBars="true">
       <metamodel href="http://cvmodel/cv#/"/>
       <defaultLayer name="Default">
-        <nodeMappings name="PersonNode" domainClass="cv::Person">
-          <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:firstNames" tooltipExpression="feature:firstNames" labelPosition="node" resizeKind="NSEW">
+        <containerMappings name="SectionLayer" domainClass="cv::SectionLayer" childrenPresentation="VerticalStack">
+          <subContainerMappings name="IdentificationSection" domainClass="cv::IdentificationSection" childrenPresentation="List">
+            <subNodeMappings name="PersonNode" domainClass="cv::Person">
+              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.firstNames + ' ' + self.lastNames" iconPath="/org.eclipse.emf.validation.ui.source/icons/full/lock.gif" tooltipExpression="feature:firstNames" labelPosition="node" resizeKind="NSEW">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+              </style>
+            </subNodeMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            </style>
+          </subContainerMappings>
+          <subContainerMappings name="OrderedSection" domainClass="cv::OrderedSection">
+            <subContainerMappings name="Content" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Content"/>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="CV">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
           </style>
-        </nodeMappings>
+        </containerMappings>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="CVTree" domainClass="cv::CV">
       <metamodel href="http://cvmodel/cv#/"/>
       <subItemMappings name="SectionLayer" domainClass="cv::SectionLayer" semanticCandidatesExpression="feature:eAllContents">
         <defaultStyle labelSize="12" labelExpression="SectionLayer">
-          <labelFormat>bold</labelFormat>
           <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+          <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
         </defaultStyle>
         <subItemMappings name="IdentificationSection" domainClass="cv::IdentificationSection" semanticCandidatesExpression="feature:eAllContents">
           <defaultStyle labelSize="12">
             <labelFormat>underline</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </defaultStyle>
           <subItemMappings name="Person" semanticElements="feature:aboutMe" domainClass="cv::Person" semanticCandidatesExpression="feature:eAllContents">
             <defaultStyle labelSize="12" labelExpression="aql:self.firstNames + ' ' + self.lastNames">
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </defaultStyle>
           </subItemMappings>
+        </subItemMappings>
+        <subItemMappings name="Section" domainClass="cv::OrderedSection" semanticCandidatesExpression="feature:eAllContents">
+          <defaultStyle>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </defaultStyle>
         </subItemMappings>
       </subItemMappings>
     </ownedRepresentations>

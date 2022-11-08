@@ -5,7 +5,7 @@ Bundle-SymbolicName: cvmodel.editor;singleton:=true
 Automatic-Module-Name: cvmodel.editor
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: cv.presentation.CvEditorPlugin$Implementation
+Bundle-Activator: cv.presentation.CvgenEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5

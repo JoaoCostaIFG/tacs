@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated cv -->
+      <!-- @generated cvgen -->
       <factory
             uri="http://cvmodel/cv"
             class="cv.provider.CvItemProviderAdapterFactory"

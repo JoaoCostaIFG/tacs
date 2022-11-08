@@ -70,7 +70,6 @@ public class PersonItemProvider
 			addGenderPropertyDescriptor(object);
 			addMaritalStatusPropertyDescriptor(object);
 			addAboutMePropertyDescriptor(object);
-			addPicturePropertyDescriptor(object);
 			addNationalitiesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -231,28 +230,6 @@ public class PersonItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Picture feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPicturePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Person_picture_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Person_picture_feature", "_UI_Person_type"),
-				 CvPackage.Literals.PERSON__PICTURE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Nationalities feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -286,6 +263,7 @@ public class PersonItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
+			childrenFeatures.add(CvPackage.Literals.PERSON__PICTURE);
 			childrenFeatures.add(CvPackage.Literals.PERSON__CONTACTS);
 			childrenFeatures.add(CvPackage.Literals.PERSON__ADDRESSES);
 		}
@@ -353,6 +331,7 @@ public class PersonItemProvider
 			case CvPackage.PERSON__NATIONALITIES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
+			case CvPackage.PERSON__PICTURE:
 			case CvPackage.PERSON__CONTACTS:
 			case CvPackage.PERSON__ADDRESSES:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
@@ -371,6 +350,11 @@ public class PersonItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.PERSON__PICTURE,
+				 CvFactory.eINSTANCE.createFile()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -431,7 +415,7 @@ public class PersonItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return CvEditPlugin.INSTANCE;
+		return CvgenEditPlugin.INSTANCE;
 	}
 
 }

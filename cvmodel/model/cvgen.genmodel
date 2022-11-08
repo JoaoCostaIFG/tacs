@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/cvmodel/src" modelPluginID="cvmodel" modelName="Cv"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/cvmodel/src" modelPluginID="cvmodel" modelName="Cvgen"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
     complianceLevel="5.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
   <foreignModel>cv.ecore</foreignModel>
@@ -307,8 +307,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Content/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Content/url"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Content/files"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//Content/address"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//Content/timeFrame"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Content/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Content/timeFrame"/>
     </genClasses>
     <genClasses ecoreClass="cv.ecore#//File">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//File/path"/>
@@ -346,9 +346,9 @@
     <genClasses ecoreClass="cv.ecore#//WorkExperience">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//WorkExperience/occupation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//WorkExperience/employer"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperience/timeFrame"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperience/timeFrame"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//WorkExperience/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperience/address"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//WorkExperience/address"/>
     </genClasses>
     <genClasses ecoreClass="cv.ecore#//EducationTrainingSection">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//EducationTrainingSection/educationTraining"/>
@@ -374,7 +374,7 @@
     <genClasses ecoreClass="cv.ecore#//MobilePhoneNumber"/>
     <genClasses ecoreClass="cv.ecore#//UrlContact"/>
     <genClasses ecoreClass="cv.ecore#//IdentificationSection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//IdentificationSection/person"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//IdentificationSection/person"/>
     </genClasses>
     <genClasses ecoreClass="cv.ecore#//Person">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/firstNames"/>
@@ -384,7 +384,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/gender"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/maritalStatus"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/aboutMe"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv.ecore#//Person/picture"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Person/picture"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Person/nationalities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Person/contacts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Person/addresses"/>

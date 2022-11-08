@@ -248,7 +248,7 @@ public class AddressItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return CvEditPlugin.INSTANCE;
+		return CvgenEditPlugin.INSTANCE;
 	}
 
 }

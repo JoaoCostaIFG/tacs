@@ -272,7 +272,7 @@ public class EducationTrainingItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return CvEditPlugin.INSTANCE;
+		return CvgenEditPlugin.INSTANCE;
 	}
 
 }

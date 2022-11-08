@@ -67,8 +67,6 @@ public class ContentItemProvider
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addUrlPropertyDescriptor(object);
-			addAddressPropertyDescriptor(object);
-			addTimeFramePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -162,50 +160,6 @@ public class ContentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Address feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAddressPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Content_address_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Content_address_feature", "_UI_Content_type"),
-				 CvPackage.Literals.CONTENT__ADDRESS,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Time Frame feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addTimeFramePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Content_timeFrame_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Content_timeFrame_feature", "_UI_Content_type"),
-				 CvPackage.Literals.CONTENT__TIME_FRAME,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -218,6 +172,8 @@ public class ContentItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(CvPackage.Literals.CONTENT__FILES);
+			childrenFeatures.add(CvPackage.Literals.CONTENT__ADDRESS);
+			childrenFeatures.add(CvPackage.Literals.CONTENT__TIME_FRAME);
 		}
 		return childrenFeatures;
 	}
@@ -280,6 +236,8 @@ public class ContentItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case CvPackage.CONTENT__FILES:
+			case CvPackage.CONTENT__ADDRESS:
+			case CvPackage.CONTENT__TIME_FRAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -301,6 +259,36 @@ public class ContentItemProvider
 			(createChildParameter
 				(CvPackage.Literals.CONTENT__FILES,
 				 CvFactory.eINSTANCE.createFile()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CONTENT__ADDRESS,
+				 CvFactory.eINSTANCE.createAddress()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CONTENT__ADDRESS,
+				 CvFactory.eINSTANCE.createNamedAddress()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CONTENT__ADDRESS,
+				 CvFactory.eINSTANCE.createHomeAddress()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CONTENT__ADDRESS,
+				 CvFactory.eINSTANCE.createWorkAddress()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CONTENT__TIME_FRAME,
+				 CvFactory.eINSTANCE.createStartEndTimeFrame()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(CvPackage.Literals.CONTENT__TIME_FRAME,
+				 CvFactory.eINSTANCE.createOnGoingTimeFrame()));
 	}
 
 	/**
@@ -311,7 +299,7 @@ public class ContentItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return CvEditPlugin.INSTANCE;
+		return CvgenEditPlugin.INSTANCE;
 	}
 
 }

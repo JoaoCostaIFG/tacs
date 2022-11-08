@@ -531,7 +531,7 @@ public class CvEditor
 					}
 				}
 				catch (CoreException exception) {
-					CvEditorPlugin.INSTANCE.log(exception);
+					CvgenEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -648,7 +648,7 @@ public class CvEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					CvEditorPlugin.INSTANCE.log(exception);
+					CvgenEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -657,7 +657,7 @@ public class CvEditor
 					markerHelper.updateMarkers(diagnostic);
 				}
 				catch (CoreException exception) {
-					CvEditorPlugin.INSTANCE.log(exception);
+					CvgenEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		}
@@ -1527,7 +1527,7 @@ public class CvEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			CvEditorPlugin.INSTANCE.log(exception);
+			CvgenEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1731,7 +1731,7 @@ public class CvEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return CvEditorPlugin.INSTANCE.getString(key);
+		return CvgenEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1741,7 +1741,7 @@ public class CvEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return CvEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return CvgenEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

@@ -200,7 +200,7 @@ public class FileItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return CvEditPlugin.INSTANCE;
+		return CvgenEditPlugin.INSTANCE;
 	}
 
 }

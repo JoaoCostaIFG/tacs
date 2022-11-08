@@ -336,7 +336,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv.ecore#//Section/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//Section/content"/>
     </genClasses>
-    <genClasses ecoreClass="cv.ecore#//OrderedSection"/>
+    <genClasses ecoreClass="cv.ecore#//OrderedSection">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference cv.ecore#//OrderedSection/parent"/>
+    </genClasses>
     <genClasses ecoreClass="cv.ecore#//SectionLayer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv.ecore#//SectionLayer/identificationSection"/>
     </genClasses>

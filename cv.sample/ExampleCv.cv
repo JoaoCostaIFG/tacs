@@ -44,6 +44,12 @@
       </content>
     </sections>
     <sections name="Recommendations" order="6">
+      <sections name="A subsection" order="2">
+        <content order="1" name="Here for the sake of it"/>
+      </sections>
+      <sections name="Another section" order="1">
+        <content order="1" name="The content"/>
+      </sections>
       <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com"/>
     </sections>
     <identificationSection name="Identification">

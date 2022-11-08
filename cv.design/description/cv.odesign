@@ -22,7 +22,7 @@
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="Section" semanticCandidatesExpression="aql:self.sections->sortedBy(s | s.order)" domainClass="cv::OrderedSection" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Section" semanticCandidatesExpression="aql: self.sections->closure(s | s.sections)->select(s | s.sections->isEmpty())->asOrderedSet()->collect(s | s.parent.sections->sortedBy(s | s.order))" domainClass="cv::OrderedSection" childrenPresentation="VerticalStack">
             <subContainerMappings name="WorkExperienceContainer" semanticCandidatesExpression="aql:  if self.workExperiences->size() > 0 then self else null endif" domainClass="cv::WorkExperienceSection" childrenPresentation="List">
               <subNodeMappings name="WorkExperience" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::WorkExperience">
                 <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation" sizeComputationExpression="-1" labelPosition="node">
@@ -57,7 +57,7 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="Content" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Content" childrenPresentation="List">
+            <subContainerMappings name="Content" semanticCandidatesExpression="feature:content" domainClass="cv::Content" childrenPresentation="List">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" labelAlignment="LEFT">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

@@ -9,14 +9,7 @@ Bundle-Activator: cv.presentation.CvEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: cv.content.presentation,
- cv.edutrain.presentation,
- cv.identification.contact.presentation,
- cv.identification.presentation,
- cv.presentation,
- cv.section.presentation,
- cv.skill.presentation,
- cv.workexp.presentation
+Export-Package: cv.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  cvmodel.edit;visibility:=reexport,

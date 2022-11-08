@@ -31,6 +31,20 @@ public class CvTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new CvTests("cv Tests");
+		suite.addTestSuite(ContentTest.class);
+		suite.addTestSuite(StartEndTimeFrameTest.class);
+		suite.addTestSuite(OrderedSectionTest.class);
+		suite.addTestSuite(SectionLayerTest.class);
+		suite.addTestSuite(WorkExperienceSectionTest.class);
+		suite.addTestSuite(EducationTrainingSectionTest.class);
+		suite.addTestSuite(EmailTest.class);
+		suite.addTestSuite(PhoneNumberTest.class);
+		suite.addTestSuite(HomePhoneNumberTest.class);
+		suite.addTestSuite(WorkPhoneNumberTest.class);
+		suite.addTestSuite(MobilePhoneNumberTest.class);
+		suite.addTestSuite(IdentificationSectionTest.class);
+		suite.addTestSuite(SkillSectionTest.class);
+		suite.addTestSuite(HardSkillTest.class);
 		return suite;
 	}
 

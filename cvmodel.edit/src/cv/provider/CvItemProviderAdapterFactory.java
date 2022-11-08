@@ -72,6 +72,627 @@ public class CvItemProviderAdapterFactory extends CvAdapterFactory implements Co
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link cv.Content} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContentItemProvider contentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.Content}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createContentAdapter() {
+		if (contentItemProvider == null) {
+			contentItemProvider = new ContentItemProvider(this);
+		}
+
+		return contentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.File} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FileItemProvider fileItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.File}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFileAdapter() {
+		if (fileItemProvider == null) {
+			fileItemProvider = new FileItemProvider(this);
+		}
+
+		return fileItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.StartEndTimeFrame} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StartEndTimeFrameItemProvider startEndTimeFrameItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.StartEndTimeFrame}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStartEndTimeFrameAdapter() {
+		if (startEndTimeFrameItemProvider == null) {
+			startEndTimeFrameItemProvider = new StartEndTimeFrameItemProvider(this);
+		}
+
+		return startEndTimeFrameItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.OnGoingTimeFrame} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OnGoingTimeFrameItemProvider onGoingTimeFrameItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.OnGoingTimeFrame}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOnGoingTimeFrameAdapter() {
+		if (onGoingTimeFrameItemProvider == null) {
+			onGoingTimeFrameItemProvider = new OnGoingTimeFrameItemProvider(this);
+		}
+
+		return onGoingTimeFrameItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.Address} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AddressItemProvider addressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.Address}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAddressAdapter() {
+		if (addressItemProvider == null) {
+			addressItemProvider = new AddressItemProvider(this);
+		}
+
+		return addressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.OrderedSection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OrderedSectionItemProvider orderedSectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.OrderedSection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOrderedSectionAdapter() {
+		if (orderedSectionItemProvider == null) {
+			orderedSectionItemProvider = new OrderedSectionItemProvider(this);
+		}
+
+		return orderedSectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.SectionLayer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SectionLayerItemProvider sectionLayerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.SectionLayer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSectionLayerAdapter() {
+		if (sectionLayerItemProvider == null) {
+			sectionLayerItemProvider = new SectionLayerItemProvider(this);
+		}
+
+		return sectionLayerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.WorkExperienceSection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WorkExperienceSectionItemProvider workExperienceSectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.WorkExperienceSection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWorkExperienceSectionAdapter() {
+		if (workExperienceSectionItemProvider == null) {
+			workExperienceSectionItemProvider = new WorkExperienceSectionItemProvider(this);
+		}
+
+		return workExperienceSectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.WorkExperience} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WorkExperienceItemProvider workExperienceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.WorkExperience}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWorkExperienceAdapter() {
+		if (workExperienceItemProvider == null) {
+			workExperienceItemProvider = new WorkExperienceItemProvider(this);
+		}
+
+		return workExperienceItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.EducationTrainingSection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EducationTrainingSectionItemProvider educationTrainingSectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.EducationTrainingSection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEducationTrainingSectionAdapter() {
+		if (educationTrainingSectionItemProvider == null) {
+			educationTrainingSectionItemProvider = new EducationTrainingSectionItemProvider(this);
+		}
+
+		return educationTrainingSectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.EducationTraining} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EducationTrainingItemProvider educationTrainingItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.EducationTraining}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEducationTrainingAdapter() {
+		if (educationTrainingItemProvider == null) {
+			educationTrainingItemProvider = new EducationTrainingItemProvider(this);
+		}
+
+		return educationTrainingItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.Contact} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ContactItemProvider contactItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.Contact}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createContactAdapter() {
+		if (contactItemProvider == null) {
+			contactItemProvider = new ContactItemProvider(this);
+		}
+
+		return contactItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.Email} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EmailItemProvider emailItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.Email}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEmailAdapter() {
+		if (emailItemProvider == null) {
+			emailItemProvider = new EmailItemProvider(this);
+		}
+
+		return emailItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.PhoneNumber} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PhoneNumberItemProvider phoneNumberItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.PhoneNumber}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPhoneNumberAdapter() {
+		if (phoneNumberItemProvider == null) {
+			phoneNumberItemProvider = new PhoneNumberItemProvider(this);
+		}
+
+		return phoneNumberItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.HomePhoneNumber} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HomePhoneNumberItemProvider homePhoneNumberItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.HomePhoneNumber}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHomePhoneNumberAdapter() {
+		if (homePhoneNumberItemProvider == null) {
+			homePhoneNumberItemProvider = new HomePhoneNumberItemProvider(this);
+		}
+
+		return homePhoneNumberItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.WorkPhoneNumber} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WorkPhoneNumberItemProvider workPhoneNumberItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.WorkPhoneNumber}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWorkPhoneNumberAdapter() {
+		if (workPhoneNumberItemProvider == null) {
+			workPhoneNumberItemProvider = new WorkPhoneNumberItemProvider(this);
+		}
+
+		return workPhoneNumberItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.MobilePhoneNumber} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MobilePhoneNumberItemProvider mobilePhoneNumberItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.MobilePhoneNumber}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMobilePhoneNumberAdapter() {
+		if (mobilePhoneNumberItemProvider == null) {
+			mobilePhoneNumberItemProvider = new MobilePhoneNumberItemProvider(this);
+		}
+
+		return mobilePhoneNumberItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.UrlContact} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UrlContactItemProvider urlContactItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.UrlContact}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUrlContactAdapter() {
+		if (urlContactItemProvider == null) {
+			urlContactItemProvider = new UrlContactItemProvider(this);
+		}
+
+		return urlContactItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.IdentificationSection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IdentificationSectionItemProvider identificationSectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.IdentificationSection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIdentificationSectionAdapter() {
+		if (identificationSectionItemProvider == null) {
+			identificationSectionItemProvider = new IdentificationSectionItemProvider(this);
+		}
+
+		return identificationSectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.Person} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PersonItemProvider personItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.Person}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPersonAdapter() {
+		if (personItemProvider == null) {
+			personItemProvider = new PersonItemProvider(this);
+		}
+
+		return personItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.NamedAddress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NamedAddressItemProvider namedAddressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.NamedAddress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNamedAddressAdapter() {
+		if (namedAddressItemProvider == null) {
+			namedAddressItemProvider = new NamedAddressItemProvider(this);
+		}
+
+		return namedAddressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.HomeAddress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HomeAddressItemProvider homeAddressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.HomeAddress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHomeAddressAdapter() {
+		if (homeAddressItemProvider == null) {
+			homeAddressItemProvider = new HomeAddressItemProvider(this);
+		}
+
+		return homeAddressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.WorkAddress} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected WorkAddressItemProvider workAddressItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.WorkAddress}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createWorkAddressAdapter() {
+		if (workAddressItemProvider == null) {
+			workAddressItemProvider = new WorkAddressItemProvider(this);
+		}
+
+		return workAddressItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.SkillSection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SkillSectionItemProvider skillSectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.SkillSection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSkillSectionAdapter() {
+		if (skillSectionItemProvider == null) {
+			skillSectionItemProvider = new SkillSectionItemProvider(this);
+		}
+
+		return skillSectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.HardSkill} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected HardSkillItemProvider hardSkillItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.HardSkill}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createHardSkillAdapter() {
+		if (hardSkillItemProvider == null) {
+			hardSkillItemProvider = new HardSkillItemProvider(this);
+		}
+
+		return hardSkillItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.MotherTongue} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MotherTongueItemProvider motherTongueItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.MotherTongue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMotherTongueAdapter() {
+		if (motherTongueItemProvider == null) {
+			motherTongueItemProvider = new MotherTongueItemProvider(this);
+		}
+
+		return motherTongueItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link cv.SecondLanguage} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SecondLanguageItemProvider secondLanguageItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link cv.SecondLanguage}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSecondLanguageAdapter() {
+		if (secondLanguageItemProvider == null) {
+			secondLanguageItemProvider = new SecondLanguageItemProvider(this);
+		}
+
+		return secondLanguageItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link cv.CV} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -193,6 +814,33 @@ public class CvItemProviderAdapterFactory extends CvAdapterFactory implements Co
 	 * @generated
 	 */
 	public void dispose() {
+		if (contentItemProvider != null) contentItemProvider.dispose();
+		if (fileItemProvider != null) fileItemProvider.dispose();
+		if (startEndTimeFrameItemProvider != null) startEndTimeFrameItemProvider.dispose();
+		if (onGoingTimeFrameItemProvider != null) onGoingTimeFrameItemProvider.dispose();
+		if (addressItemProvider != null) addressItemProvider.dispose();
+		if (orderedSectionItemProvider != null) orderedSectionItemProvider.dispose();
+		if (sectionLayerItemProvider != null) sectionLayerItemProvider.dispose();
+		if (workExperienceSectionItemProvider != null) workExperienceSectionItemProvider.dispose();
+		if (workExperienceItemProvider != null) workExperienceItemProvider.dispose();
+		if (educationTrainingSectionItemProvider != null) educationTrainingSectionItemProvider.dispose();
+		if (educationTrainingItemProvider != null) educationTrainingItemProvider.dispose();
+		if (contactItemProvider != null) contactItemProvider.dispose();
+		if (emailItemProvider != null) emailItemProvider.dispose();
+		if (phoneNumberItemProvider != null) phoneNumberItemProvider.dispose();
+		if (homePhoneNumberItemProvider != null) homePhoneNumberItemProvider.dispose();
+		if (workPhoneNumberItemProvider != null) workPhoneNumberItemProvider.dispose();
+		if (mobilePhoneNumberItemProvider != null) mobilePhoneNumberItemProvider.dispose();
+		if (urlContactItemProvider != null) urlContactItemProvider.dispose();
+		if (identificationSectionItemProvider != null) identificationSectionItemProvider.dispose();
+		if (personItemProvider != null) personItemProvider.dispose();
+		if (namedAddressItemProvider != null) namedAddressItemProvider.dispose();
+		if (homeAddressItemProvider != null) homeAddressItemProvider.dispose();
+		if (workAddressItemProvider != null) workAddressItemProvider.dispose();
+		if (skillSectionItemProvider != null) skillSectionItemProvider.dispose();
+		if (hardSkillItemProvider != null) hardSkillItemProvider.dispose();
+		if (motherTongueItemProvider != null) motherTongueItemProvider.dispose();
+		if (secondLanguageItemProvider != null) secondLanguageItemProvider.dispose();
 		if (cvItemProvider != null) cvItemProvider.dispose();
 	}
 

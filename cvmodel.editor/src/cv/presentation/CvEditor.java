@@ -157,22 +157,6 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import cv.provider.CvItemProviderAdapterFactory;
 
-import cv.content.provider.ContentItemProviderAdapterFactory;
-
-import cv.edutrain.provider.EdutrainItemProviderAdapterFactory;
-
-import cv.identification.contact.provider.ContactItemProviderAdapterFactory;
-
-import cv.identification.provider.IdentificationItemProviderAdapterFactory;
-
-import cv.order.provider.OrderItemProviderAdapterFactory;
-
-import cv.section.provider.SectionItemProviderAdapterFactory;
-
-import cv.skill.provider.SkillItemProviderAdapterFactory;
-
-import cv.workexp.provider.WorkexpItemProviderAdapterFactory;
-
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -717,14 +701,6 @@ public class CvEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CvItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new OrderItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ContentItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SectionItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new WorkexpItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new EdutrainItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new IdentificationItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ContactItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SkillItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

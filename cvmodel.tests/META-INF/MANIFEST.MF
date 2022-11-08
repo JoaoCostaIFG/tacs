@@ -8,15 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: cv.content.tests,
- cv.edutrain.tests,
- cv.identification.contact.tests,
- cv.identification.tests,
- cv.order.tests,
- cv.section.tests,
- cv.skill.tests,
- cv.tests,
- cv.workexp.tests
+Export-Package: cv.tests
 Require-Bundle: org.eclipse.core.runtime,
  cvmodel;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

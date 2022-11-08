@@ -4,9 +4,8 @@ package cv.provider;
 
 
 import cv.CV;
+import cv.CvFactory;
 import cv.CvPackage;
-
-import cv.section.SectionFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -152,7 +151,7 @@ public class CVItemProvider
 		newChildDescriptors.add
 			(createChildParameter
 				(CvPackage.Literals.CV__SECTION_LAYER,
-				 SectionFactory.eINSTANCE.createSectionLayer()));
+				 CvFactory.eINSTANCE.createSectionLayer()));
 	}
 
 	/**

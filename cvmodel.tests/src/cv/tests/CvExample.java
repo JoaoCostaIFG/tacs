@@ -2,7 +2,7 @@
  */
 package cv.tests;
 
-import cv.CV;
+import cv.Content;
 import cv.CvFactory;
 import cv.CvPackage;
 
@@ -60,7 +60,7 @@ public class CvExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.cv"));
-				CV root = CvFactory.eINSTANCE.createCV();
+				Content root = CvFactory.eINSTANCE.createContent();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

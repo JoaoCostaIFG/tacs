@@ -9,15 +9,7 @@ Bundle-Activator: cv.provider.CvEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: cv.content.provider,
- cv.edutrain.provider,
- cv.identification.contact.provider,
- cv.identification.provider,
- cv.order.provider,
- cv.provider,
- cv.section.provider,
- cv.skill.provider,
- cv.workexp.provider
+Export-Package: cv.provider
 Require-Bundle: org.eclipse.core.runtime,
  cvmodel;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport

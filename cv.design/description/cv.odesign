@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CVDiagram" domainClass="cv::CV" enablePopupBars="true">
       <metamodel href="http://cvmodel/cv#/"/>
       <defaultLayer name="Default">
-        <containerMappings name="SectionLayer" domainClass="cv::SectionLayer">
+        <containerMappings name="SectionLayer" domainClass="cv::SectionLayer" childrenPresentation="VerticalStack">
           <subContainerMappings name="IdentificationSection" domainClass="cv::IdentificationSection" childrenPresentation="List">
             <subNodeMappings name="PersonNode" domainClass="cv::Person">
               <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.firstNames + ' ' + self.lastNames" iconPath="/org.eclipse.emf.validation.ui.source/icons/full/lock.gif" tooltipExpression="feature:firstNames" labelPosition="node" resizeKind="NSEW">
@@ -20,8 +20,24 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             </style>
           </subContainerMappings>
-          <subContainerMappings name="Section" semanticCandidatesExpression="aql:self.sections->sortedBy(s | s.order)" domainClass="cv::OrderedSection">
-            <subNodeMappings name="Content" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::EducationTraining"/>
+          <subContainerMappings name="Section" semanticCandidatesExpression="aql:self.sections->sortedBy(s | s.order)" domainClass="cv::OrderedSection" childrenPresentation="VerticalStack">
+            <subContainerMappings name="WorkExperienceContainer" semanticCandidatesExpression="var:self" domainClass="cv::OrderedSection" childrenPresentation="List">
+              <subNodeMappings name="WorkExperience" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::WorkExperience">
+                <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-100.png" labelAlignment="LEFT" tooltipExpression="feature:occupation" sizeComputationExpression="-1" width="40" height="2">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+                </style>
+              </subNodeMappings>
+            </subContainerMappings>
+            <subContainerMappings name="EducationTrainingContainer" semanticCandidatesExpression="var:self" domainClass="cv::OrderedSection">
+              <subNodeMappings name="EducationTraining" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::EducationTraining">
+                <style xsi:type="style:WorkspaceImageDescription" borderSizeComputationExpression="2" labelSize="12" showIcon="false" labelExpression="feature:title" tooltipExpression="feature:title" workspacePath="/cv.design/icons/icons8-graduation-64.png">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                </style>
+              </subNodeMappings>
+            </subContainerMappings>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" backgroundStyle="GradientTopToBottom">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
               <labelFormat>underline</labelFormat>

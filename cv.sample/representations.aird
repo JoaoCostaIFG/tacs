@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description">
+  <viewpoint:DAnalysis uid="_aTuVoF9tEe2hqpjNqW2zWA" selectedViews="_cCTTIF90Ee2bHpcN-yWzYw" version="15.0.0.202209061200">
+    <semanticResources>Example.person.identification</semanticResources>
+    <semanticResources>Example.cv</semanticResources>
+    <semanticResources>platform:/resource/cvmodel/model/cv.ecore</semanticResources>
+    <semanticResources>ExampleCv.cv</semanticResources>
+    <semanticResources>ExamplePerson.cv</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_cCTTIF90Ee2bHpcN-yWzYw">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='cv']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_c7tnYF90Ee2bHpcN-yWzYw" name="CV diagram" repPath="#_c7FVQF90Ee2bHpcN-yWzYw" changeId="7e987953-38dc-4263-8cb4-ec4fa6c9f7d0">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='cv']/@ownedRepresentations[name='CV%20diagram']"/>
+        <target xmi:type="cvmodel.cv:CV" href="Example.cv#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_c7FVQF90Ee2bHpcN-yWzYw">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_c8fqgF90Ee2bHpcN-yWzYw" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_c8fqgV90Ee2bHpcN-yWzYw" type="Sirius" element="_c7FVQF90Ee2bHpcN-yWzYw" measurementUnit="Pixel">
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_c8fqgl90Ee2bHpcN-yWzYw"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_c87vYF90Ee2bHpcN-yWzYw" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_c88WcF90Ee2bHpcN-yWzYw"/>
+    </ownedAnnotationEntries>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='cv']/@ownedRepresentations[name='CV%20diagram']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_c7ZeUF90Ee2bHpcN-yWzYw"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='cv']/@ownedRepresentations[name='CV%20diagram']/@defaultLayer"/>
+    <target xmi:type="cvmodel.cv:CV" href="Example.cv#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>

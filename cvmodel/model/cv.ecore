@@ -121,6 +121,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fieldsOfStudy" upperBound="-1"
         eType="#//FieldOfStudy"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="eqf" eType="#//EQF"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="timeFrame" lowerBound="1"
+        eType="#//TimeFrame" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FieldOfStudy">
     <eLiterals name="GENERIC" literal="Generic programs and classifications"/>

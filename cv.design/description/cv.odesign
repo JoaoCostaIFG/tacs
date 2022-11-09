@@ -24,7 +24,7 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="EducationTrainingContainer" semanticCandidatesExpression="aql: self" domainClass="cv::EducationTrainingSection" childrenPresentation="List">
-              <subNodeMappings name="EducationTraining" deletionDescription="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Delete%20title']" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::EducationTraining">
+              <subNodeMappings name="EducationTraining" deletionDescription="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Title%20tools']/@tools.1" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::EducationTraining">
                 <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:title" iconPath="/cv.design/icons/icons8-graduation-32.png" labelAlignment="LEFT" tooltipExpression="feature:title" sizeComputationExpression="-1">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -76,6 +76,7 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
+            <subContainerMappings name="SubSection" semanticCandidatesExpression="var:self" domainClass="cv::Section"/>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" tooltipExpression="feature:name">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>underline</labelFormat>
@@ -111,23 +112,34 @@
               <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="Title creation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTrainingContainer']/@subNodeMappings[name='EducationTraining']">
+          <ownedTools xsi:type="tool:ToolGroup" name="Title tools">
+            <tools xsi:type="tool:NodeCreationDescription" name="Title creation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTrainingContainer']/@subNodeMappings[name='EducationTraining']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: self">
+                  <subModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::EducationTraining" referenceName="educationTraining">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="title" valueExpression="New title"/>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:DeleteElementDescription" name="Delete title">
+              <element name="element"/>
+              <elementView name="elementView"/>
+              <containerView name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:RemoveElement"/>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="CreateSection" forceRefresh="true" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='SubSection'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql: self">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::EducationTraining" referenceName="educationTraining">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="title" valueExpression="New title"/>
-                </subModelOperations>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::OrderedSection" referenceName="sections">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New section"/>
               </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:DeleteElementDescription" name="Delete title">
-            <element name="element"/>
-            <elementView name="elementView"/>
-            <containerView name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:RemoveElement"/>
             </initialOperation>
           </ownedTools>
         </toolSections>

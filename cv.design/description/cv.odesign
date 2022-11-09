@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="cv" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="cv" version="12.0.0.2017041100">
   <ownedViewpoints name="CvViewpoint" modelFileExtension="">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CVDiagram" domainClass="cv::CV" enablePopupBars="true">
       <metamodel href="http://cvmodel/cv#/"/>
       <defaultLayer name="Default">
         <containerMappings name="SectionLayer" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::SectionLayer" childrenPresentation="VerticalStack">
-          <subContainerMappings name="Section" semanticCandidatesExpression="aql: Sequence{self.identificationSection}->concat(self.sections->sortedBy(s | s.order))->closure(s | s.sections->sortedBy(s | s.order))" domainClass="cv::Section" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Section" labelDirectEdit="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='SectionNameEdit']" semanticCandidatesExpression="aql: Sequence{self.identificationSection}->concat(self.sections->sortedBy(s | s.order))->closure(s | s.sections->sortedBy(s | s.order))" domainClass="cv::Section" childrenPresentation="VerticalStack">
             <subContainerMappings name="WorkExperienceContainer" semanticCandidatesExpression="aql:  if self.workExperiences->size() > 0 then self else null endif" domainClass="cv::WorkExperienceSection" childrenPresentation="List">
               <subNodeMappings name="WorkExperience" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::WorkExperience">
                 <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation" sizeComputationExpression="-1" labelPosition="node">
@@ -104,6 +104,14 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
+        <toolSections name="Section Tools">
+          <ownedTools xsi:type="tool:DirectEditLabel" name="SectionNameEdit">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="CVTree" domainClass="cv::CV">

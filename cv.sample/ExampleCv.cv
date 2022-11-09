@@ -17,6 +17,7 @@
     </sections>
     <sections xsi:type="cvmodel.cv:SkillSection" name="Skills" order="1">
       <content name="New content"/>
+      <hardSkills name="The hard skill"/>
       <softSkills>Team worker</softSkills>
       <softSkills>Friendly</softSkills>
       <softSkills>Doesn't bite</softSkills>
@@ -51,7 +52,9 @@
       <sections name="Another section" order="1">
         <content order="1" name="The content"/>
       </sections>
-      <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com"/>
+      <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2020-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
+      </content>
     </sections>
     <identificationSection name="Identification">
       <person firstNames="Ana" lastNames="Barros" title="Software engineer" dateOfBirth="2000-06-28T00:00:00.000+0100" gender="FEMALE" aboutMe="I am a student at FEUP taking the master's in Informatics and Computing Engineering.&#xA;am currently looking for internships to get work experience.">

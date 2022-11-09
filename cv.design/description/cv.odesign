@@ -8,7 +8,7 @@
           <subContainerMappings name="Section" labelDirectEdit="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Section%20tools']/@tools.1" semanticCandidatesExpression="aql: self.sections->sortedBy(s | s.order)->prepend(self.identificationSection)->closure(s | s.sections->sortedBy(s | s.order))" domainClass="cv::Section" childrenPresentation="VerticalStack">
             <subContainerMappings name="WorkExperienceContainer" semanticCandidatesExpression="aql:  self" domainClass="cv::WorkExperienceSection" childrenPresentation="List">
               <subNodeMappings name="WorkExperience" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::WorkExperience">
-                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation" sizeComputationExpression="-1" labelPosition="node">
+                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -25,7 +25,7 @@
             </subContainerMappings>
             <subContainerMappings name="EducationTrainingContainer" semanticCandidatesExpression="aql: self" domainClass="cv::EducationTrainingSection" childrenPresentation="List">
               <subNodeMappings name="EducationTraining" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::EducationTraining">
-                <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:title" iconPath="/cv.design/icons/icons8-graduation-32.png" labelAlignment="LEFT" tooltipExpression="feature:title" sizeComputationExpression="-1">
+                <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="feature:title" iconPath="/cv.design/icons/icons8-graduation-32.png" labelAlignment="LEFT" tooltipExpression="feature:title" sizeComputationExpression="-1" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -42,7 +42,7 @@
             </subContainerMappings>
             <subContainerMappings name="HardSkillsContainer" semanticCandidatesExpression="aql:  self" domainClass="cv::SkillSection">
               <subNodeMappings name="HardSkill" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::HardSkill">
-                <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/cv.design/icons/icons8-development-skill-32.png" labelAlignment="LEFT" tooltipExpression="feature:name" sizeComputationExpression="-1" labelPosition="node">
+                <style xsi:type="style:SquareDescription" labelSize="10" iconPath="/cv.design/icons/icons8-development-skill-32.png" labelAlignment="LEFT" tooltipExpression="feature:name" sizeComputationExpression="-1" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -68,6 +68,16 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="Content" semanticCandidatesExpression="feature:content" domainClass="cv::Content" childrenPresentation="List">
+              <borderedNodeMappings name="ContentTimeFrame" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::TimeFrame">
+                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.startDate" labelAlignment="LEFT" tooltipExpression="aql: self.startDate" labelPosition="node" resizeKind="NSEW" width="18" height="2">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <forbiddenSides>WEST</forbiddenSides>
+                  <forbiddenSides>SOUTH</forbiddenSides>
+                  <forbiddenSides>NORTH</forbiddenSides>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                </style>
+              </borderedNodeMappings>
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" labelAlignment="LEFT">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -76,12 +86,13 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="SubSection" semanticCandidatesExpression="var:self" domainClass="cv::Section">
+            <subContainerMappings name="SubSection" semanticCandidatesExpression="var:self" domainClass="cv::Section" childrenPresentation="List">
               <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" labelSize="1" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" tooltipExpression="feature:name">
@@ -114,7 +125,7 @@
         </containerMappings>
         <toolSections name="Section Tools">
           <ownedTools xsi:type="tool:ToolGroup" name="EducationTraining tools">
-            <tools xsi:type="tool:NodeCreationDescription" name="Title creation" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTrainingContainer']/@subNodeMappings[name='EducationTraining']">
+            <tools xsi:type="tool:NodeCreationDescription" name="Create title" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTrainingContainer']/@subNodeMappings[name='EducationTraining']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -150,6 +161,28 @@
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::Content" referenceName="content">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New content"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="WorkExperience tools">
+            <tools xsi:type="tool:NodeCreationDescription" name="Create occupation" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperienceContainer']/@subNodeMappings[name='WorkExperience']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::WorkExperience" referenceName="workExperiences">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="occupation" valueExpression="New occupation"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="Skills tools">
+            <tools xsi:type="tool:NodeCreationDescription" name="Create hard skill" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='HardSkillsContainer']/@subNodeMappings[name='HardSkill']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::HardSkill" referenceName="hardSkills">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New hard skill"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>

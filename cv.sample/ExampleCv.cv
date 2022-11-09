@@ -33,7 +33,7 @@
     </sections>
     <sections name="Projects" order="5">
       <content order="1" name="Outdo" description="Participated in the creation of the Outdo startup. My main role is the development and maintenance of both the website&#xA;and mobile application prototypes." url="https://outdoapp.pt/">
-        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="2019-01-01T00:00:00.000+0000"/>
+        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="1970-01-01T00:00:00.000+0100"/>
       </content>
       <content order="2" name="The Landing Gear System" description="The goal of this project was to explore the validation and verification of a realistic safety-critical software system during the design and implementation stages of development. The project consisted of two parts: one part was the design in Alloy and the other one was the implementation in Dafny. The system under analysis (The Landing Gear System 2022) was part of a series of case studies set provided by the ABZ Conf.">
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2022-02-01T23:00:00.000+0000" endDate="2022-06-01T01:00:00.000+0100"/>

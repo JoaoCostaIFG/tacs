@@ -328,12 +328,36 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool:ToolGroup" name="Skills tools">
-            <tools xsi:type="tool:ContainerCreationDescription" name="Create Hard Skill" precondition="aql: self.oclIsTypeOf(cv::SkillSection)" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='SubSection']">
+            <tools xsi:type="tool:ContainerCreationDescription" name="Create Skill" precondition="aql: self.oclIsTypeOf(cv::SkillSection)" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='SubSection']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::HardSkill" referenceName="hardSkills">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New skill"/>
+                <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="NewSkill Dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="Hard skill" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::HardSkill" referenceName="hardSkills">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New skill"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Mother tongue" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::MotherTongue" referenceName="motherTongues">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New mother tongue"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Second language" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::SecondLanguage" referenceName="secondLanguages">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New second language"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Choose skill type to create Page" labelExpression="Choose skill type to create" semanticCandidateExpression="var:self"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>

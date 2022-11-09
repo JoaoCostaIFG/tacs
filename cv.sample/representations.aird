@@ -22,7 +22,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MVrlQl-gEe2V1YSitGIQpg" name="new CVDiagram" repPath="#_MVrlQF-gEe2V1YSitGIQpg" changeId="d0c6b818-f998-4efc-a10c-a7f99b2cc5d8">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MVrlQl-gEe2V1YSitGIQpg" name="new CVDiagram" repPath="#_MVrlQF-gEe2V1YSitGIQpg" changeId="83eb90ea-fabb-442a-b191-8a189c061c9d">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
@@ -428,7 +428,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_pqZFZ1-0Ee2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_pqZFYV-0Ee2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqZFYl-0Ee2dV44-xjD11g" y="234"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqZFYl-0Ee2dV44-xjD11g" y="174"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_pqYeUF-0Ee2dV44-xjD11g" type="3008" element="_pp254l-0Ee2dV44-xjD11g">
               <children xmi:type="notation:Node" xmi:id="_pqYeU1-0Ee2dV44-xjD11g" type="5005"/>
@@ -484,7 +484,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_pqYeV1-0Ee2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_pqYeUV-0Ee2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqYeUl-0Ee2dV44-xjD11g" y="375"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqYeUl-0Ee2dV44-xjD11g" y="361"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_pqZFcF-0Ee2dV44-xjD11g" type="3008" element="_pp4IAF-0Ee2dV44-xjD11g">
               <children xmi:type="notation:Node" xmi:id="_pqZFc1-0Ee2dV44-xjD11g" type="5005"/>
@@ -518,7 +518,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_pqZscF-0Ee2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_pqZFcV-0Ee2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqZFcl-0Ee2dV44-xjD11g" y="516"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqZFcl-0Ee2dV44-xjD11g" y="584"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_pqZscV-0Ee2dV44-xjD11g" type="3008" element="_pp4IA1-0Ee2dV44-xjD11g">
               <children xmi:type="notation:Node" xmi:id="_pqZsdF-0Ee2dV44-xjD11g" type="5005"/>
@@ -594,7 +594,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_pqZseF-0Ee2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_pqZscl-0Ee2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqZsc1-0Ee2dV44-xjD11g" y="611"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pqZsc1-0Ee2dV44-xjD11g" y="697"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_04dbIF_GEe2dV44-xjD11g" type="3008" element="_02EOdV_GEe2dV44-xjD11g">
               <children xmi:type="notation:Node" xmi:id="_04dbI1_GEe2dV44-xjD11g" type="5005"/>
@@ -632,7 +632,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_04dbJ1_GEe2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_04dbIV_GEe2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_04dbIl_GEe2dV44-xjD11g" y="856"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_04dbIl_GEe2dV44-xjD11g" y="996"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_04dbKF_GEe2dV44-xjD11g" type="3008" element="_02EOeF_GEe2dV44-xjD11g">
               <children xmi:type="notation:Node" xmi:id="_04dbK1_GEe2dV44-xjD11g" type="5005"/>
@@ -662,7 +662,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_04dbL1_GEe2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_04dbKV_GEe2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" italic="true" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_04dbKl_GEe2dV44-xjD11g" y="969"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_04dbKl_GEe2dV44-xjD11g" y="1127"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_04dbMF_GEe2dV44-xjD11g" type="3008" element="_02EOe1_GEe2dV44-xjD11g">
               <children xmi:type="notation:Node" xmi:id="_04eCMF_GEe2dV44-xjD11g" type="5005"/>
@@ -692,7 +692,7 @@
                 <styles xmi:type="notation:DrawerStyle" xmi:id="_04eCNF_GEe2dV44-xjD11g"/>
               </children>
               <styles xmi:type="notation:ShapeStyle" xmi:id="_04dbMV_GEe2dV44-xjD11g" fontName="Source Han Sans" fontHeight="12" italic="true" underline="true"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_04dbMl_GEe2dV44-xjD11g" y="1055"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_04dbMl_GEe2dV44-xjD11g" y="1213"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_kyQHMl-zEe2dV44-xjD11g"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_kyQHM1-zEe2dV44-xjD11g"/>

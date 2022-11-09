@@ -22,7 +22,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MVrlQl-gEe2V1YSitGIQpg" name="new CVDiagram" repPath="#_MVrlQF-gEe2V1YSitGIQpg" changeId="91f0157e-b60c-41eb-a9a2-6ea21c0407db">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_MVrlQl-gEe2V1YSitGIQpg" name="new CVDiagram" repPath="#_MVrlQF-gEe2V1YSitGIQpg" changeId="0291127c-645f-47df-91e1-62f43a5be4d0">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>
@@ -363,7 +363,7 @@
                     <styles xmi:type="notation:DrawerStyle" xmi:id="_8otOd2BBEe25AKNNYLeVQw"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_8otOcWBBEe25AKNNYLeVQw" fontName="Source Han Sans"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8otOcmBBEe25AKNNYLeVQw" y="502"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8otOcmBBEe25AKNNYLeVQw" y="423"/>
                 </children>
                 <children xmi:type="notation:Node" xmi:id="_IN-vAGBvEe2es9tUAdE6-Q" visible="false" type="3009" element="_IM6_FGBvEe2es9tUAdE6-Q">
                   <children xmi:type="notation:Node" xmi:id="_IN_WEGBvEe2es9tUAdE6-Q" type="5004"/>
@@ -383,7 +383,7 @@
                     <styles xmi:type="notation:DrawerStyle" xmi:id="_B0Fh32B8Ee2es9tUAdE6-Q"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_B0Fh2WB8Ee2es9tUAdE6-Q" fontName="Source Han Sans" fontHeight="10"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B0Fh2mB8Ee2es9tUAdE6-Q" y="458"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B0Fh2mB8Ee2es9tUAdE6-Q" y="379"/>
                 </children>
                 <children xmi:type="notation:Node" xmi:id="_EmTx0GB8Ee2es9tUAdE6-Q" type="3009" element="_ElWvkGB8Ee2es9tUAdE6-Q">
                   <children xmi:type="notation:Node" xmi:id="_EmUY4GB8Ee2es9tUAdE6-Q" type="5004"/>
@@ -411,7 +411,7 @@
                     <styles xmi:type="notation:DrawerStyle" xmi:id="_EVbLRGB-Ee2es9tUAdE6-Q"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_EVakMWB-Ee2es9tUAdE6-Q" fontName="Source Han Sans" fontHeight="10"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EVakMmB-Ee2es9tUAdE6-Q" y="100"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EVakMmB-Ee2es9tUAdE6-Q" y="60"/>
                 </children>
                 <children xmi:type="notation:Node" xmi:id="_jvsrsGB8Ee2es9tUAdE6-Q" type="3009" element="_jvl-GGB8Ee2es9tUAdE6-Q">
                   <children xmi:type="notation:Node" xmi:id="_jvtSwGB8Ee2es9tUAdE6-Q" type="5004"/>
@@ -441,7 +441,7 @@
                     <styles xmi:type="notation:DrawerStyle" xmi:id="_jvtSxGB8Ee2es9tUAdE6-Q"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_jvsrsWB8Ee2es9tUAdE6-Q" fontName="Source Han Sans" fontHeight="10"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jvsrsmB8Ee2es9tUAdE6-Q" y="200"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jvsrsmB8Ee2es9tUAdE6-Q" y="121"/>
                 </children>
                 <children xmi:type="notation:Node" xmi:id="_jvtSxWB8Ee2es9tUAdE6-Q" type="3009" element="_jvl-G2B8Ee2es9tUAdE6-Q">
                   <children xmi:type="notation:Node" xmi:id="_jvtSyGB8Ee2es9tUAdE6-Q" type="5004"/>
@@ -471,7 +471,7 @@
                     <styles xmi:type="notation:DrawerStyle" xmi:id="_jvtSzGB8Ee2es9tUAdE6-Q"/>
                   </children>
                   <styles xmi:type="notation:ShapeStyle" xmi:id="_jvtSxmB8Ee2es9tUAdE6-Q" fontName="Source Han Sans" fontHeight="10"/>
-                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jvtSx2B8Ee2es9tUAdE6-Q" y="329"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_jvtSx2B8Ee2es9tUAdE6-Q" y="250"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_pqZFbV-0Ee2dV44-xjD11g"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_pqZFbl-0Ee2dV44-xjD11g"/>

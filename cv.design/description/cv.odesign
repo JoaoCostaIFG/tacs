@@ -227,6 +227,13 @@
                       </firstModelOperations>
                     </initialOperation>
                   </buttons>
+                  <buttons labelExpression="Identification Section" isEnabledExpression="aql: self.oclIsTypeOf(cv::SectionLayer) and self.oclAsType(cv::SectionLayer).identificationSection->size() == 0" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::IdentificationSection" referenceName="identificationSection">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Identification"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
                   <buttons labelExpression="Skills section" closeDialogOnClick="true">
                     <initialOperation>
                       <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::SkillSection" referenceName="sections">
@@ -256,15 +263,6 @@
               <mask mask="{0}"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:0"/>
-              </initialOperation>
-            </tools>
-            <tools xsi:type="tool:ContainerCreationDescription" name="Create Identity Section" precondition="aql: container.identificationSection->size() == 0" forceRefresh="true" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']">
-              <variable name="container"/>
-              <viewVariable name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::IdentificationSection" referenceName="identificationSection">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Identification"/>
-                </firstModelOperations>
               </initialOperation>
             </tools>
           </ownedTools>

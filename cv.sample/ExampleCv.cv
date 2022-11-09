@@ -18,14 +18,9 @@
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2021-09-01T00:00:00.000+0100" endDate="2021-12-01T00:00:00.000+0000"/>
         <address city="Porto" country="Portugal"/>
       </workExperiences>
-      <workExperiences occupation="New occupation">
-        <address country="Set country"/>
-      </workExperiences>
     </sections>
     <sections xsi:type="cvmodel.cv:SkillSection" name="Skills" order="1">
-      <content name="New content"/>
       <hardSkills name="The hard skill"/>
-      <hardSkills name="asd"/>
       <softSkills>Team worker</softSkills>
       <softSkills>Friendly</softSkills>
       <softSkills>Doesn't bite</softSkills>

@@ -5,24 +5,7 @@
       <metamodel href="http://cvmodel/cv#/"/>
       <defaultLayer name="Default">
         <containerMappings name="SectionLayer" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::SectionLayer" childrenPresentation="VerticalStack">
-          <subContainerMappings name="IdentificationSection" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::IdentificationSection" childrenPresentation="List">
-            <subNodeMappings name="PersonNode" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Person">
-              <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.firstNames + ' ' + self.lastNames" iconPath="/org.eclipse.emf.validation.ui.source/icons/full/lock.gif" tooltipExpression="feature:firstNames" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
-              </style>
-            </subNodeMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="4" labelSize="12" showIcon="false">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
-              <labelFormat>underline</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="Section" semanticCandidatesExpression="aql: self.sections->closure(s | s.sections)->select(s | s.sections->isEmpty())->asOrderedSet()->collect(s | s.parent.sections->sortedBy(s | s.order))" domainClass="cv::OrderedSection" childrenPresentation="VerticalStack">
+          <subContainerMappings name="Section" semanticCandidatesExpression="aql: Sequence{self.identificationSection}->concat(self.sections->sortedBy(s | s.order))->closure(s | s.sections->sortedBy(s | s.order))" domainClass="cv::Section" childrenPresentation="VerticalStack">
             <subContainerMappings name="WorkExperienceContainer" semanticCandidatesExpression="aql:  if self.workExperiences->size() > 0 then self else null endif" domainClass="cv::WorkExperienceSection" childrenPresentation="List">
               <subNodeMappings name="WorkExperience" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::WorkExperience">
                 <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation" sizeComputationExpression="-1" labelPosition="node">
@@ -78,8 +61,18 @@
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelFormat>underline</labelFormat>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
+              </style>
+            </subContainerMappings>
+            <subContainerMappings name="Person" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Person" childrenPresentation="List">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="4" labelSize="12" showIcon="false" labelExpression="aql: self.firstNames+' '+self.lastNames" tooltipExpression="aql: self.firstNames+' '+self.lastNames">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+                <labelFormat>underline</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
@@ -91,6 +84,16 @@
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
+            <conditionnalStyles predicateExpression="aql: not self.eContainer().oclIsTypeOf(cv::SectionLayer)">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: self.oclAsType(cv::OrderedSection).parent.oclAsType(cv::Section).name + ': ' + self.name">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelFormat>italic</labelFormat>
+                <labelFormat>underline</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              </style>
+            </conditionnalStyles>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="16" showIcon="false" labelExpression="CV" backgroundStyle="GradientTopToBottom">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

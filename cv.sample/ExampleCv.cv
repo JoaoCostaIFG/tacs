@@ -53,6 +53,7 @@
         <content order="1" name="The content"/>
       </sections>
       <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com">
+        <address country="Portugal"/>
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2020-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
       </content>
     </sections>

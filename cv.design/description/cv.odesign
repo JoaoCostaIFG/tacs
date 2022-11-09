@@ -68,8 +68,8 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="Content" semanticCandidatesExpression="feature:content" domainClass="cv::Content" childrenPresentation="List">
-              <borderedNodeMappings name="ContentTimeFrame" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::TimeFrame">
-                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.startDate" tooltipExpression="aql: self.startDate" labelPosition="node" width="18" height="2">
+              <subNodeMappings name="ContentTimeFrame" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::TimeFrame">
+                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.startDate" labelAlignment="LEFT" tooltipExpression="aql: self.startDate" labelPosition="node" width="18" height="2">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <forbiddenSides>WEST</forbiddenSides>
@@ -77,9 +77,9 @@
                   <forbiddenSides>NORTH</forbiddenSides>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
                 </style>
-              </borderedNodeMappings>
-              <borderedNodeMappings name="ContentAddress" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Address">
-                <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="aql: self.country" tooltipExpression="aql: self.country" labelPosition="node" resizeKind="NSEW" width="10" height="4">
+              </subNodeMappings>
+              <subNodeMappings name="ContentAdress" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Address">
+                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.country" labelAlignment="LEFT" tooltipExpression="aql: self.country" labelPosition="node" resizeKind="NSEW" width="10" height="4">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <forbiddenSides>SOUTH</forbiddenSides>
@@ -87,7 +87,7 @@
                   <forbiddenSides>NORTH</forbiddenSides>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
                 </style>
-              </borderedNodeMappings>
+              </subNodeMappings>
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" labelAlignment="LEFT">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="cv" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/tree/description/1.0.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="cv" version="12.0.0.2017041100">
   <ownedViewpoints name="CvViewpoint" modelFileExtension="">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="CVDiagram" domainClass="cv::CV" enablePopupBars="true">
       <metamodel href="http://cvmodel/cv#/"/>
@@ -156,8 +156,39 @@
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::OrderedSection" referenceName="sections">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New section"/>
+                <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="NewSectionDialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="Stardard section" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::OrderedSection" referenceName="sections">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="New section"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Skills section" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::SkillSection" referenceName="sections">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Skills"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Education/Training section" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::EducationTrainingSection" referenceName="sections">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Education/Training"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Work experience section" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::WorkExperienceSection" referenceName="sections">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Work Experience"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Chose section type Page" labelExpression="Chose section type" semanticCandidateExpression="var:self"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>
@@ -187,23 +218,31 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:NodeCreationDescription" name="Create On-going Time Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTraining']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperienceContainer']/@subNodeMappings[name='ContentTimeFrame']">
+            <tools xsi:type="tool:NodeCreationDescription" name="CreateTime Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTraining']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperienceContainer']/@subNodeMappings[name='ContentTimeFrame']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::OnGoingTimeFrame" referenceName="timeFrame">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="startDate" valueExpression="1970-01-01"/>
-                </firstModelOperations>
-              </initialOperation>
-            </tools>
-            <tools xsi:type="tool:NodeCreationDescription" name="Create Start-End Time Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTraining']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperienceContainer']/@subNodeMappings[name='ContentTimeFrame']">
-              <variable name="container"/>
-              <viewVariable name="containerView"/>
-              <initialOperation>
-                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::StartEndTimeFrame" referenceName="timeFrame">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="startDate" valueExpression="1970-01-01">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="endDate" valueExpression="1970-01-02"/>
-                  </subModelOperations>
+                <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="NewTimeFrameDialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="On-going time frame" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::OnGoingTimeFrame" referenceName="timeFrame">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="startDate" valueExpression="1970-01-01"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Start-end time frame" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::StartEndTimeFrame" referenceName="timeFrame">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="startDate" valueExpression="1970-01-01">
+                          <subModelOperations xsi:type="tool_1:SetValue" featureName="endDate" valueExpression="1970-01-02"/>
+                        </subModelOperations>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Choose time frame type Page" labelExpression="Choose time frame type" semanticCandidateExpression="var:self"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>

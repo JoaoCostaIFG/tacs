@@ -5,9 +5,7 @@
       <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="1970-01-01T00:00:00.000+0100" endDate="1970-01-02T00:00:00.000+0100"/>
       </educationTraining>
-      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
-        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="1969-01-01T00:00:00.000+0100"/>
-      </educationTraining>
+      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto"/>
     </sections>
     <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience" order="3">
       <workExperiences occupation="Application Developer" employer="OUTDO" description="Participated in the development of the prototype website and mobile application for Outdo.">

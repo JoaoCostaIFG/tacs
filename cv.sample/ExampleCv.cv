@@ -5,7 +5,9 @@
       <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="1970-01-01T00:00:00.000+0100" endDate="1970-01-02T00:00:00.000+0100"/>
       </educationTraining>
-      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto"/>
+      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="1970-01-01T00:00:00.000+0100" endDate="1970-01-02T00:00:00.000+0100"/>
+      </educationTraining>
     </sections>
     <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience" order="3">
       <workExperiences occupation="Application Developer" employer="OUTDO" description="Participated in the development of the prototype website and mobile application for Outdo.">
@@ -29,6 +31,12 @@
       <secondLanguages name="French" conversation="B1" reading="B1" writing="B1" comprehension="B1" peerReview="B1"/>
     </sections>
     <sections name="Networks and Memberships" order="4">
+      <sections name="A subsection" order="2">
+        <content order="1" name="Here for the sake of it"/>
+      </sections>
+      <sections name="Another section" order="1">
+        <content order="1" name="The content"/>
+      </sections>
       <content order="1" name="Member of the Student Council for NCGM" description="Faculdade de Engenharia da Universidade do Porto. I was part of the student council for NCGM. As an active member, I took part in some projects, organized events, as well as other activities." url="https://ncgm.fe.up.pt/pt/home">
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2018-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
       </content>
@@ -48,12 +56,6 @@
       </content>
     </sections>
     <sections name="Recommendations" order="6">
-      <sections name="A subsection" order="2">
-        <content order="1" name="Here for the sake of it"/>
-      </sections>
-      <sections name="Another section" order="1">
-        <content order="1" name="The content"/>
-      </sections>
       <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com">
         <address country="Portugal"/>
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2020-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
@@ -69,6 +71,8 @@
         <contacts xsi:type="cvmodel.cv:MobilePhoneNumber" name="mobile phone" info="91"/>
         <contacts xsi:type="cvmodel.cv:UrlContact" name="https://example.com" info="my blog"/>
         <addresses xsi:type="cvmodel.cv:HomeAddress" city="Trofa" country="Portugal" name="Home Address"/>
+        <addresses country="portugal" name="Named add"/>
+        <addresses xsi:type="cvmodel.cv:WorkAddress" country="portugal" name="work addr"/>
       </person>
     </identificationSection>
   </sectionLayer>

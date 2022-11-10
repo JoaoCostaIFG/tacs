@@ -6,7 +6,7 @@
       <defaultLayer name="Default">
         <containerMappings name="SectionLayer" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::SectionLayer" childrenPresentation="VerticalStack">
           <subContainerMappings name="Section" labelDirectEdit="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Section%20tools']/@tools.1" semanticCandidatesExpression="aql: self.getAllSectionsOrdered()" domainClass="cv::Section" childrenPresentation="VerticalStack">
-            <subContainerMappings name="WorkExperienceContainer" semanticCandidatesExpression="aql: self.workExperiences->select(e | e.timeFrame &lt;> null)->sortedBy(e | e.timeFrame.startDate)->reverse()->concat(self.workExperiences->select(e | e.timeFrame == null))" domainClass="cv::WorkExperience" childrenPresentation="List">
+            <subContainerMappings name="WorkExperience" semanticCandidatesExpression="aql: self.workExperiences->select(e | e.timeFrame &lt;> null)->sortedBy(e | e.timeFrame.startDate)->reverse()->concat(self.workExperiences->select(e | e.timeFrame == null))" domainClass="cv::WorkExperience" childrenPresentation="List">
               <subNodeMappings name="ContentTimeFrame" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::TimeFrame">
                 <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.startDate + '\n' + self.endDate" labelAlignment="LEFT" tooltipExpression="aql: self.startDate + '\n' + self.endDate" labelPosition="node" width="18" height="2">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -126,6 +126,13 @@
             <subContainerMappings name="Person" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Person" childrenPresentation="List">
               <subNodeMappings name="PersonContacts" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Contact">
                 <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.info" iconPath="/cv.design/icons/icons8-contact-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.info" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                </style>
+              </subNodeMappings>
+              <subNodeMappings name="PersonAddress" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::NamedAddress">
+                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.country" iconPath="/cv.design/icons/icons8-location-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.country" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -273,7 +280,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:NodeCreationDescription" name="CreateTime Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTraining']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperienceContainer']/@subNodeMappings[name='ContentTimeFrame']">
+            <tools xsi:type="tool:NodeCreationDescription" name="CreateTime Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTraining']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperience']/@subNodeMappings[name='ContentTimeFrame']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -301,7 +308,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:NodeCreationDescription" name="Create Adress" precondition="aql: container.address->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentAdress'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperienceContainer']/@subNodeMappings[name='ContentAdress']">
+            <tools xsi:type="tool:NodeCreationDescription" name="Create Adress" precondition="aql: container.address->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentAdress'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperience']/@subNodeMappings[name='ContentAdress']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -424,7 +431,40 @@
                       </firstModelOperations>
                     </initialOperation>
                   </buttons>
-                  <page name="Choose dialog type Page" labelExpression="Choose dialog type" semanticCandidateExpression="var:self"/>
+                  <page name="Choose contact type Page" labelExpression="Choose contact type" semanticCandidateExpression="var:self"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="Create person address" label="Create address" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create address dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="Generic address" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::NamedAddress" referenceName="addresses">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Generic address"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Home address" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::HomeAddress" referenceName="addresses">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Home address"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Work address" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::WorkAddress" referenceName="addresses">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Work address"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Choose person address type Page" labelExpression="Choose address type" semanticCandidateExpression="var:self"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>
@@ -458,6 +498,12 @@
           </vsmElementCustomizations>
           <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::UrlContact)">
             <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-link-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::HomeAddress)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonAddress']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-house-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::WorkAddress)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonAddress']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-organization-32.png"/>
           </vsmElementCustomizations>
         </customization>
       </defaultLayer>

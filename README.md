@@ -18,3 +18,8 @@
   - The use of the `oclIsUndefined` causes the same problem;
   - For this reason, we made the `TimeFrame` class abstract and created 2 other
     classes: `StartEndTimeFrame` and `OnGoingTimeFrame`.
+
+## Credits
+
+Icons in the [icons directory](./cv.design/icons) are taken from
+[icons8](https://icons8.com).

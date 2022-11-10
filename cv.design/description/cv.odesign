@@ -124,7 +124,14 @@
               </style>
             </subContainerMappings>
             <subContainerMappings name="Person" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Person" childrenPresentation="List">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="4" labelSize="12" showIcon="false" labelExpression="aql: self.firstNames+' '+self.lastNames" tooltipExpression="aql: self.firstNames+' '+self.lastNames">
+              <subNodeMappings name="PersonContacts" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Contact">
+                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.info" iconPath="/cv.design/icons/icons8-contact-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.info" labelPosition="node" resizeKind="NSEW">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                </style>
+              </subNodeMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="4" labelSize="12" labelExpression="aql: self.firstNames+' '+self.lastNames" iconPath="/cv.design/icons/icons8-person-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.firstNames+' '+self.lastNames">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelFormat>underline</labelFormat>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -171,24 +178,14 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" tooltipExpression="feature:name">
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" tooltipExpression="feature:name" backgroundStyle="GradientTopToBottom">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>underline</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
+              <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.1"/>
             </style>
-            <conditionnalStyles predicateExpression="aql: not self.eContainer().oclIsTypeOf(cv::SectionLayer)">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql: self.oclAsType(cv::OrderedSection).parent.oclAsType(cv::Section).name + ': ' + self.name">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelFormat>italic</labelFormat>
-                <labelFormat>underline</labelFormat>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-              </style>
-            </conditionnalStyles>
           </subContainerMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="16" showIcon="false" labelExpression="CV" backgroundStyle="GradientTopToBottom">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -267,7 +264,7 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool:ToolGroup" name="Content tools">
-            <tools xsi:type="tool:ContainerCreationDescription" name="Create content" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='SubSection']">
+            <tools xsi:type="tool:ContainerCreationDescription" name="Create Content" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='SubSection']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -360,7 +357,109 @@
               </initialOperation>
             </tools>
           </ownedTools>
+          <ownedTools xsi:type="tool:ToolGroup" name="Identification tools">
+            <tools xsi:type="tool:ContainerCreationDescription" name="Create person" precondition="aql: self.oclIsTypeOf(cv::IdentificationSection) and self.person->size() == 0" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='SubSection']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::Person" referenceName="person">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="firstNames" valueExpression="New identity"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+            <tools xsi:type="tool:NodeCreationDescription" name="Create contact" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create contact dialog">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="Generic contact" default="true" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::Contact" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Generic contact"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Email" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::Email" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Email"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Phone number" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::PhoneNumber" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Phone number"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Home phone number" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::HomePhoneNumber" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Home phone number"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Work phone number" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::WorkPhoneNumber" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Work phone number"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="Mobile phone number" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::MobilePhoneNumber" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Mobile phone number"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <buttons labelExpression="URL" closeDialogOnClick="true">
+                    <initialOperation>
+                      <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::UrlContact" referenceName="contacts">
+                        <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="Url"/>
+                      </firstModelOperations>
+                    </initialOperation>
+                  </buttons>
+                  <page name="Choose dialog type Page" labelExpression="Choose dialog type" semanticCandidateExpression="var:self"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
+          </ownedTools>
         </toolSections>
+        <customization>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::Person) and self.gender == cv::Gender::FEMALE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-female-user-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::Person) and self.gender == cv::Gender::MALE">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-user-male-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: not self.eContainer().oclIsTypeOf(cv::SectionLayer)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@style" attributeName="labelExpression" value="aql: self.oclAsType(cv::OrderedSection).parent.oclAsType(cv::Section).name + ': ' + self.name"/>
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@style" attributeName="labelFormat" value="aql: Sequence{'italic', 'underline'}"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::Email)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-mail-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::PhoneNumber)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-phone-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::HomePhoneNumber)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-home-phone-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::WorkPhoneNumber)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-office-phone-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::MobilePhoneNumber)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-smartphone-32.png"/>
+          </vsmElementCustomizations>
+          <vsmElementCustomizations xsi:type="description:VSMElementCustomization" predicateExpression="aql: self.oclIsTypeOf(cv::UrlContact)">
+            <featureCustomizations xsi:type="description:EAttributeCustomization" appliedOn="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Person']/@subNodeMappings[name='PersonContacts']/@style" attributeName="iconPath" value="/cv.design/icons/icons8-link-32.png"/>
+          </vsmElementCustomizations>
+        </customization>
       </defaultLayer>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_2:TreeDescription" name="CVTree" domainClass="cv::CV">

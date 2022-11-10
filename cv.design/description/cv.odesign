@@ -6,29 +6,24 @@
       <defaultLayer name="Default">
         <containerMappings name="SectionLayer" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::SectionLayer" childrenPresentation="VerticalStack">
           <subContainerMappings name="Section" labelDirectEdit="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Section%20tools']/@tools.1" semanticCandidatesExpression="aql: self.getAllSectionsOrdered()" domainClass="cv::Section" childrenPresentation="VerticalStack">
-            <subContainerMappings name="WorkExperience" semanticCandidatesExpression="aql: self.workExperiences->select(e | e.timeFrame &lt;> null)->sortedBy(e | e.timeFrame.startDate)->reverse()->concat(self.workExperiences->select(e | e.timeFrame == null))" domainClass="cv::WorkExperience" childrenPresentation="List">
-              <subNodeMappings name="ContentTimeFrame" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::TimeFrame">
-                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.startDate + '\n' + self.endDate" labelAlignment="LEFT" tooltipExpression="aql: self.startDate + '\n' + self.endDate" labelPosition="node" width="18" height="2">
+            <subContainerMappings name="Person" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Person" childrenPresentation="List">
+              <subNodeMappings name="PersonContacts" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Contact">
+                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.info" iconPath="/cv.design/icons/icons8-contact-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.info" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <forbiddenSides>WEST</forbiddenSides>
-                  <forbiddenSides>SOUTH</forbiddenSides>
-                  <forbiddenSides>NORTH</forbiddenSides>
-                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 </style>
               </subNodeMappings>
-              <subNodeMappings name="ContentAdress" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Address">
-                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.country" labelAlignment="LEFT" tooltipExpression="aql: self.country" labelPosition="node" resizeKind="NSEW" width="10" height="4">
+              <subNodeMappings name="PersonAddress" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::NamedAddress">
+                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.country" iconPath="/cv.design/icons/icons8-location-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.country" labelPosition="node" resizeKind="NSEW">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <forbiddenSides>SOUTH</forbiddenSides>
-                  <forbiddenSides>EAST</forbiddenSides>
-                  <forbiddenSides>NORTH</forbiddenSides>
-                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 </style>
               </subNodeMappings>
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="4" labelSize="12" labelExpression="aql: self.firstNames+' '+self.lastNames" iconPath="/cv.design/icons/icons8-person-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.firstNames+' '+self.lastNames">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelFormat>underline</labelFormat>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -104,17 +99,7 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="EducationTraining" semanticCandidatesExpression="aql: self.educationTraining->select(e | e.timeFrame &lt;> null)->sortedBy(e | e.timeFrame.startDate)->reverse()->concat(self.educationTraining->select(e | e.timeFrame == null))" domainClass="cv::EducationTraining" childrenPresentation="List">
-              <subNodeMappings name="ContentTimeFrame" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::TimeFrame">
-                <style xsi:type="style:SquareDescription" labelSize="9" showIcon="false" labelExpression="aql: self.startDate + '\n' + self.endDate" labelAlignment="LEFT" tooltipExpression="aql: self.startDate + '\n' + self.endDate" labelPosition="node" width="18" height="2">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <forbiddenSides>WEST</forbiddenSides>
-                  <forbiddenSides>SOUTH</forbiddenSides>
-                  <forbiddenSides>NORTH</forbiddenSides>
-                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
-                </style>
-              </subNodeMappings>
+            <subContainerMappings name="EducationTraining" semanticCandidatesExpression="aql: self.educationTraining->select(e | e.timeFrame &lt;> null)->sortedBy(e | e.timeFrame.startDate)->reverse()->concat(self.educationTraining->select(e | e.timeFrame == null))" domainClass="cv::EducationTraining" reusedNodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame']" childrenPresentation="List">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" labelExpression="feature:title" iconPath="/cv.design/icons/icons8-graduation-32.png" labelAlignment="LEFT" tooltipExpression="feature:title">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -123,24 +108,9 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="Person" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Person" childrenPresentation="List">
-              <subNodeMappings name="PersonContacts" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::Contact">
-                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.info" iconPath="/cv.design/icons/icons8-contact-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.info" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                </style>
-              </subNodeMappings>
-              <subNodeMappings name="PersonAddress" semanticCandidatesExpression="feature:eAllContents" domainClass="cv::NamedAddress">
-                <style xsi:type="style:SquareDescription" labelSize="10" labelExpression="aql: self.name + ': ' + self.country" iconPath="/cv.design/icons/icons8-location-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.name + ': ' + self.country" labelPosition="node" resizeKind="NSEW">
-                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                  <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                </style>
-              </subNodeMappings>
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="4" labelSize="12" labelExpression="aql: self.firstNames+' '+self.lastNames" iconPath="/cv.design/icons/icons8-person-32.png" labelAlignment="LEFT" tooltipExpression="aql: self.firstNames+' '+self.lastNames">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelFormat>underline</labelFormat>
+            <subContainerMappings name="WorkExperience" semanticCandidatesExpression="aql: self.workExperiences->select(e | e.timeFrame &lt;> null)->sortedBy(e | e.timeFrame.startDate)->reverse()->concat(self.workExperiences->select(e | e.timeFrame == null))" domainClass="cv::WorkExperience" reusedNodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentAdress']" childrenPresentation="List">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" labelExpression="feature:occupation" iconPath="/cv.design/icons/icons8-business-32.png" labelAlignment="LEFT" tooltipExpression="feature:occupation">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                 <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -176,15 +146,7 @@
                 <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
               </style>
             </subContainerMappings>
-            <subContainerMappings name="SubSection" semanticCandidatesExpression="var:self" domainClass="cv::Section" childrenPresentation="List">
-              <style xsi:type="style:FlatContainerStyleDescription" arcWidth="0" arcHeight="0" labelSize="1" showIcon="false" labelExpression="" hideLabelByDefault="true" widthComputationExpression="1" heightComputationExpression="1">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
-              </style>
-            </subContainerMappings>
+            <subContainerMappings name="SubSection" semanticCandidatesExpression="var:self" domainClass="cv::Section" childrenPresentation="List"/>
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" tooltipExpression="feature:name" backgroundStyle="GradientTopToBottom">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelFormat>underline</labelFormat>
@@ -280,7 +242,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:NodeCreationDescription" name="CreateTime Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='EducationTraining']/@subNodeMappings[name='ContentTimeFrame'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperience']/@subNodeMappings[name='ContentTimeFrame']">
+            <tools xsi:type="tool:NodeCreationDescription" name="CreateTime Frame" precondition="aql: container.timeFrame->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentTimeFrame']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -308,7 +270,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool:NodeCreationDescription" name="Create Adress" precondition="aql: container.address->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentAdress'] //@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='WorkExperience']/@subNodeMappings[name='ContentAdress']">
+            <tools xsi:type="tool:NodeCreationDescription" name="Create Adress" precondition="aql: container.address->size() == 0" nodeMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']/@subContainerMappings[name='Section']/@subContainerMappings[name='Content']/@subNodeMappings[name='ContentAdress']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -468,6 +430,13 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create CV" containerMappings="//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']/@defaultLayer/@containerMappings[name='SectionLayer']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::SectionLayer" referenceName="sectionLayer"/>
+            </initialOperation>
           </ownedTools>
         </toolSections>
         <customization>

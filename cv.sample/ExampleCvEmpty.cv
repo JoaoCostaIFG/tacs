@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvmodel.cv:CV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv">
+  <sectionLayer>
+    <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience">
+      <workExperiences occupation="Master na FEUP" employer="FEUP" description="curso de engenharia informática na FEUP"/>
+    </sections>
+    <identificationSection name="Identification">
+      <person firstNames="Irao">
+        <contacts xsi:type="cvmodel.cv:UrlContact" name="Url" info="https://joaocosta.dev"/>
+      </person>
+    </identificationSection>
+  </sectionLayer>
+</cvmodel.cv:CV>

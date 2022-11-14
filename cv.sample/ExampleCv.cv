@@ -2,12 +2,8 @@
 <cvmodel.cv:CV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv">
   <sectionLayer>
     <sections xsi:type="cvmodel.cv:EducationTrainingSection" name="Education" order="2">
-      <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
-        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="1970-01-01T00:00:00.000+0100" endDate="1970-01-02T00:00:00.000+0100"/>
-      </educationTraining>
-      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
-        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="1970-01-01T00:00:00.000+0100" endDate="2020-01-01T00:00:00.000+0000"/>
-      </educationTraining>
+      <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto"/>
+      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto"/>
     </sections>
     <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience" order="3">
       <workExperiences occupation="Application Developer" employer="OUTDO" description="Participated in the development of the prototype website and mobile application for Outdo.">
@@ -69,7 +65,7 @@
         <contacts xsi:type="cvmodel.cv:HomePhoneNumber" name="home phone" info="91"/>
         <contacts xsi:type="cvmodel.cv:WorkPhoneNumber" name="work phone" info="91"/>
         <contacts xsi:type="cvmodel.cv:MobilePhoneNumber" name="mobile phone" info="91"/>
-        <contacts xsi:type="cvmodel.cv:UrlContact" name="https://example.com" info="my blog"/>
+        <contacts xsi:type="cvmodel.cv:UrlContact" name="My blog" info="https://example.com"/>
         <addresses xsi:type="cvmodel.cv:HomeAddress" city="Trofa" country="Portugal" name="Home Address"/>
         <addresses country="portugal" name="Named add"/>
         <addresses xsi:type="cvmodel.cv:WorkAddress" country="portugal" name="work addr"/>

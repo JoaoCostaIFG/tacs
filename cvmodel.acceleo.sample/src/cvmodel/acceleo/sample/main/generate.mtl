@@ -1,80 +1,7 @@
 [comment encoding = UTF-8 /]
 [module generate('http://cvmodel/cv')]
 
-[template public generateContent(c : Content, prefix: String) post(trim())]
-[if (c.url.oclIsUndefined())]
-[prefix/] [c.name/]
-[else]
-[prefix/] ['['/][c.name/][']'/]([c.url/])
-[/if]
-[if (not c.url.oclIsUndefined() or not c.address.oclIsUndefined()) ]
-
-	[if (not c.url.oclIsUndefined())]
-- ['['/][c.url/][']'/]([c.url/])
-	[/if]
-	[if (not c.address.oclIsUndefined())]
-- [c.address.country/]
-	[/if]
-[/if]
-[if (not c.description.oclIsUndefined())]
-
-[c.description/]
-[/if]
-[/template]
-
-[template public generateSectionTitle(s : Section, prefix: String) post(trim())]
-[prefix/] [s.name/] Section
-[/template]
-
-[template public generateSectionBody(s : Section, prefix: String) post(trim())]
-[for (c : Content | s.content->sortedBy(c | c.order))]
-
-[generateContent(c, prefix + '#')/]
-[/for]
-[for (s : Section | s.sections->sortedBy(s | s.order))]
-
-[generateSection(s, prefix + '#')/]
-[/for]
-[/template]
-
-[template public generateSection(s : Section, prefix: String) post(trim())]
-[generateSectionTitle(s, prefix)/]
-[generateSectionBody(s, prefix)/]
-[/template]
-
-[template public generateSection(s : IdentificationSection, prefix: String) post(trim())]
-[generateSectionTitle(s, prefix)/]
-
-[prefix/]# [for (Sequence{s.person.firstNames, s.person.lastNames}) separator (' ')][self/][/for][if (not s.person.title.oclIsUndefined())], [s.person.title/][/if]
-
-- First name(s): [s.person.firstNames/]
-[if (not s.person.lastNames.oclIsUndefined())]- Last name(s): [s.person.lastNames/][/if]
-[if (not s.person.title.oclIsUndefined())]- Title: [s.person.title/][/if]
-[if (not s.person.dateOfBirth.oclIsUndefined())]- Date of birth: [s.person.dateOfBirth/][/if]
-- Gender: [s.person.gender/]
-- Marital status: [s.person.maritalStatus/]
-[if (s.person.nationalities->size() = 1)]
-- Nationality: [s.person.nationalities->at(1)/]
-[elseif (s.person.nationalities->size() > 0)]
-- Nationalities:
-	[for (s.person.nationalities)]
-    - [self/]
-	[/for]
-[/if]
-[if (s.person.contacts->size() > 0)]
-- Contacts:
-	[for (s.person.contacts)]
-    - [self.name/]
-	[/for]
-[/if]
-[if (s.person.addresses->size() > 0)]
-- Addresses:
-	[for (s.person.addresses)]
-    - [self.country/]
-	[/for]
-[/if]
-[generateSectionBody(s, prefix)/]
-[/template]
+[import cvmodel::acceleo::sample::files::generateSection /]
 
 [template public generateCv(aCV : CV)]
 [comment @main/]
@@ -84,7 +11,7 @@
 [generateSection(aCV.sectionLayer.identificationSection, '##')/]
 [for (s : Section | aCV.sectionLayer.sections->sortedBy(s | s.order))]
 
-[generateSection(self, '##')/]
+[generateSection(self)/]
 [/for]
 [/file]
 [/template]

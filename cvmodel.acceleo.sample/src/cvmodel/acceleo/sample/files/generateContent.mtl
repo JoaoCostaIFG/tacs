@@ -1,0 +1,47 @@
+[comment encoding = UTF-8 /]
+[module generateContent('http://cvmodel/cv')]
+
+[template public generateContent(c : Content, prefix: String) post(trim())]
+[if (c.url.oclIsUndefined())]
+[prefix/] [c.name/]
+[else]
+[prefix/] ['['/][c.name/][']'/]([c.url/])
+[/if]
+[if (not c.url.oclIsUndefined() or not c.address.oclIsUndefined()) ]
+
+	[if (not c.url.oclIsUndefined())]
+- ['['/][c.url/][']'/]([c.url/])
+	[/if]
+	[if (not c.address.oclIsUndefined())]
+- [c.address.country/]
+	[/if]
+[/if]
+[if (not c.description.oclIsUndefined())]
+
+[c.description/]
+[/if]
+[/template]
+
+[template private generateAddressContent(a : Address) post(trim())]
+[if (not a.line1.oclIsUndefined())]
+- [a.line1/]
+[/if]
+[if (not a.line2.oclIsUndefined())]
+- [a.line2/]
+[/if]
+[if (not a.postalCode.oclIsUndefined())]
+- [a.postalCode/][if (not a.city.oclIsUndefined())], [a.city/][/if]
+[elseif (not a.city.oclIsUndefined())]
+- [a.city/]
+[/if]
+- [a.country/]
+[/template]
+
+[template public generateAddress(a : Address) post(trim())]
+[generateAddressContent(a)/]
+[/template]
+
+[template public generateAddress(a : NamedAddress) post(trim())]
+- [a.name/]
+    [generateAddressContent(a)/]
+[/template]

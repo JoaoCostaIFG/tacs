@@ -66,7 +66,7 @@
         <contacts xsi:type="cvmodel.cv:WorkPhoneNumber" name="work phone" info="91"/>
         <contacts xsi:type="cvmodel.cv:MobilePhoneNumber" name="mobile phone" info="91"/>
         <contacts xsi:type="cvmodel.cv:UrlContact" name="My blog" info="https://example.com"/>
-        <addresses xsi:type="cvmodel.cv:HomeAddress" city="Trofa" country="Portugal" name="Home Address"/>
+        <addresses xsi:type="cvmodel.cv:HomeAddress" line1="Linha 1" line2="Linha 2" postalCode="4505-078" city="Trofa" country="Portugal" name="Home Address"/>
         <addresses country="portugal" name="Named add"/>
         <addresses xsi:type="cvmodel.cv:WorkAddress" country="portugal" name="work addr"/>
       </person>

@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generate('http://cvmodel/cv')]
+
+
+[template public generateCv(aCV : CV)]
+[comment @main/]
+[file (aCV.sectionLayer.identificationSection.name, false, 'UTF-8')]
+
+[/file]
+[/template]

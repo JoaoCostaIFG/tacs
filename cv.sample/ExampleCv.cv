@@ -17,6 +17,7 @@
     </sections>
     <sections xsi:type="cvmodel.cv:SkillSection" name="Skills" order="1">
       <hardSkills name="The hard skill"/>
+      <hardSkills name="Really big muscles (hard)" proficiency="5.0"/>
       <softSkills>Team worker</softSkills>
       <softSkills>Friendly</softSkills>
       <softSkills>Doesn't bite</softSkills>

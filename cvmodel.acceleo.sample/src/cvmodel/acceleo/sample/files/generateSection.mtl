@@ -9,7 +9,6 @@
 
 [template private generateSectionBody(s : Section, prefix: String) post(trim())]
 [for (c : Content | s.content->sortedBy(c | c.order))]
-
 [generateContent(c)/]
 [/for]
 [for (s : Section | s.sections->sortedBy(s | s.order))]
@@ -66,4 +65,32 @@
 [/template]
 
 [template public generateSection(s : SkillSection, prefix: String) post(trim())]
+[generateSectionTitle(s, prefix)/]
+
+[if (s.softSkills->size() > 0)]
+- Soft skills:
+    - [for (s.softSkills) separator (', ')][self/][/for]
+[/if]
+[if (s.hardSkills->size() > 0)]
+- Hard skills:
+[for (s.hardSkills)]
+    - [self.name/]: [self.proficiency/]
+[/for]
+[/if]
+[if (s.motherTongues->size() = 1)]
+- Mother-tongue: [s.motherTongues->at(1).name/]
+[elseif (s.motherTongues->size() > 0)]
+- Mother-tongues: [for (s.motherTongues) separator (', ')][self.name/][/for]
+[/if]
+[if (s.secondLanguages->size() > 0)]
+- Second language:
+[for (s.secondLanguages)]
+[if (Set{self.conversation, self.reading, self.writing, self.comprehension, self.peerReview}->size() = 1)]
+    - [self.name/]: [self.conversation/]
+[else]
+    - [self.name/]: [self.conversation/] [self.reading/] [self.writing/] [self.comprehension/] [self.peerReview/]
+[/if]
+[/for]
+[/if]
+[generateSectionBody(s, prefix)/]
 [/template]

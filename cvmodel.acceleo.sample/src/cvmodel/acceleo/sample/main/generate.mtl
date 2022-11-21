@@ -1,10 +1,38 @@
 [comment encoding = UTF-8 /]
 [module generate('http://cvmodel/cv')]
 
+[template public generateSection(s : Section)]
+## [s.name/] Section
+	[for (c : Content | s.content->sortedBy(c | c.order))]
+
+		[if (self.url.oclIsUndefined())]
+### [self.name/]
+		[else]
+### ['['/][self.name/][']'/]([self.url/])
+		[/if]
+
+		[if (not self.url.oclIsUndefined())]
+- ['['/][self.url/][']'/]([self.url/])
+		[/if]
+		[if (not self.address.oclIsUndefined())]
+- [self.address.country/]
+		[/if]
+		[if (not self.description.oclIsUndefined())]
+
+[self.description/]
+		[/if]
+	[/for]
+[/template]
 
 [template public generateCv(aCV : CV)]
 [comment @main/]
-[file (aCV.sectionLayer.identificationSection.name, false, 'UTF-8')]
+[file (aCV.sectionLayer.identificationSection.person.firstNames.substituteAll(' ', '_') + '.cv.md', false, 'UTF-8')]
+# [for (Sequence{aCV.sectionLayer.identificationSection.person.firstNames, aCV.sectionLayer.identificationSection.person.lastNames}) separator (' ')][self/][/for]'s CV
 
+[generateSection(aCV.sectionLayer.identificationSection)/]
+[for (s : Section | aCV.sectionLayer.sections->sortedBy(s | s.order))]
+
+[generateSection(self)/]
+[/for]
 [/file]
 [/template]

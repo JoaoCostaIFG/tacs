@@ -24,10 +24,14 @@
 
 [template public generateSection(s : Section, prefix: String) post(trim())]
 [prefix/] [s.name/] Section
-	[for (c : Content | s.content->sortedBy(c | c.order))]
+[for (c : Content | s.content->sortedBy(c | c.order))]
 
 [generateContent(c, prefix + '#')/]
-	[/for]
+[/for]
+[for (s : Section | s.sections->sortedBy(s | s.order))]
+
+[generateSection(s, prefix + '#')/]
+[/for]
 [/template]
 
 [template public generateCv(aCV : CV)]

@@ -57,8 +57,20 @@
 - Nationality: [s.person.nationalities->at(1)/]
 [elseif (s.person.nationalities->size() > 0)]
 - Nationalities:
-	[for (s.person.nationalities) separator ('\n')]
+	[for (s.person.nationalities)]
     - [self/]
+	[/for]
+[/if]
+[if (s.person.contacts->size() > 0)]
+- Contacts:
+	[for (s.person.contacts)]
+    - [self.name/]
+	[/for]
+[/if]
+[if (s.person.addresses->size() > 0)]
+- Addresses:
+	[for (s.person.addresses)]
+    - [self.country/]
 	[/for]
 [/if]
 [generateSectionBody(s, prefix)/]

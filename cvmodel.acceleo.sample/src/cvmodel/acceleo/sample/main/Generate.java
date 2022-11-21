@@ -408,5 +408,4 @@ public class Generate extends AbstractAcceleoGenerator {
          */ 
         // UMLResourcesUtil.init(resourceSet)
     }
-    
 }

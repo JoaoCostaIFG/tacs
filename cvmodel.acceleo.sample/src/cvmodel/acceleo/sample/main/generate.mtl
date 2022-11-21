@@ -6,9 +6,7 @@
 [template public generateCv(aCV : CV)]
 [comment @main/]
 [file (aCV.sectionLayer.identificationSection.person.firstNames.substituteAll(' ', '_') + '.cv.md', false, 'UTF-8')]
-# [for (Sequence{aCV.sectionLayer.identificationSection.person.firstNames, aCV.sectionLayer.identificationSection.person.lastNames}) separator (' ')][self/][/for]'s CV
-
-[generateSection(aCV.sectionLayer.identificationSection, '##')/]
+[generateSection(aCV.sectionLayer.identificationSection, '#')/]
 [for (s : Section | aCV.sectionLayer.sections->sortedBy(s | s.order))]
 
 [generateSection(self)/]

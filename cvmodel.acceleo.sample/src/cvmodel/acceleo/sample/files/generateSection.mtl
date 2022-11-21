@@ -10,7 +10,7 @@
 [template private generateSectionBody(s : Section, prefix: String) post(trim())]
 [for (c : Content | s.content->sortedBy(c | c.order))]
 
-[generateContent(c, prefix + '#')/]
+[generateContent(c)/]
 [/for]
 [for (s : Section | s.sections->sortedBy(s | s.order))]
 
@@ -28,9 +28,8 @@
 [/template]
 
 [template public generateSection(s : IdentificationSection, prefix: String) post(trim())]
-[generateSectionTitle(s, prefix)/]
-
-[prefix/]# [for (Sequence{s.person.firstNames, s.person.lastNames}) separator (' ')][self/][/for][if (not s.person.title.oclIsUndefined())], [s.person.title/][/if]
+[prefix/] [for (Sequence{s.person.firstNames, s.person.lastNames}) separator (' ')][self/][/for]
+[if (not s.person.title.oclIsUndefined())][s.person.title/][/if]
 
 - First name(s): [s.person.firstNames/]
 [if (not s.person.lastNames.oclIsUndefined())]
@@ -69,4 +68,7 @@
 	[/for]
 [/if]
 [generateSectionBody(s, prefix)/]
+[/template]
+
+[template public generateSection(s : SkillSection, prefix: String) post(trim())]
 [/template]

@@ -1,6 +1,7 @@
 [comment encoding = UTF-8 /]
 [module generateContent('http://cvmodel/cv')]
 
+
 [template public generateContent(c : Content) post(trim())]
 [if (not c.timeFrame.oclIsUndefined())]`[generateTimeframe(c.timeFrame)/]` [/if][if (c.url.oclIsUndefined())]
 [c.name/]
@@ -36,17 +37,18 @@
 - [a.country/]
 [/template]
 
-[query public formatDate(arg0 : String) : String
-	= invoke('cvmodel.acceleo.sample.services.GenerateServices',
-		'formatDate3(java.lang.String)', Sequence{arg0})
-/]
-
 [template public generateTimeframe(t : TimeFrame) post(trim())]
-[t.startDate.toString().tokenize(' ')->at(2)/] - now - [formatDate('JORJAO')/]
+[let startDateTokens : Sequence(String) = t.startDate.toString().tokenize(' ')]
+[startDateTokens->at(2)/], [startDateTokens->at(6)/] - now
+[/let]
 [/template]
 
 [template public generateTimeframe(t : StartEndTimeFrame) post(trim())]
-[t.startDate/] - [t.endDate/]
+[let startDateTokens : Sequence(String) = t.startDate.toString().tokenize(' ')]
+[let endDateTokens : Sequence(String) = t.endDate.toString().tokenize(' ')]
+[startDateTokens->at(2)/], [startDateTokens->at(6)/] - [endDateTokens->at(2)/], [endDateTokens->at(6)/]
+[/let]
+[/let]
 [/template]
 
 [template public generateAddress(a : Address) post(trim())]

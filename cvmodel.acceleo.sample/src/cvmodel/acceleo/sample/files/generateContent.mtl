@@ -45,3 +45,19 @@
 - [a.name/]
     [generateAddressContent(a)/]
 [/template]
+
+[template public generateContact(c : Contact) post(trim())]
+- [c.name/]: [c.info/]
+[/template]
+
+[template public generateContact(c : Email) post(trim())]
+- [c.name/]: ['['/][c.info/][']'/](mailto:[c.info/])
+[/template]
+
+[template public generateContact(c : PhoneNumber) post(trim())]
+- [c.name/]: ['['/][c.info/][']'/](tel:[c.info/])
+[/template]
+
+[template public generateContact(c : UrlContact) post(trim())]
+- [c.name/]: ['['/][c.info/][']'/]([c.info/])
+[/template]

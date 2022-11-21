@@ -22,8 +22,11 @@
 [/if]
 [/template]
 
-[template public generateSection(s : Section, prefix: String) post(trim())]
+[template public generateSectionTitle(s : Section, prefix: String) post(trim())]
 [prefix/] [s.name/] Section
+[/template]
+
+[template public generateSectionBody(s : Section, prefix: String) post(trim())]
 [for (c : Content | s.content->sortedBy(c | c.order))]
 
 [generateContent(c, prefix + '#')/]
@@ -32,6 +35,20 @@
 
 [generateSection(s, prefix + '#')/]
 [/for]
+[/template]
+
+[template public generateSection(s : Section, prefix: String) post(trim())]
+[generateSectionTitle(s, prefix)/]
+[generateSectionBody(s, prefix)/]
+[/template]
+
+[template public generateSection(s : IdentificationSection, prefix: String) post(trim())]
+[generateSectionTitle(s, prefix)/]
+
+[prefix/]# Person
+
+- First name(s): [s.person.firstNames/]
+[generateSectionBody(s, prefix)/]
 [/template]
 
 [template public generateCv(aCV : CV)]

@@ -45,9 +45,22 @@
 [template public generateSection(s : IdentificationSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
 
-[prefix/]# Person
+[prefix/]# [for (Sequence{s.person.firstNames, s.person.lastNames}) separator (' ')][self/][/for][if (not s.person.title.oclIsUndefined())], [s.person.title/][/if]
 
 - First name(s): [s.person.firstNames/]
+[if (not s.person.lastNames.oclIsUndefined())]- Last name(s): [s.person.lastNames/][/if]
+[if (not s.person.title.oclIsUndefined())]- Title: [s.person.title/][/if]
+[if (not s.person.dateOfBirth.oclIsUndefined())]- Date of birth: [s.person.dateOfBirth/][/if]
+- Gender: [s.person.gender/]
+- Marital status: [s.person.maritalStatus/]
+[if (s.person.nationalities->size() = 1)]
+- Nationality: [s.person.nationalities->at(1)/]
+[elseif (s.person.nationalities->size() > 0)]
+- Nationalities:
+	[for (s.person.nationalities) separator ('\n')]
+    - [self/]
+	[/for]
+[/if]
 [generateSectionBody(s, prefix)/]
 [/template]
 

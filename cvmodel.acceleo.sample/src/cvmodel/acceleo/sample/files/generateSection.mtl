@@ -96,17 +96,36 @@
 [generateSectionBody(s, prefix)/]
 [/template]
 
+[template public generateSection(s : EducationTrainingSection, prefix: String) post(trim())]
+[generateSectionTitle(s, prefix)/]
+
+[for (e : EducationTraining | s.educationTraining->sortedBy(e | e.timeFrame.startDate))]
+- `[generateTimeframe(e.timeFrame)/]` [e.title/][if (not e.organization.oclIsUndefined())] at [e.organization/][/if]
+[if (not e.finalGrade.oclIsUndefined())]
+    - Final grade: [e.finalGrade/]
+[/if]
+[if (e.eqf <> EQF::NO_EQF)]
+    - EQF: [e.eqf/]
+[/if]
+[if (not e.description.oclIsUndefined())]
+    - [e.description/]
+[/if]
+[/for]
+
+[generateSectionBody(s, prefix)/]
+[/template]
+
 [template public generateSection(s : WorkExperienceSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
 
 [for (w : WorkExperience | s.workExperiences->sortedBy(w | w.timeFrame.startDate))]
-- `[generateTimeframe(self.timeFrame)/]` [self.occupation/] at [self.employer/]
-[if (not self.address.oclIsUndefined())]
+- `[generateTimeframe(w.timeFrame)/]` [w.occupation/] at [w.employer/]
+[if (not w.address.oclIsUndefined())]
     - Address:
-        [generateAddress(self.address)/]
+        [generateAddress(w.address)/]
 [/if]
-[if (not self.description.oclIsUndefined())]
-    - [self.description/]
+[if (not w.description.oclIsUndefined())]
+    - [w.description/]
 [/if]
 [/for]
 

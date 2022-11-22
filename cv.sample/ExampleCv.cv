@@ -2,8 +2,12 @@
 <cvmodel.cv:CV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv">
   <sectionLayer>
     <sections xsi:type="cvmodel.cv:EducationTrainingSection" name="Education" order="2">
-      <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto"/>
-      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto"/>
+      <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
+        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="2021-01-01T00:00:00.000+0000"/>
+      </educationTraining>
+      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2018-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
+      </educationTraining>
     </sections>
     <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience" order="3">
       <workExperiences occupation="Application Developer" employer="OUTDO" description="Participated in the development of the prototype website and mobile application for Outdo.">

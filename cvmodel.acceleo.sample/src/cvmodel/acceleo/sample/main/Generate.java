@@ -340,9 +340,6 @@ public class Generate extends AbstractAcceleoGenerator {
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
-        if (!isInWorkspace(cv.CvPackage.class)) {
-            resourceSet.getPackageRegistry().put(cv.CvPackage.eINSTANCE.getNsURI(), cv.CvPackage.eINSTANCE);
-        }
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"

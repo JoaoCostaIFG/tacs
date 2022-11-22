@@ -17,3 +17,6 @@
 	= invoke('cvmodel.acceleo.sample.services.GenerateServices', 'getCountryCodeExtension(cv.PhoneCountryCode)', Sequence{arg0})
 /]
 
+[query public hardSkillToStars(arg0 : HardSkill) : String
+	= invoke('cvmodel.acceleo.sample.services.GenerateServices', 'hardSkillToStars(cv.HardSkill)', Sequence{arg0})
+/]

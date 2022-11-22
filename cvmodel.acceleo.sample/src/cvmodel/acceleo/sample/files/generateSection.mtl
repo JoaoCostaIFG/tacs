@@ -68,12 +68,12 @@
 
 [if (s.softSkills->size() > 0)]
 - Soft skills:
-    - [for (s.softSkills) separator (', ')][self/][/for]
+    - [for (s.softSkills) separator (' | ')][self/][/for]
 [/if]
 [if (s.hardSkills->size() > 0)]
 - Hard skills:
 [for (s.hardSkills)]
-    - [self.name/]: [self.proficiency/]
+    - [self.name/]: [hardSkillToStars(self)/]
 [/for]
 [/if]
 [if (s.motherTongues->size() > 0 or s.secondLanguages->size() > 0)]
@@ -81,7 +81,7 @@
 [if (s.motherTongues->size() = 1)]
 - Mother-tongue: [s.motherTongues->at(1).name/]
 [elseif (s.motherTongues->size() > 0)]
-- Mother-tongues: [for (s.motherTongues) separator (', ')][self.name/][/for]
+- Mother-tongues: [for (s.motherTongues) separator (' | ')][self.name/][/for]
 [/if]
 [if (s.secondLanguages->size() > 0)]
 - Second language(s):

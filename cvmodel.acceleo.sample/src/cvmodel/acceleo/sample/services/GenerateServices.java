@@ -1,5 +1,6 @@
 package cvmodel.acceleo.sample.services;
 
+import cv.HardSkill;
 import cv.Person;
 import cv.PhoneCountryCode;
 import cv.StartEndTimeFrame;
@@ -25,5 +26,18 @@ public class GenerateServices {
 	
 	public static Integer getCountryCodeExtension(PhoneCountryCode countryCode) {
 		return countryCode.getValue();
+	}
+	
+	public static String hardSkillToStars(HardSkill hardSkill) {
+		float proficiency = hardSkill.getProficiency();
+		float proficiencyRounded = Math.round(proficiency);
+	
+		StringBuilder sb = new StringBuilder();
+		for (int i = 1; i <= 5; ++i) {
+			sb.append((i <= proficiencyRounded) ? "★" : "☆");
+		}
+		sb.append(" (").append(proficiency).append(")");
+
+		return sb.toString();
 	}
 }

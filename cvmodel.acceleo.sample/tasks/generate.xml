@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="cvmodel.acceleo.sample">
     <property name="ECLIPSE_HOME" value="../../../../../../../../../usr/lib/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../../../runtime-EclipseApplication"/>
+    <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="cvmodel.acceleo.sample.libraryclasspath">

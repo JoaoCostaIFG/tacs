@@ -1,6 +1,7 @@
 [comment encoding = UTF-8 /]
 [module generateSection('http://cvmodel/cv')]
 
+[import cvmodel::acceleo::sample::services::generate /]
 [import cvmodel::acceleo::sample::files::generateContent /]
 
 [template private generateSectionTitle(s : Section, prefix: String) post(trim())]
@@ -31,9 +32,7 @@
 [if (not s.person.title.oclIsUndefined())][s.person.title/][/if]
 
 [if (not s.person.dateOfBirth.oclIsUndefined())]
-[let startDateTokens : Sequence(String) = s.person.dateOfBirth.toString().tokenize(' ')]
-- Date of birth: [startDateTokens->at(2)/] [startDateTokens->at(3)/], [startDateTokens->at(6)/]
-[/let]
+- Date of birth: [formatBirthDate(s.person)/]
 [/if]
 [if (s.person.gender <> Gender::DONOTINDICATE)]
 - Gender: [s.person.gender.toString().toLower().toUpperFirst()/]

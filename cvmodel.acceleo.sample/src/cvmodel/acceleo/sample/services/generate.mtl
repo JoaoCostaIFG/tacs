@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[module generate('http://cvmodel/cv')/]
+
+[query public formatDate(arg0 : TimeFrame) : String
+	= invoke('cvmodel.acceleo.sample.services.GenerateServices', 'formatDate(cv.TimeFrame)', Sequence{arg0})
+/]
+
+[query public formatDateStartEnd(arg0 : StartEndTimeFrame) : String
+	= invoke('cvmodel.acceleo.sample.services.GenerateServices', 'formatDateStartEnd(cv.StartEndTimeFrame)', Sequence{arg0})
+/]
+
+[query public formatBirthDate(arg0 : Person) : String
+	= invoke('cvmodel.acceleo.sample.services.GenerateServices', 'formatBirthDate(cv.Person)', Sequence{arg0})
+/]
+
+[query public getCountryCodeExtension(arg0 : PhoneCountryCode) : Integer
+	= invoke('cvmodel.acceleo.sample.services.GenerateServices', 'getCountryCodeExtension(cv.PhoneCountryCode)', Sequence{arg0})
+/]
+

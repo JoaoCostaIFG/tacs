@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project default="generate" name="cvmodel.acceleo.sample">
     <property name="ECLIPSE_HOME" value="../../../../../../../../../usr/lib/eclipse"/>
-    <property name="ECLIPSE_WORKSPACE" value="../.."/>
+    <property name="ECLIPSE_WORKSPACE" value="../../../runtime-EclipseApplication"/>
 
     <!-- The classpath with only the dependencies used by the project -->
     <path id="cvmodel.acceleo.sample.libraryclasspath">
@@ -19,6 +19,7 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore_2.28.0.v20220817-1401.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.common_2.26.0.v20220817-1401.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.xmi_2.17.0.v20220817-1334.jar"/>
+        <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.emf.ecore.change_2.14.0.v20190528-0725.jar"/>
     </path>
 
     <path id="cvmodel.acceleo.sample.classpath">

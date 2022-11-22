@@ -1,6 +1,8 @@
 [comment encoding = UTF-8 /]
 [module generateContent('http://cvmodel/cv')]
 
+[import cvmodel::acceleo::sample::services::generate /]
+
 [template public generateContent(c : Content) post(trim())]
 - [if (not c.timeFrame.oclIsUndefined())]`[generateTimeframe(c.timeFrame)/]` [/if][if (c.url.oclIsUndefined())]
 [c.name/]
@@ -32,17 +34,11 @@
 [/template]
 
 [template public generateTimeframe(t : TimeFrame) post(trim())]
-[let startDateTokens : Sequence(String) = t.startDate.toString().tokenize(' ')]
-[startDateTokens->at(2)/], [startDateTokens->at(6)/] - now
-[/let]
+[formatDate(t)/]
 [/template]
 
 [template public generateTimeframe(t : StartEndTimeFrame) post(trim())]
-[let startDateTokens : Sequence(String) = t.startDate.toString().tokenize(' ')]
-[let endDateTokens : Sequence(String) = t.endDate.toString().tokenize(' ')]
-[startDateTokens->at(2)/], [startDateTokens->at(6)/] - [endDateTokens->at(2)/], [endDateTokens->at(6)/]
-[/let]
-[/let]
+[formatDateStartEnd(t)/]
 [/template]
 
 [template public generateAddress(a : Address) post(trim())]
@@ -63,7 +59,7 @@
 [/template]
 
 [template public generateContact(c : PhoneNumber) post(trim())]
-- [c.name/]: ['['/][c.info/][']'/](tel:[c.info/])
+- [c.name/]: ['['/](+[getCountryCodeExtension(c.countryCode)/]) [c.info/][']'/](tel:+[getCountryCodeExtension(c.countryCode)/]-[c.info/])
 [/template]
 
 [template public generateContact(c : UrlContact) post(trim())]

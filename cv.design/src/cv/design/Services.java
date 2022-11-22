@@ -47,7 +47,7 @@ public class Services {
     	return ret;
 	}
 	
-	private Integer getCountryCode(PhoneNumber self) {
+	public Integer getCountryCode(PhoneNumber self) {
 		return self.getCountryCode().getValue();
 	}
 }

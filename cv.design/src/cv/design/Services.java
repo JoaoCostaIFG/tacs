@@ -7,6 +7,8 @@ import java.util.List;
 import org.eclipse.emf.ecore.EObject;
 
 import cv.OrderedSection;
+import cv.PhoneCountryCode;
+import cv.PhoneNumber;
 import cv.Section;
 import cv.SectionLayer;
 
@@ -43,5 +45,9 @@ public class Services {
     	}
     	
     	return ret;
+	}
+	
+	private Integer getCountryCode(PhoneNumber self) {
+		return self.getCountryCode().getValue();
 	}
 }

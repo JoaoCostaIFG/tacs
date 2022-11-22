@@ -95,3 +95,20 @@
 [/if]
 [generateSectionBody(s, prefix)/]
 [/template]
+
+[template public generateSection(s : WorkExperienceSection, prefix: String) post(trim())]
+[generateSectionTitle(s, prefix)/]
+
+[for (w : WorkExperience | s.workExperiences->sortedBy(w | w.timeFrame.startDate))]
+- `[generateTimeframe(self.timeFrame)/]` [self.occupation/] at [self.employer/]
+[if (not self.address.oclIsUndefined())]
+    - Address:
+        [generateAddress(self.address)/]
+[/if]
+[if (not self.description.oclIsUndefined())]
+    - [self.description/]
+[/if]
+[/for]
+
+[generateSectionBody(s, prefix)/]
+[/template]

@@ -5,7 +5,9 @@
       <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
         <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="2021-01-01T00:00:00.000+0000"/>
       </educationTraining>
-      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
+      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto" finalGrade="16">
+        <fieldsOfStudy>Information and Communication Technologies</fieldsOfStudy>
+        <fieldsOfStudy>Engineering, manufacturing and construction</fieldsOfStudy>
         <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2018-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
       </educationTraining>
     </sections>

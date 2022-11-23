@@ -4,11 +4,12 @@
 [import cvmodel::acceleo::sample::services::generate /]
 [import cvmodel::acceleo::sample::files::generateContent /]
 
-[template private generateSectionTitle(s : Section, prefix: String) post(trim())]
+[template private generateSectionTitle(s : Section, prefix: String)]
 [prefix/] [s.name/]
+
 [/template]
 
-[template private generateSectionBody(s : Section, prefix: String) post(trim())]
+[template private generateSectionBody(s : Section, prefix: String)]
 [for (c : Content | s.content->sortedBy(c | c.order))]
 [generateContent(c)/]
 [/for]
@@ -65,10 +66,8 @@
 
 [template public generateSection(s : SkillSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
-
 [if (s.softSkills->size() > 0)]
-- Soft skills:
-    - [for (s.softSkills) separator (' | ')][self/][/for]
+- Soft skills: [for (s.softSkills) separator (', ')][self/][/for]
 [/if]
 [if (s.hardSkills->size() > 0)]
 - Hard skills:
@@ -77,11 +76,13 @@
 [/for]
 [/if]
 [if (s.motherTongues->size() > 0 or s.secondLanguages->size() > 0)]
+
 [prefix/]# Language skills
+
 [if (s.motherTongues->size() = 1)]
 - Mother-tongue: [s.motherTongues->at(1).name/]
 [elseif (s.motherTongues->size() > 0)]
-- Mother-tongues: [for (s.motherTongues) separator (' | ')][self.name/][/for]
+- Mother-tongues: [for (s.motherTongues) separator (', ')][self.name/][/for]
 [/if]
 [if (s.secondLanguages->size() > 0)]
 - Second language(s):
@@ -98,11 +99,15 @@
 
 [template public generateSection(s : EducationTrainingSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
-
-[for (e : EducationTraining | s.educationTraining->sortedBy(e | e.timeFrame.startDate))]
+[for (e : EducationTraining | s.educationTraining->sortedBy(e | e.timeFrame.startDate)->reverse())]
 - `[generateTimeframe(e.timeFrame)/]` [e.title/][if (not e.organization.oclIsUndefined())] at [e.organization/][/if]
 [if (not e.finalGrade.oclIsUndefined())]
     - Final grade: [e.finalGrade/]
+[/if]
+[if (e.fieldsOfStudy->size() = 1)]
+	- Field of study: [e.fieldsOfStudy->at(1)/]
+[elseif (e.fieldsOfStudy->size() > 0)]
+    - Fields of study: [for (e.fieldsOfStudy) separator (', ')][self/][/for]
 [/if]
 [if (e.eqf <> EQF::NO_EQF)]
     - EQF: [e.eqf/]
@@ -111,14 +116,12 @@
     - [e.description/]
 [/if]
 [/for]
-
 [generateSectionBody(s, prefix)/]
 [/template]
 
 [template public generateSection(s : WorkExperienceSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
-
-[for (w : WorkExperience | s.workExperiences->sortedBy(w | w.timeFrame.startDate))]
+[for (w : WorkExperience | s.workExperiences->sortedBy(w | w.timeFrame.startDate)->reverse())]
 - `[generateTimeframe(w.timeFrame)/]` [w.occupation/] at [w.employer/]
 [if (not w.address.oclIsUndefined())]
     - Address:
@@ -128,6 +131,5 @@
     - [w.description/]
 [/if]
 [/for]
-
 [generateSectionBody(s, prefix)/]
 [/template]

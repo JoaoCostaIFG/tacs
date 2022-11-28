@@ -100,7 +100,7 @@
 [template public generateSection(s : EducationTrainingSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
 [for (e : EducationTraining | s.educationTraining->sortedBy(e | e.timeFrame.startDate)->reverse())]
-- `[generateTimeframe(e.timeFrame)/]` [e.title/][if (not e.organization.oclIsUndefined())] at [e.organization/][/if]
+- [e.title/][if (not e.organization.oclIsUndefined())] at [e.organization/][/if] `[generateTimeframe(e.timeFrame)/]`
 [if (not e.finalGrade.oclIsUndefined())]
     - Final grade: [e.finalGrade/]
 [/if]
@@ -122,7 +122,7 @@
 [template public generateSection(s : WorkExperienceSection, prefix: String) post(trim())]
 [generateSectionTitle(s, prefix)/]
 [for (w : WorkExperience | s.workExperiences->sortedBy(w | w.timeFrame.startDate)->reverse())]
-- `[generateTimeframe(w.timeFrame)/]` [w.occupation/] at [w.employer/]
+- [w.occupation/] at [w.employer/] `[generateTimeframe(w.timeFrame)/]`
 [if (not w.address.oclIsUndefined())]
     - Address:
         [generateAddress(w.address)/]

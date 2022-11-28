@@ -4,11 +4,7 @@
 [import cvmodel::acceleo::sample::services::generate /]
 
 [template public generateContent(c : Content) post(trim())]
-- [if (not c.timeFrame.oclIsUndefined())]`[generateTimeframe(c.timeFrame)/]` [/if][if (c.url.oclIsUndefined())]
-[c.name/]
-[else]
-['['/][c.name/][']'/]([c.url/])
-[/if]
+- [if (c.url.oclIsUndefined())][c.name/][else]['['/][c.name/][']'/]([c.url/])[/if][if (not c.timeFrame.oclIsUndefined())] `[generateTimeframe(c.timeFrame)/]`[/if]
 [if (not c.address.oclIsUndefined())]
     - Address:
         [generateAddress(c.address)/]

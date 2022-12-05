@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvmodel.cv:CV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv">
+  <sectionLayer>
+    <sections xsi:type="cvmodel.cv:SkillSection" name="Skills" order="4">
+      <motherTongues name="Portuguese"/>
+      <secondLanguages name="English" conversation="C1" reading="C1" writing="C1" comprehension="C1" peerReview="C1"/>
+    </sections>
+    <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience" order="1">
+      <sections name="Projects" order="1">
+        <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Exchange" order="1">
+          <content order="1" name="Fincancer" description="Fundação para a Ciência e a Tecnologia, Portugal."/>
+          <workExperiences occupation="Master's Scholarship" employer="Fundação para a Ciência e a Tecnologia, Portugal" description="Desenvolvimento de células solares redox de escoamento. SFRH/BM/35444/2021">
+            <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2021-11-01T00:00:00.000+0000" endDate="2022-10-31T00:00:00.000+0000"/>
+          </workExperiences>
+        </sections>
+        <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Projects" order="2">
+          <workExperiences occupation="Investigator" employer="Universidade do Porto Faculdade de Engenharia, Portugal" description="Inverted perovskite solar cells: a disruptive architecture enabling high-efficiency, high-stability and high cost benefit">
+            <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2022-12-01T00:00:00.000+0000" endDate="2023-02-08T00:00:00.000+0000"/>
+          </workExperiences>
+        </sections>
+      </sections>
+      <workExperiences occupation="Investigator" employer="Instituto de Engenharia de Sistemas e Computadores Tecnologia e Ciência, Portugal">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2022-01-01T00:00:00.000+0000" endDate="2022-09-30T00:00:00.000+0100"/>
+      </workExperiences>
+      <workExperiences occupation="Research Intern" employer="Instituto de Engenharia de Sistemas e Computadores Tecnologia e Ciência, Portugal">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2021-07-01T00:00:00.000+0100" endDate="2021-07-31T00:00:00.000+0100"/>
+      </workExperiences>
+    </sections>
+    <sections name="Productions" order="2">
+      <content order="1" name="Journal Article" description="Bernardo, Gabriel; Araújo, Tiago; da Silva Lopes, Telmo; Sousa, José; Mendes, Adélio; Fontão, Ricardo. &quot;Recent advances in membrane technologies for hydrogen purification&quot;, International Journal of Hydrogen Energy, 2020" url="http://dx.doi.org/10.1016/j.ijhydene.2019.06.162"/>
+      <content order="2" name="Conference Poster" description="Fontão, Ricardo; Madureira, Rúben; Neto, Francisco; Martins, Jorge; Emami, Seyedali; Mendes, Adélio; Mendes, Joaquim. &quot;Numerical Simulation Of LaserAssisted Sealing Of Perovskite Solar Cells&quot;. Trabalho apresentado em 1st International Solar Power Technologies Conference - SPTech, 2021."/>
+    </sections>
+    <sections name="Activities" order="3">
+      <sections name="Commission member" order="1">
+        <content order="1" name="Member of the course monitoring of &quot;Batchelor in Environment Engineering" description="Universidade do Porto Faculdade de Engenharia, Portugal">
+          <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2020-09-01T00:00:00.000+0100" endDate="2021-07-31T00:00:00.000+0100"/>
+        </content>
+      </sections>
+    </sections>
+    <identificationSection name="Identification">
+      <sections name="Author Identifiers" order="1">
+        <content order="1" name="Ciência ID" description="C012-0B9A-5F26"/>
+        <content order="2" name="ORCID ID" description="0000-0002-0433-7255"/>
+      </sections>
+      <sections name="Fields of action" order="2">
+        <content order="1" name="Engineering Sciences and Technologies" description="Electrotechnical, Electronics and Informatics Engineering"/>
+      </sections>
+      <sections xsi:type="cvmodel.cv:EducationTrainingSection" name="Education/Training" order="3">
+        <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
+          <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2021-10-01T00:00:00.000+0100" endDate="2023-06-15T00:00:00.000+0100"/>
+        </educationTraining>
+        <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto" finalGrade="16.58">
+          <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2018-09-18T00:00:00.000+0100" endDate="2021-06-15T00:00:00.000+0100"/>
+        </educationTraining>
+        <educationTraining title="Workshop on Energy System Flexibility" organization="Universidade de Coimbra Instituto de Engenharia de Sistemas e Computadores de Coimbra, Portugal">
+          <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="2022-02-02T00:00:00.000+0000"/>
+        </educationTraining>
+      </sections>
+      <person firstNames="Ricardo Jorge" lastNames="Cruz Fontão" dateOfBirth="2020-09-06T00:00:00.000+0100" gender="MALE" maritalStatus="SINGLE" aboutMe="My name is Ricardo Fontão. I have concluded my Bachelors degree in Informatic Engineering in FEUP and am currently enrolled in the Master's degree in the same area. In 2022, I was working as an Assistant Researcher at INESC TEC, where I worked developing a web app and with smart cards in the area of biometrics. My main areas of interest are Computer Vision and Embedded systems.">
+        <picture path="fontao_foto" type="PNG" createdDate="2022-12-01T00:00:00.000+0000"/>
+        <contacts xsi:type="cvmodel.cv:Email" name="Email (Professional)" info="ricardo.fontao@gmail.com "/>
+        <contacts name="Citation Name" info="Fontão, Ricardo"/>
+      </person>
+    </identificationSection>
+  </sectionLayer>
+</cvmodel.cv:CV>

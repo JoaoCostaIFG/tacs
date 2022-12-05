@@ -466,11 +466,8 @@
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
-                <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create file dialog">
-                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                    <initialOperation/>
-                  </buttons>
-                  <page name="Choose person picture file type Page" labelExpression="Choose file type" semanticCandidateExpression="var:self"/>
+                <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="cv::File" referenceName="picture">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="1"/>
                 </firstModelOperations>
               </initialOperation>
             </tools>

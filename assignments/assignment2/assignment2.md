@@ -62,6 +62,15 @@ printing `Date` objects in the desired format, to convert the skill level of the
 obtain the integer value of enums (surprisingly, the Acceleo language doesn't
 support that natively).
 
+When we designed the meta-model, we thought we would end-up generating a PDF
+file for the models. With this, we planned to incorporate user given files into
+de PDF output. As such, we designed the files to be either images (png, jgp,
+svg) or PDF files (e.g., in latex we can include other PDF files). Since we
+ended-up generating Markdown files, this plan suffered a change: now users
+specify the path to the file and are responsible for placing the file there. The
+generated Markdown links to these files (if the file is an image, the link shows
+the image). The paths can be relative to the location of the markdown file.
+
 ## Problems to be address
 
 - `EducationTraining` could have an (optional) `Address`;

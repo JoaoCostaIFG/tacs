@@ -46,6 +46,10 @@ basically a depth first search in the sections graph.
 The icons in the editor change based on the type of information shown, e.g., a
 home phone number has a different icon for a work phone number.
 
+We wanted to create a dialog for users to pick files to add to the CV, but we
+didn't find a way to do this. As such, users need to introduce the path to the
+files manually (in a text field).
+
 ## Stuff about Acceleo
 
 We decided to output file to Markdown given its popularity and versatility

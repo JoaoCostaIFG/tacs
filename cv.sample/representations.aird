@@ -5,7 +5,7 @@
     <semanticResources>FontaoCV.cv</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_X9LLYGnpEe2JCLYOsHvc7w">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aExxEGnpEe2JCLYOsHvc7w" name="new CVDiagram" repPath="#_aElj0GnpEe2JCLYOsHvc7w" changeId="39a49f1f-0cca-40e5-a294-0416d5d6421b">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_aExxEGnpEe2JCLYOsHvc7w" name="AnaCVDiagram" repPath="#_aElj0GnpEe2JCLYOsHvc7w" changeId="39a49f1f-0cca-40e5-a294-0416d5d6421b">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/cv.design/description/cv.odesign#//@ownedViewpoints[name='CvViewpoint']/@ownedRepresentations[name='CVDiagram']"/>
         <target xmi:type="cvmodel.cv:CV" href="ExampleCv.cv#/"/>
       </ownedRepresentationDescriptors>

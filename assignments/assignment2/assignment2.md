@@ -50,6 +50,8 @@ We wanted to create a dialog for users to pick files to add to the CV, but we
 didn't find a way to do this. As such, users need to introduce the path to the
 files manually (in a text field).
 
+![A screenshot of a CV being edited in Sirius](img/sirius_editor_screenshot.png)
+
 ## Stuff about Acceleo
 
 We decided to output file to Markdown given its popularity and versatility
@@ -68,12 +70,29 @@ support that natively).
 
 When we designed the meta-model, we thought we would end-up generating a PDF
 file for the models. With this, we planned to incorporate user given files into
-de PDF output. As such, we designed the files to be either images (png, jgp,
-svg) or PDF files (e.g., in latex we can include other PDF files). Since we
+de PDF output. As such, we designed the files to be either images (PNG, JGP,
+SVG) or PDF files (e.g., in latex we can include other PDF files). Since we
 ended-up generating Markdown files, this plan suffered a change: now users
 specify the path to the file and are responsible for placing the file there. The
 generated Markdown links to these files (if the file is an image, the link shows
 the image). The paths can be relative to the location of the markdown file.
+
+![Part of the generated Markdown for a CV](img/acceleo_generated_markdown.png)
+
+## Example CVs
+
+There are 2 example CVs (and the generated Markdown files) in the
+[CVs directory](./CVs).
+
+- [Ana Barros CV](./CVs/AnaCV.cv) - generates
+  [this Markdown file](./CVs/Ana.cv.md)
+  - This was the CV that server as the test during the development of the
+    application.
+- [Ricardo Fontão CV](./CVs/RicardoJorgeCV.cv) - generates
+  [this Markdown file](./CVs/Ricardo_Jorge.cv.md)
+  - This was the result of one of our friends taking their CV and _rebuilding_
+    it using our application;
+  - He used the CV he wrote for the Curriculum Vitae CT at FEUP.
 
 ## Problems to be address
 

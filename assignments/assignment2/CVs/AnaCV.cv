@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cvmodel.cv:CV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cvmodel.cv="http://cvmodel/cv">
+  <sectionLayer>
+    <sections xsi:type="cvmodel.cv:EducationTrainingSection" name="Education" order="2">
+      <educationTraining title="Master in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto">
+        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="2021-01-01T00:00:00.000+0000"/>
+      </educationTraining>
+      <educationTraining title="Bachelor in Informatics and Computer Engineering" organization="Faculdade de Engenharia da Universidade do Porto" finalGrade="16">
+        <fieldsOfStudy>Information and Communication Technologies</fieldsOfStudy>
+        <fieldsOfStudy>Engineering, manufacturing and construction</fieldsOfStudy>
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2018-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
+      </educationTraining>
+    </sections>
+    <sections xsi:type="cvmodel.cv:WorkExperienceSection" name="Work Experience" order="3">
+      <workExperiences occupation="Application Developer" employer="OUTDO" description="Participated in the development of the prototype website and mobile application for Outdo.">
+        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="2019-01-01T00:00:00.000+0000"/>
+        <address country="Portugal"/>
+      </workExperiences>
+      <workExperiences occupation="University Teaching Assistant" employer="FEUP" description="I was invited by my teachers to assist with &quot;Projeto FEUP&quot;. During this time, I was responsible for helping 1st year&#xA;students transitioning from highschool to university. I had to guide them during activies and assist them during class.">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2021-09-01T00:00:00.000+0100" endDate="2021-12-01T00:00:00.000+0000"/>
+        <address city="Porto" country="Portugal"/>
+      </workExperiences>
+    </sections>
+    <sections xsi:type="cvmodel.cv:SkillSection" name="Skills" order="1">
+      <hardSkills name="The hard skill" proficiency="2.5"/>
+      <hardSkills name="Really big muscles (hard)" proficiency="5.0"/>
+      <softSkills>Team worker</softSkills>
+      <softSkills>Friendly</softSkills>
+      <softSkills>Doesn't bite</softSkills>
+      <softSkills>Soft (squishy)</softSkills>
+      <motherTongues name="Portuguese"/>
+      <motherTongues name=":)"/>
+      <secondLanguages name="English" conversation="C1" reading="C1" writing="C1" comprehension="C1" peerReview="C1"/>
+      <secondLanguages name="French" conversation="B1" reading="B1" writing="B1" comprehension="B1" peerReview="B1"/>
+    </sections>
+    <sections name="Networks and Memberships" order="4">
+      <sections name="A subsection" order="2">
+        <content order="1" name="Here for the sake of it"/>
+      </sections>
+      <sections name="Another section" order="1">
+        <content order="1" name="The content"/>
+      </sections>
+      <content order="1" name="Member of the Student Council for NCGM" description="Faculdade de Engenharia da Universidade do Porto. I was part of the student council for NCGM. As an active member, I took part in some projects, organized events, as well as other activities." url="https://ncgm.fe.up.pt/pt/home">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2018-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
+      </content>
+    </sections>
+    <sections name="Projects" order="5">
+      <content order="1" name="Outdo" description="Participated in the creation of the Outdo startup. My main role is the development and maintenance of both the website&#xA;and mobile application prototypes." url="https://outdoapp.pt/">
+        <timeFrame xsi:type="cvmodel.cv:OnGoingTimeFrame" startDate="1970-01-01T00:00:00.000+0100"/>
+      </content>
+      <content order="2" name="The Landing Gear System" description="The goal of this project was to explore the validation and verification of a realistic safety-critical software system during the design and implementation stages of development. The project consisted of two parts: one part was the design in Alloy and the other one was the implementation in Dafny. The system under analysis (The Landing Gear System 2022) was part of a series of case studies set provided by the ABZ Conf.">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2022-02-01T23:00:00.000+0000" endDate="2022-06-01T01:00:00.000+0100"/>
+      </content>
+      <content order="3" name="Segmentation Fault" description="An online QA web application resembling StackOverflow. This project was developed for the learning experience of using&#xA;Bootstrap, Docker, Laravel, and PostgreSQL.">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2021-02-01T00:00:00.000+0000" endDate="2021-06-01T00:00:00.000+0100"/>
+      </content>
+      <content order="4" name="Greener" description="Greener is a capturing game for 2 players, where both must capture the same colour. This project involved implementing Greener using Sictus Prolog (logic programming).">
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2020-10-01T00:00:00.000+0100" endDate="2021-01-01T00:00:00.000+0000"/>
+      </content>
+    </sections>
+    <sections name="Recommendations" order="6">
+      <content order="1" name="Cláudia Amaral - Manager at Outdo" description="Participated in the development of the prototype for Outdo, where I got a recommendation letter." url="mailto:info@outdoapp.com">
+        <address country="Portugal"/>
+        <timeFrame xsi:type="cvmodel.cv:StartEndTimeFrame" startDate="2020-01-01T00:00:00.000+0000" endDate="2021-01-01T00:00:00.000+0000"/>
+      </content>
+    </sections>
+    <identificationSection name="Identification">
+      <person firstNames="Ana" lastNames="Barros" title="Software engineer" dateOfBirth="2000-06-28T00:00:00.000+0100" gender="FEMALE" aboutMe="I am a student at FEUP taking the master's in Informatics and Computing Engineering.&#xA;am currently looking for internships to get work experience.">
+        <nationalities>Portuguese</nationalities>
+        <contacts xsi:type="cvmodel.cv:Email" name="Email" info="anaiobarros@outlook.pt"/>
+        <contacts xsi:type="cvmodel.cv:PhoneNumber" name="phone" info="91"/>
+        <contacts xsi:type="cvmodel.cv:HomePhoneNumber" name="home phone" info="91"/>
+        <contacts xsi:type="cvmodel.cv:WorkPhoneNumber" name="work phone" info="91"/>
+        <contacts xsi:type="cvmodel.cv:MobilePhoneNumber" name="mobile phone" info="91"/>
+        <contacts xsi:type="cvmodel.cv:UrlContact" name="My blog" info="https://example.com"/>
+        <addresses xsi:type="cvmodel.cv:HomeAddress" line1="Linha 1" line2="Linha 2" postalCode="4505-078" city="Trofa" country="Portugal" name="Home Address"/>
+        <addresses line1="asd" country="portugal" name="Named add"/>
+        <addresses xsi:type="cvmodel.cv:WorkAddress" country="portugal" name="work addr"/>
+      </person>
+    </identificationSection>
+  </sectionLayer>
+</cvmodel.cv:CV>

@@ -6,6 +6,11 @@
 - [Joao Alexandre Lobo Cardoso <up201806531@fe.up.pt>](up201806531@fe.up.pt)
 - [Joao de Jesus Costa <up201806560@fe.up.pt>](up201806560@fe.up.pt)
 
+## Notes on assignments
+
+The [assignments directory](./assignments) contains our notes for both
+assignments.
+
 ## Dev notes
 
 - Enums can't be set to null:
